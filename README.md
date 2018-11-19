@@ -9,3 +9,14 @@
 - 王佳琦（后端工程师）
     - Email：1397978384@qq.com
     - Github：https://github.com/8wangjiaqi
+- 黄媛媛（UI设计师）
+    - Email：930317972@qq.com
+    - Github：https://github.com/huangyuanyuan98
+- 齐琦（前端工程师）
+    - Email：3510363360@qq.com
+    - Github：https://github.com/8wangjiaqi
+- 候存巧（前端工程师）
+    - Email：853801007@qq.com
+    - Github：https://github.com/8qiqi
+
+
