@@ -1,0 +1,108 @@
+page-gonglue {
+    padding-bottom:100px;
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .touxiang{
+        width: 50px;
+        height: 50px;
+       border-radius: 50%;
+       position:relative;
+   }
+   .title{
+        font-size: 25px;
+        font-weight: bolder;
+        margin-top:-5%;
+    }
+    hr{
+        margin-top:5%;
+        margin-bottom: 5%;
+    }
+    .username{
+        position:absolute;
+        margin-top:3%;
+    }
+    .articleimg{
+        width: 30%;
+        height: 20%;
+        margin-left: 35%;
+    }
+    .content{
+        margin-top:5%;
+        font-size: 20px;
+    }
+    .time{
+        color: gainsboro;
+        font-size: 10px;
+    }
+    .mytouxiang{
+        width: 30px;
+        height: 30px;
+       border-radius: 50%;
+       position: relative;
+    }
+    .pinglun{
+        border-radius:6px;
+        height: 5%;
+        width: 70%;
+        position: relative;
+        margin-left: 3%;
+        margin-top:-10%;
+    }
+    // .fixed{
+    //     // position: fixed;
+    //     // left: 0px;
+    //     // bottom: 0px;
+    //     // // width: 100%;
+    //     // background-color: red;
+    //     // z-index:9999;//设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
+    //     position:fixed; left:0px; bottom:0px; width:100%; height:100px; background-color:red; z-index:9999;
+    // }
+    .divs{
+        position: relative;
+        margin-left: 60%;
+    }
+    .div1,.div2,.div3{
+        //display: inline-block;
+        float: left;
+        width: 33%;
+        height: 30px;
+        margin-top: 10px;
+        p{
+            font-size: 0.6em;
+            margin-top: -5%;
+        }
+    }
+    .agree,.argue{
+        float: left;
+        height: 30px;
+        margin-top:10px;
+        margin-bottom: 10px;
+    }
+    .argue{
+        width: 10%;
+    }
+    .agree{
+        margin-left: 2%;
+        margin-right: 5%;
+        width: 15%;
+    }
+    .ioncontent{
+        margin-bottom: 100px;
+    }
+    .fixed1{
+        margin-bottom: 10px;
+    }
+    // .fixed{
+    //     height: 10%;
+    //     background-color: red;
+    // }
+    // .fixed1,.fixed{
+    //     width: 100%;
+    //     float: left;
+    // }
+    ion-footer{
+        background-color: white;
+    }
+}

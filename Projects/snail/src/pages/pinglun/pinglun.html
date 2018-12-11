@@ -1,0 +1,36 @@
+<!--
+  Generated template for the PinglunPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color="blu">
+      <ion-title>评论</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+     <p class="allpinglun">全部评论</p>
+    <div *ngFor="let comment of comment['comment'];let idx=index;" class="pingluns">
+        <img src="{{comment.touxiang}}" alt="" class="touxiang">
+        <span class="username">{{comment.name}}</span>
+        <div class="div1">
+            <p>{{comment.content}}</p>
+        </div>
+        <div class="other">
+          <span class="time">{{comment.time}}</span>
+          <span class="huifu">查看回复</span>
+          <div class="zanpinglun">
+              <div class="zan">
+                <span>{{comment.zan}}</span><ion-icon  md="md-hand" (click)="inceresezan(idx)" class="dianzan"></ion-icon>
+              </div>
+              <div class="pinglun">
+                <span>{{comment.pinglun}}</span><ion-icon md="md-chatbubbles" (click)="increasecomment(idx)"></ion-icon>
+              </div>
+          </div>
+        </div>
+    </div>
+  </ion-content>
+  

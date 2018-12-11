@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar id="a" color="blu">
+    <ion-title text-center>添加计划</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name=""></ion-icon>
+        <ion-icon name=""></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content>
+  <ion-item id="item1">
+    <ion-label color="blu">第几天：</ion-label>
+    <ion-select [(ngModel)]="days" multiple="true">
+      <ion-option>1天</ion-option>
+      <ion-option>2天</ion-option>
+      <ion-option>3天</ion-option>
+      <ion-option>4天</ion-option>
+      <ion-option>5天</ion-option>
+      <ion-option>6天</ion-option>
+      <ion-option>7天</ion-option>
+      <ion-option>8天</ion-option>
+      <ion-option>9天</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="blu" stacked>上午：</ion-label>
+    <ion-input type="text" [(ngModel)]="shangwu"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="blu" stacked>中午：</ion-label>
+    <ion-input type="text" [(ngModel)]="zhongwu"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="blu" stacked>下午：</ion-label>
+    <ion-input type="text" [(ngModel)]="xiawu"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="blu" stacked>晚上：</ion-label>
+    <ion-input type="text" [(ngModel)]="wanshang"></ion-input>
+  </ion-item>
+
+  <button ion-button round type="submit" ion-button (click)="saveplan()">保存</button>
+
+</ion-content>

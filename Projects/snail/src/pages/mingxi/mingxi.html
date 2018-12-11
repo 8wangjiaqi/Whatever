@@ -1,0 +1,40 @@
+<ion-header>
+
+  <ion-navbar id="a" color="blu">
+    <ion-title text-center>明细&nbsp;&nbsp;<ion-icon name="md-create"></ion-icon></ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name=""></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content color="lgrey">
+  <ion-item id="money">
+    <ion-label color="blu">花销:&nbsp;&nbsp;{{userInfo.money}}</ion-label>
+  </ion-item>
+
+  <ion-item id="money">
+    <ion-label color="blu">类别:&nbsp;&nbsp;{{userInfo.goodtype}}</ion-label>
+  </ion-item>
+
+
+  <ion-item id="money">
+    <ion-label color="blu">时间:&nbsp;&nbsp;{{userInfo.time}}</ion-label>
+  </ion-item>
+
+  <ion-item id="money">
+    <ion-label color="blu">付款类型:&nbsp;&nbsp;{{userInfo.typemoney}}</ion-label>
+  </ion-item>
+
+
+  <ion-item id="money">
+    <ion-label color="blu">备注:&nbsp;&nbsp;{{userInfo.more}}</ion-label>
+  </ion-item>
+
+  <br/><br/><br/>
+  <button ion-button round (click)="deletelist()">删除</button>
+</ion-content>

@@ -1,0 +1,39 @@
+page-jizhangben {
+    ion-content{
+        background-color: #F5F5F5!important;
+        img{
+            width: 100%;
+            height: 27%;
+            display: block;
+            margin-bottom: -4px;
+        }
+        button{
+            background-color: #207b94!important;
+        }
+        #listdiv{
+            #list{
+                position: relative;
+                li{
+                    list-style: none;
+                    background-color: white;
+                    line-height: 30px;
+                    width: 88%;
+                    border-radius: 20%;
+                    height: 30px;
+                    font-size: 15px;
+                    margin-top: 5px;
+                    text-align: center;
+                    
+                    .ion-md-backspace:before{
+                        position: absolute;
+                        display: block;
+                        float: right!important;
+                        margin-left: 20px;
+                        font-size: 25px;
+                        margin-top: -16px;
+                    }
+                }  
+            }
+        } 
+    }
+}

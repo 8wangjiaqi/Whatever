@@ -1,0 +1,35 @@
+<!-- 注册 -->
+<ion-content padding>
+  <div class="close" (click)="goTabs()">
+      <ion-icon ios="ios-close" md="md-close"></ion-icon>
+  </div>
+  <div class="header">
+    <img src="assets/imgs/蜗牛.png" alt="图标">
+  </div>
+  <div class="box">
+    <div class="pn">
+      <label>
+        <ion-icon name="contact"></ion-icon>
+        <input type="text" placeholder="手机号/邮箱" class="text-input">
+      </label>
+    </div>
+    <div class="vc">
+      <label>
+        <ion-icon name="checkmark"></ion-icon>
+        <input type="number" placeholder="验证码" class="text-input">
+        <button ion-button>发送验证码</button>
+      </label>
+    </div>
+    <div class="pw">
+      <label>
+        <ion-icon name="lock"></ion-icon>
+        <input type="password" placeholder="密码" class="text-input">
+      </label>
+    </div>
+    <button ion-button block>注册</button>
+  </div>
+  <div class="buttom">
+    <span float-left (click)="goRegister()">已有账号？去登陆</span>
+  </div>
+</ion-content>
+  

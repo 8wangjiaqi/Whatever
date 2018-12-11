@@ -1,0 +1,7 @@
+{
+  "name": "snail",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

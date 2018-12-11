@@ -1,0 +1,91 @@
+page-concerning {
+    ion-header{
+        ion-navbar{
+            ion-buttons{
+                width: 44px;
+            }
+        }
+    }
+    ion-content{
+        .picture{
+            padding: 0;
+            margin: 0;
+            float: left;
+            width: 100%;
+            height: 160px;
+            text-align: center;
+            img{
+                width: 150px;
+                height: 150px;
+                vertical-align: middle;
+            }
+        }
+        .font{
+            float: left;
+            width: 100%;
+            height: 70px;
+            .title{
+                font-size: 18px;
+                color: #505050;
+                line-height: 40px;
+                width: 100%;
+                height: 40px;
+            }
+            .platform{
+                color: #999999;
+                width: 100%;
+                height: 30px;
+                font-size: 14px;
+                line-height: 30px;
+            }
+        }
+        .list{
+            float: left;
+            margin-top: 30px;
+            width: 100%;
+            height: 80px;
+            ul{
+                margin: 0;
+                padding: 0;
+                border: 1px solid #e5e5e5;
+                li{
+                    border-bottom: 0.5px #e5e5e5 solid;
+                    height: 40px;
+                    font-size: 16px;
+                    line-height: 40px;
+                    color: #505050;
+                    padding: 0 0 0 8px;
+                    .right{
+                        font-size: 22px;
+                        margin-right: 8px;
+                        color: #999999;
+                    }
+                }
+            }
+        }
+        .bottom{
+            float: left;
+            position: relative;
+            top: 28%;
+            width: 100%;
+            height: 60px;
+            .statement{
+                // color: #207b94;
+                line-height: 30px;
+                font-size: 14px;
+                width: 100%;
+                height: 30px;
+                a{
+                    color: #207b94;
+                }
+            }
+            .copyright{
+                font-size: 12px;
+                color: #c4c4c4;
+                width: 100%;
+                height: 30px;
+                line-height: 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,184 @@
+import { Component } from '@angular/core';
+import { ModalController } from 'ionic-angular';
+import { NavController} from 'ionic-angular';
+import { Http} from '@angular/http';
+import { GongluePage } from '../gonglue/gonglue';
+import { NavParams } from 'ionic-angular';
+@Component({
+  selector: 'page-shouyeqq',
+  templateUrl: 'shouyeqq.html'
+})
+export class ShouyeqqPage {
+ isActive=0;
+ isClick(i){
+   this.isActive=i;
+ }
+ data: Object = {
+  username: '张三',
+  callback: data => {
+    console.log(data.info);
+  }
+};
+ arr=["你的攻略","我的关注"];
+ users=[
+   {name:'仙女不仙',
+   touxiang:'../assets/imgs/2.jpg',
+   title:'八月去北京，这份攻略你一定要看',
+   content:'8月份北京还是很热的，温度几乎在30度以上，而且紫外线很强。阴天的时候也是要做好防晒工作的！！光阴蹉跎，世界喧嚣，我自己要警惕，在人生旅途上保持一份童趣和闲心是不容易的。光阴蹉跎，世界喧嚣，我自己要警惕，在人生旅途上保持一份童趣和闲心是不容易的光阴蹉跎，世界喧嚣，我自己要警惕，在人生旅途上保持一份童趣和闲心是不容易的如果哪一天我只是埋头于人生中的种种事务，不再有兴致扒在车窗旁看沿途的风光，倾听内心的音乐，那时候我就真正老了俗了，那样便辜负了人生这一趟美好的旅行，倾听内心的音乐，那时候我就真正老了俗了，那样便辜负了人生这一趟美好的旅行，倾听内心的音乐，那时候我就真正老了俗了，那样便辜负了人生这一趟美好的旅行!!!',
+   imgUrl:'../assets/imgs/4.jpg',
+   agree:455,
+   pinglun:3,
+   time:'2018.08.10',
+   comment:[
+      {
+        touxiang:'../assets/imgs/2.jpg',
+        name:'大大爱你',
+        content:'小姐姐住什么酒店',
+        time:'2018.08.10',
+        zan:123,
+        pinglun:23
+      },
+      {
+        touxiang:'../assets/imgs/4.jpg',
+        name:'总有一个人',
+        content:'需要提前一小时购票吗',
+        time:'2018.08.10',
+        zan:22,
+        pinglun:23
+      },
+      {
+        touxiang:'../assets/imgs/4.jpg',
+        name:'嘻嘻哈哈',
+        content:'门票是通票吗',
+        time:'2018.08.10',
+        zan:22,
+        pinglun:23
+      }
+   ]
+   },
+    {name:'杏仁',
+    touxiang:'../assets/imgs/3.jpg',
+   title:'大学生五天穷游北京',
+   content:'8月份北京还是很热的，温度几乎在30度以上，而且紫外线很强。阴天的时候也是要做好防晒工作的！！...',
+   imgUrl:'../assets/imgs/8.jpg',
+   agree:44,
+   pinglun:23,
+   time:'2015.04.10',
+   comment:[
+      {
+        touxiang:'../assets/imgs/2.jpg',
+        name:'哈哈哈哈',
+        content:'坐大巴合适吗',
+        time:'2018.08.10',
+        zan:123,
+        pinglun:23
+      },
+      {
+        touxiang:'../assets/imgs/4.jpg',
+        name:'美猴王',
+        content:'旋转木马的开放时间固定吗',
+        time:'2018.08.10',
+        zan:22,
+        pinglun:23
+      }
+   ]
+   }
+ ];
+ users2=[
+   {
+    name:'王佳佳',
+    touxiang:'../assets/imgs/2.jpg',
+    title:'八月去北京，这份攻略你一定要看',
+    content:'8月份北京还是很热的，温度几乎在30度以上，而且紫外线很强。阴天的时候也是要做好防晒工作的！！...',
+    imgUrl:'../assets/imgs/4.jpg',
+    agree:455,
+    pinglun:3,
+    time:'2018.08.10',
+    comment:[
+        {
+          touxiang:'../assets/imgs/2.jpg',
+          name:'巴拉拉',
+          content:'坐大巴合适吗',
+          time:'2018.08.10',
+          zan:123,
+          pinglun:23
+        },
+        {
+          touxiang:'../assets/imgs/4.jpg',
+          name:'小魔仙',
+          content:'旋转木马的开放时间固定吗',
+          time:'2018.08.10',
+          zan:442,
+          pinglun:53
+        },
+        {
+          touxiang:'../assets/imgs/6.jpg',
+          name:'看见美好',
+          content:'很棒的分享哦',
+          time:'2018.08.10',
+          zan:32,
+          pinglun:23
+        }
+    ]
+    },
+      {name:'沧海一粟',
+      touxiang:'../assets/imgs/4.jpg',
+    title:'大学生五天穷游北京',
+    content:'8月份北京还是很热的，温度几乎在30度以上，而且紫外线很强。阴天的时候也是要做好防晒工作的！！...',
+    imgUrl:'../assets/imgs/8.jpg',
+    agree:44,
+    pinglun:23,
+    time:'2015.04.10',
+    comment:[
+        {
+          touxiang:'../assets/imgs/2.jpg',
+          name:'那些年',
+          content:'坐大巴合适吗',
+          time:'2018.08.10',
+          zan:123,
+          pinglun:23
+        },
+        {
+          touxiang:'../assets/imgs/4.jpg',
+          name:'时光匆匆',
+          content:'旋转木马的开放时间固定吗',
+          time:'2018.08.10',
+          zan:22,
+          pinglun:23
+        }
+    ]
+    }
+ ]
+ imgUrl:String;
+  listData: Object;// 接收数据用
+  res: Response;
+  constructor(public modalCtrl: ModalController,public navCtrl: NavController,private http: Http,public navParams:NavParams) {
+    
+  }
+   goGongluePage(idx){
+     if(this.isActive==0){
+      this.navCtrl.push(GongluePage,{
+        name:this.users[idx].name,
+        touxiang:this.users[idx].touxiang,
+        title:this.users[idx].title,
+        content:this.users[idx].content,
+        imgUrl:this.users[idx].imgUrl,
+        time:this.users[idx].time,
+        comment:this.users[idx].comment,
+        data:this.data
+      });
+     }else{
+      this.navCtrl.push(GongluePage,{
+        name:this.users2[idx].name,
+        touxiang:this.users2[idx].touxiang,
+        title:this.users2[idx].title,
+        content:this.users2[idx].content,
+        imgUrl:this.users2[idx].imgUrl,
+        time:this.users2[idx].time,
+        comment:this.users2[idx].comment,
+        data:this.data
+      });
+     }
+   
+  }
+}

@@ -1,0 +1,101 @@
+page-enroll {
+    ion-content{//整个全屏
+        background: url(../assets/imgs/enroll_background.png);
+        background-size: cover;
+        .close{
+            width: 100%;
+            ion-icon{
+                font-size: 25px;
+                color: #fff;
+            }
+        }
+        .header{
+            margin-top: 50px;
+            text-align: center;
+            width: 100%;
+            height: 170px;
+            img{
+                width: 120px;
+                height: 120px;
+                vertical-align: middle;;
+            }
+        }
+        .box{
+            ion-icon{
+                width: 24px;
+                color: #505050;
+                line-height: 35px;
+                font-size: 28px;
+            }
+            .pn{
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                height: 35px;
+            }
+            .vc{
+                margin-top: 10px;
+                width: 100%;
+                height: 35px;
+                input{
+                    width: 65%;
+                }
+                button{
+                    margin: 0 0 10px 0!important;
+                    // margin-bottom: 3px;
+                    padding: 0;
+                    width: 25%;
+                    font-size: 14px;
+                color: #505050;
+                // margin-top: 30px;
+                height: 35px; 
+                background-color: rgba($color: #616464, $alpha: 0.4);
+                }
+            }
+            .pw{
+                margin-top: 10px;
+                width: 100%;
+                height: 35px;
+            }
+            input{
+                padding-left: 5px;
+                width: 90%;
+                height: 35px;
+                border: 0.5px solid #b9adad;
+                background-color: transparent;
+            }
+            button{
+                font-size: 16px;
+                color: #505050;
+                margin-top: 30px;
+                height: 40px; 
+                background-color: rgba($color: #207b94, $alpha: 0.4);
+            }
+            .text-input::-webkit-input-placeholder {
+                font-size: 14px;
+                color: #cec7c7;
+            }    
+            .text-input:-ms-input-placeholder {
+                font-size: 14px;
+                color: #cec7c7; 
+            }    
+            .text-input::-moz-placeholder {
+                font-size: 14px;
+                color: #cec7c7;    
+            }    
+        }
+        .buttom{
+            width: 100%;
+            position: absolute;
+            bottom:2%;
+            span{
+                color: #d8d5d5;
+                padding: 10px;
+            }
+            .psw{
+                position: absolute;
+                right: 10%;
+            }
+        }
+    }
+}

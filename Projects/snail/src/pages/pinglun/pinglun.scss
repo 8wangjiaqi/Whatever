@@ -1,0 +1,48 @@
+page-pinglun {
+    .allpinglun{
+        margin-left: 5%;
+    }
+    .touxiang{
+        width: 30px;
+        height: 30px;
+       border-radius: 50%;
+    }
+    .username{
+        display: block;
+        margin-top: -30px;
+        margin-left: 40px;
+    }
+    .pingluns{
+        width: 90%;
+        margin-left: 5%;
+        background-color: rgb(246, 248, 250);
+        margin-bottom:3%;
+    }
+    .div1{
+        margin-left: 40px;
+    }
+    .other{
+        margin-left: 40px;
+    }
+    .zan{
+        float: left;
+        margin-right: 15px;
+    }
+    .zan2{
+        color: red;
+    }
+    .pinglun{
+        float: left;
+    }
+    .huifu{
+        position: relative;
+    }
+    .zanpinglun{
+        display: inline-block;
+        position: absolute;
+        margin-left: 15%;
+    }
+    .time,.huifu,.zanpinglun{
+        color:grey;
+    }
+}

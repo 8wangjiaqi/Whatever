@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar id="a" color="blu">
+    <ion-title text-center>记一笔&nbsp;&nbsp;<ion-icon name="md-create"></ion-icon></ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name=""></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content>
+  <img src="assets/imgs/plan.png">
+  <button ion-button full (click)="gonullpage()" >添加记录</button>
+
+  <div id="listdiv">
+    <ul id="list" text-center [(ngModel)]="arr" ngDefaultControl>
+      <li  ngDefaultControl *ngFor="let item of arr;let i = index;" (click)="gomingxi(i)" >{{item.goodtype}}:{{item.money}}&nbsp;&nbsp;&nbsp;date:{{item.time}}
+      </li>  
+      
+    </ul>
+  </div>
+</ion-content>

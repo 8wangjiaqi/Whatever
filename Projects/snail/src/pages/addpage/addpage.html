@@ -1,0 +1,40 @@
+<ion-header >
+  <ion-navbar color="blu">
+    <ion-buttons style="position: absolute;left:2%">
+      <button ion-button icon-only (click)="showConfirm()">
+        取消       
+      </button>
+    </ion-buttons>  
+    <ion-title text-center>在路上</ion-title>
+    <ion-buttons style="position: absolute;right:2%;top:25%;">
+      <button ion-button icon-only>
+        发布
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-textarea placeholder="分享你的旅行攻略，你的心情。。。"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>禁止转载</ion-label>
+      <ion-toggle [(ngModel)]="zhuanzai"></ion-toggle>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label>匿名身份</ion-label>
+      <ion-toggle [(ngModel)]="niming"></ion-toggle>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>公开</ion-label>
+      <ion-toggle [(ngModel)]="gongkai"></ion-toggle>
+    </ion-item>
+
+  </ion-list>
+</ion-content>
