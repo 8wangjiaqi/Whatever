@@ -63,4 +63,9 @@ export class ContactPage {
       title : '我的收藏'
     });
   }
+
+  Clear(){
+    // console.log("清除");
+    localStorage.clear();
+  }
 }

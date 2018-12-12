@@ -47,6 +47,49 @@ var CollectionPage = /** @class */ (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConcerningPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+/**
+ * Generated class for the ConcerningPage page.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+var ConcerningPage = /** @class */ (function () {
+    function ConcerningPage(navCtrl, navParams) {
+        this.navCtrl = navCtrl;
+        this.navParams = navParams;
+        this.titleTitle = this.navParams.get('title');
+    }
+    ConcerningPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-concerning',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\concerning\concerning.html"*/'<!-- 关于我们 -->\n<ion-header text-center no-border>\n  <ion-navbar color="major">\n    <ion-title>{{titleTitle}}</ion-title>\n    <ion-buttons end>\n      <button ion-button>\n        <ion-icon></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="picture">\n    <img src="assets/imgs/蜗牛.png" alt="logo">\n  </div>\n  <div class="font">\n    <div class="title" text-center>蜗牛旅行</div>\n    <div class="platform" text-center>v1.0.0</div>\n  </div>\n  <div class="list">\n    <ul>\n      <li>\n          <span>功能介绍</span>\n          <span float-right class="right">></span>\n      </li>\n      <li>\n          <span>协议及声明</span>\n          <span float-right class="right">></span>\n      </li>\n    </ul>\n  </div>\n  <div class="bottom">\n    <div class="statement" text-center>\n      <span><a href="">服务条款&nbsp;&nbsp;&nbsp;</a></span>\n      |\n      <span><a href="">&nbsp;&nbsp;&nbsp;隐私声明</a></span>\n    </div>\n    <div class="copyright" text-center>\n        Copyright © 2018-2018 SnailTravel.All Righr Reserved.\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\concerning\concerning.html"*/,
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    ], ConcerningPage);
+    return ConcerningPage;
+}());
+
+//# sourceMappingURL=concerning.js.map
+
+/***/ }),
+
+/***/ 106:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EnrollPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
@@ -95,7 +138,7 @@ var EnrollPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 106:
+/***/ 107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -135,49 +178,6 @@ var MessagePage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=message.js.map
-
-/***/ }),
-
-/***/ 107:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConcerningPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-/**
- * Generated class for the ConcerningPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
-var ConcerningPage = /** @class */ (function () {
-    function ConcerningPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
-        this.titleTitle = this.navParams.get('title');
-    }
-    ConcerningPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-concerning',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\concerning\concerning.html"*/'<!-- 关于我们 -->\n<ion-header text-center no-border>\n  <ion-navbar color="major">\n    <ion-title>{{titleTitle}}</ion-title>\n    <ion-buttons end>\n      <button ion-button>\n        <ion-icon></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="picture">\n    <img src="assets/imgs/蜗牛.png" alt="logo">\n  </div>\n  <div class="font">\n    <div class="title" text-center>蜗牛旅行</div>\n    <div class="platform" text-center>v1.0.0</div>\n  </div>\n  <div class="list">\n    <ul>\n      <li>\n          <span>功能介绍</span>\n          <span float-right class="right">></span>\n      </li>\n      <li>\n          <span>协议及声明</span>\n          <span float-right class="right">></span>\n      </li>\n    </ul>\n  </div>\n  <div class="bottom">\n    <div class="statement" text-center>\n      <span><a href="">服务条款&nbsp;&nbsp;&nbsp;</a></span>\n      |\n      <span><a href="">&nbsp;&nbsp;&nbsp;隐私声明</a></span>\n    </div>\n    <div class="copyright" text-center>\n        Copyright © 2018-2018 SnailTravel.All Righr Reserved.\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\concerning\concerning.html"*/,
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
-    ], ConcerningPage);
-    return ConcerningPage;
-}());
-
-//# sourceMappingURL=concerning.js.map
 
 /***/ }),
 
@@ -297,15 +297,15 @@ var map = {
 		7
 	],
 	"../pages/concerning/concerning.module": [
-		295,
+		293,
 		6
 	],
 	"../pages/enroll/enroll.module": [
-		293,
+		294,
 		5
 	],
 	"../pages/fans/fans.module": [
-		294,
+		295,
 		4
 	],
 	"../pages/message/message.module": [
@@ -349,8 +349,8 @@ module.exports = webpackAsyncContext;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_register__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__message_message__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__concerning_concerning__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__message_message__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__concerning_concerning__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__opinion_opinion__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__fans_fans__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__attention_attention__ = __webpack_require__(51);
@@ -423,13 +423,18 @@ var ContactPage = /** @class */ (function () {
             title: '我的收藏'
         });
     };
+    ContactPage.prototype.Clear = function () {
+        // console.log("清除");
+        localStorage.clear();
+    };
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\contact\contact.html"*/'<!-- 我的 -->\n<ion-header>\n  <div class="top">\n    <img src="assets/imgs/header_1.jpg" alt="头像" (click)="goRegister()">\n    <p text-center class="p1">\n      <ion-icon ios="ios-create" md="md-create"></ion-icon>\n      杏仁\n    </p>\n    <p text-center class="p2">\n      <ion-icon ios="ios-create" md="md-create"></ion-icon>\n      很酷,不说话\n    </p>\n</div>\n</ion-header>\n\n<ion-content>\n  <div class="con1">\n    <ul>\n      <li (click)="goFans()">\n        <p text-center class="p1">{{fans_volume}}</p>\n        <p text-center class="p2">粉丝</p>\n      </li>\n      <li (click)="goAttention()">\n        <p text-center class="p1">{{attention_volume}}</p>\n        <p text-center class="p2">关注</p>\n      </li>\n      <li (click)="goStrategy()">\n        <p text-center class="p1">32</p>\n        <p text-center class="p2">我的攻略</p>\n      </li>\n    </ul>\n  </div>\n  <div class="con2">\n    <ul>\n      <li (click)="goCollection()">\n        <ion-icon ios="logo-codepen" md="logo-codepen" class="icon1"></ion-icon>\n        <span>我的收藏</span>\n        <span float-right class="right">></span>\n      </li>\n      <li (click)="goMessage()">\n        <ion-icon ios="ios-text" md="md-text" class="icon1"></ion-icon>\n        <span>我的消息</span>\n        <ion-icon name="notifications-outline" class="bell"></ion-icon>\n        <span float-right class="right">></span>\n      </li>\n      <li (click)="goConcerning()">\n          <ion-icon ios="ios-people" md="md-people" class="icon1"></ion-icon>\n          <span>关于我们</span>\n          <span float-right class="right">></span>\n      </li>\n      <li (click)="goOpinion()">\n          <ion-icon ios="ios-create" md="md-create" class="icon1"></ion-icon>\n          <span>意见反馈</span>\n          <span float-right class="right">></span>\n      </li>\n      <li (click)="goRegister()">\n          <ion-icon ios="ios-close-circle" md="md-close-circle" class="icon1"></ion-icon>\n          <span>退出登录</span>\n          <span float-right class="right">></span>\n      </li>\n    </ul>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\contact\contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\contact\contact.html"*/'<!-- 我的 -->\n<ion-header>\n  <div class="top">\n    <img src="assets/imgs/header_1.jpg" alt="头像" (click)="goRegister()">\n    <p text-center class="p1">\n      <ion-icon ios="ios-create" md="md-create"></ion-icon>\n      杏仁\n    </p>\n    <p text-center class="p2">\n      <ion-icon ios="ios-create" md="md-create"></ion-icon>\n      很酷,不说话\n    </p>\n</div>\n</ion-header>\n\n<ion-content>\n  <div class="con1">\n    <ul>\n      <li (click)="goFans()">\n        <p text-center class="p1">{{fans_volume}}</p>\n        <p text-center class="p2">粉丝</p>\n      </li>\n      <li (click)="goAttention()">\n        <p text-center class="p1">{{attention_volume}}</p>\n        <p text-center class="p2">关注</p>\n      </li>\n      <li (click)="goStrategy()">\n        <p text-center class="p1">32</p>\n        <p text-center class="p2">我的攻略</p>\n      </li>\n    </ul>\n  </div>\n  <div class="con2">\n    <ul>\n      <li (click)="goCollection()">\n        <ion-icon ios="logo-codepen" md="logo-codepen" class="icon1"></ion-icon>\n        <span>我的收藏</span>\n        <span float-right class="right">></span>\n      </li>\n      <li (click)="goMessage()">\n        <ion-icon ios="ios-text" md="md-text" class="icon1"></ion-icon>\n        <span>我的消息</span>\n        <ion-icon name="notifications-outline" class="bell"></ion-icon>\n        <span float-right class="right">></span>\n      </li>\n      <li (click)="goConcerning()">\n          <ion-icon ios="ios-people" md="md-people" class="icon1"></ion-icon>\n          <span>关于我们</span>\n          <span float-right class="right">></span>\n      </li>\n      <li (click)="goOpinion()">\n          <ion-icon ios="ios-create" md="md-create" class="icon1"></ion-icon>\n          <span>意见反馈</span>\n          <span float-right class="right">></span>\n      </li>\n      <li (click)="goRegister();Clear()">\n          <ion-icon ios="ios-close-circle" md="md-close-circle" class="icon1"></ion-icon>\n          <span>退出登录</span>\n          <span float-right class="right">></span>\n      </li>\n    </ul>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\contact\contact.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */]) === "function" && _a || Object])
     ], ContactPage);
     return ContactPage;
+    var _a;
 }());
 
 //# sourceMappingURL=contact.js.map
@@ -1071,9 +1076,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_strategy_strategy__ = __webpack_require__(109);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_attention_attention__ = __webpack_require__(51);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_register_register__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_enroll_enroll__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_concerning_concerning__ = __webpack_require__(107);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_message_message__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_enroll_enroll__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_concerning_concerning__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_message_message__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_opinion_opinion__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_fans_fans__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_addpage_addpage__ = __webpack_require__(172);
@@ -1156,9 +1161,9 @@ var AppModule = /** @class */ (function () {
                     links: [
                         { loadChildren: '../pages/attention/attention.module#AttentionPageModule', name: 'AttentionPage', segment: 'attention', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/collection/collection.module#CollectionPageModule', name: 'CollectionPage', segment: 'collection', priority: 'low', defaultHistory: [] },
+                        { loadChildren: '../pages/concerning/concerning.module#ConcerningPageModule', name: 'ConcerningPage', segment: 'concerning', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/enroll/enroll.module#EnrollPageModule', name: 'EnrollPage', segment: 'enroll', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/fans/fans.module#FansPageModule', name: 'FansPage', segment: 'fans', priority: 'low', defaultHistory: [] },
-                        { loadChildren: '../pages/concerning/concerning.module#ConcerningPageModule', name: 'ConcerningPage', segment: 'concerning', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/message/message.module#MessagePageModule', name: 'MessagePage', segment: 'message', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/opinion/opinion.module#OpinionPageModule', name: 'OpinionPage', segment: 'opinion', priority: 'low', defaultHistory: [] },
                         { loadChildren: '../pages/register/register.module#RegisterPageModule', name: 'RegisterPage', segment: 'register', priority: 'low', defaultHistory: [] },
@@ -1584,7 +1589,7 @@ var FansPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__enroll_enroll__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__enroll_enroll__ = __webpack_require__(106);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(46);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
