@@ -1,0 +1,31 @@
+page-sub-header {
+    ion-header{
+        ion-navbar{
+            ion-buttons{
+                width: 44px;
+                ion-icon{
+                    font-size: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+.action-sheets-basic-page {
+    .phone {
+        border-bottom: 1px rgb(204, 198, 198) solid;
+    }
+    .select {
+        border-bottom: 4px rgb(114, 109, 109) solid;
+    }
+    .cancel {
+        height: 30px;
+    }
+  }
+.action-sheet-md .action-sheet-group .button-inner { 
+    justify-content: center!important;
+    text-align: center;
+}
+// .action-sheet-md .action-sheet-button {
+//     min-height: 3.8rem;
+// }

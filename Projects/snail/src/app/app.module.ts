@@ -35,6 +35,9 @@ import { MessagePage } from '../pages/message/message';
 import { OpinionPage } from '../pages/opinion/opinion';
 import { FansPage } from '../pages/fans/fans';
 import { AddpagePage } from '../pages/addpage/addpage';
+import { HttpClientModule } from '@angular/common/http';
+import { MyselfPage } from '../pages/myself/myself';
+import { SubHeaderPage } from '../pages/sub-header/sub-header';
 
 @NgModule({
   declarations: [
@@ -61,11 +64,14 @@ import { AddpagePage } from '../pages/addpage/addpage';
     AttentionPage,
     StrategyPage,
     CollectionPage,
-    AddpagePage
+    AddpagePage,
+    MyselfPage,
+    SubHeaderPage
   ],
   imports: [
     HttpModule,
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp,{
       backButtonText: '',
       tabsHideOnSubPages:true,
@@ -96,7 +102,9 @@ import { AddpagePage } from '../pages/addpage/addpage';
     AttentionPage,
     StrategyPage,
     CollectionPage,
-    AddpagePage
+    AddpagePage,
+    MyselfPage,
+    SubHeaderPage
   ],
   providers: [
 

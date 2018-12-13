@@ -1,0 +1,34 @@
+<!-- 个人信息 -->
+<ion-header text-center no-border>
+  <ion-navbar color="major">
+    <ion-title>{{titleTitle}}</ion-title>
+    <ion-buttons end>
+      <button ion-button>
+        <ion-icon></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="information">
+    <ul>
+      <li class="header" (click)="subHeader()">
+        <span>头像</span>
+        <span float-right class="right">></span>
+      </li>
+      <li>
+        <span>名字</span>
+        <span float-right class="right">></span>
+      </li>
+      <li>
+        <span>个性签名</span>
+        <span float-right class="right">></span>
+      </li>
+      <li>
+        <span>地区</span>
+        <span float-right class="right">></span>
+      </li>
+    </ul>
+  </div>
+</ion-content>

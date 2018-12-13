@@ -10,16 +10,16 @@
     <div class="pn">
       <label>
         <ion-icon name="contact"></ion-icon>
-        <input type="text" placeholder="手机号/邮箱" class="text-input">
+        <input type="text" placeholder="手机号/邮箱" class="text-input" [(ngModel)]="tel">
       </label>
     </div>
     <div class="pw">
       <label>
         <ion-icon name="lock"></ion-icon>
-        <input type="password" placeholder="密码" class="text-input">
+        <input type="password" placeholder="密码" class="text-input" [(ngModel)]="pwd">
       </label>
     </div>
-    <button ion-button block>登录</button>
+    <button ion-button block (click)="do()">登录</button>
   </div>
   <div class="buttom">
     <span float-left (click)="goEnroll()">没有账号？立即注册</span>

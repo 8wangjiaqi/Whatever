@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
-import { RegisterPage } from '../register/register';
 import { MessagePage } from '../message/message';
 import { ConcerningPage } from '../concerning/concerning';
 import { OpinionPage } from '../opinion/opinion';
@@ -8,6 +7,7 @@ import { FansPage } from '../fans/fans';
 import { AttentionPage } from '../attention/attention';
 import { StrategyPage } from '../strategy/strategy';
 import { CollectionPage } from '../collection/collection';
+import { MyselfPage } from '../myself/myself';
 
 @Component({
   selector: 'page-contact',
@@ -23,9 +23,9 @@ export class ContactPage {
     this.fans_volume = FansPage.fansarr.length;
   }
   
-  goRegister(){
-    this.navCtrl.push(RegisterPage,{
-      title : '登录'
+  goMyself(){
+    this.navCtrl.push(MyselfPage,{
+      title : '个人信息'
     });
   }  
   goMessage(){

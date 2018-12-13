@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, Button } from 'ionic-angular';
-import { ContactPage } from '../contact/contact';
+import { NavController, NavParams, AlertController, Button } from 'ionic-angular';
 import { Events } from 'ionic-angular'; 
 import { AttentionPage } from '../attention/attention';
    
@@ -11,7 +10,6 @@ import { AttentionPage } from '../attention/attention';
  * Ionic pages and navigation.
  */
 
-@IonicPage()
 @Component({
   selector: 'page-fans',
   templateUrl: 'fans.html',
