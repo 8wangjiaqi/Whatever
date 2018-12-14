@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Header } from 'ionic-angular';
 import { Platform, ActionSheetController } from 'ionic-angular';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { ContactPage } from '../contact/contact';
+
 /**
  * Generated class for the SubHeaderPage page.
  *
@@ -14,15 +17,17 @@ import { Platform, ActionSheetController } from 'ionic-angular';
 })
 export class SubHeaderPage {
   titleTitle: any;
-
-  constructor(public platform: Platform,public actionsheetCtrl: ActionSheetController,public navCtrl: NavController, public navParams: NavParams) {
+  // header;
+  imgUrl:string;
+  constructor(private camera: Camera,public platform: Platform,public actionsheetCtrl: ActionSheetController,public navCtrl: NavController, public navParams: NavParams) {
     this.titleTitle =this.navParams.get('title');
+    this.imgUrl = ContactPage.user.headerSrc;
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SubHeaderPage');
   }
-
+  
   openMenu() {
     let actionSheet = this.actionsheetCtrl.create({
       cssClass: 'action-sheets-basic-page',
@@ -32,6 +37,12 @@ export class SubHeaderPage {
           cssClass: 'phone',
           handler: () => {
             console.log('拍照');
+            const options: CameraOptions = {
+              quality: 100,
+              destinationType: this.camera.DestinationType.DATA_URL,
+              encodingType: this.camera.EncodingType.JPEG,
+              mediaType: this.camera.MediaType.PICTURE
+            }
           }
         },
         {

@@ -36910,6 +36910,18 @@ page-enroll ion-content .close ion-icon {
   color: #fff;
 }
 
+page-enroll ion-content .close .over {
+  width: 40px;
+  height: 22px;
+  float: right;
+  color: #207b94;
+  border: #207b94 0.5px solid;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+
 page-enroll ion-content .header {
   margin-top: 50px;
   text-align: center;
@@ -37390,23 +37402,19 @@ page-myself ion-content .information ul {
 }
 
 page-myself ion-content .information ul .header {
-  padding: 0;
-  margin: 0;
   border-top: 0.5px solid #dfdede;
   width: 100%;
   height: 70px;
 }
 
 page-myself ion-content .information ul .header span {
-  line-height: 70px;
+  line-height: 69px;
 }
 
 page-myself ion-content .information ul li {
   border-bottom: 0.5px solid #dfdede;
   height: 35px;
   width: 100%;
-  padding: 0;
-  margin: 0;
 }
 
 page-myself ion-content .information ul li span {
@@ -37571,6 +37579,18 @@ page-register ion-content .close {
 page-register ion-content .close ion-icon {
   font-size: 25px;
   color: #fff;
+}
+
+page-register ion-content .close .over {
+  width: 40px;
+  height: 22px;
+  float: right;
+  color: #207b94;
+  border: #207b94 0.5px solid;
+  border-radius: 3px;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
 }
 
 page-register ion-content .header {

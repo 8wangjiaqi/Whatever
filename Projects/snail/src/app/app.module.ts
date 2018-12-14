@@ -4,6 +4,7 @@ import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
 import {HttpModule} from '@angular/http';
+import { Camera } from '@ionic-native/camera';
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -107,9 +108,9 @@ import { SubHeaderPage } from '../pages/sub-header/sub-header';
     SubHeaderPage
   ],
   providers: [
-
     StatusBar,
     SplashScreen,
+    Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     // LocalStorageProvider
   ]
