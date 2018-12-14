@@ -24,28 +24,28 @@ export class FansPage {
       status:1,
       headerSrc:"assets/imgs/header_4.jpg",
       name:"佳琦琦琦",
-      signature:"来自 个人主页",
+      signature:4,
       buttonValue:"互相关注"
     },
     {
       status:0,
       headerSrc:"assets/imgs/header_5.jpg",
       name:"咿呀呀",
-      signature:"来自 推荐",
+      signature:3,
       buttonValue:"+ 关注"
     },
     {
       status:1,
       headerSrc:"assets/imgs/header_2.jpg",
       name:"123",
-      signature:"来自 推荐",
+      signature:2,
       buttonValue:"互相关注"
     },
     {
       status:0,
       headerSrc:"assets/imgs/header_3.jpg",
       name:"lemon",
-      signature:"来自 个人主页",
+      signature:2,
       buttonValue:"+ 关注"
     },
   ];

@@ -1,14 +1,14 @@
 <!-- 我的 -->
 <ion-header>
   <div class="top">
-    <img src="assets/imgs/header_1.jpg" alt="头像" (click)="goMyself()">
+    <img src="{{user_display.headerSrc}}" alt="头像" (click)="goMyself()">
     <p text-center class="p1">
       <ion-icon ios="ios-create" md="md-create"></ion-icon>
-      杏仁
+      {{user_display.name}}
     </p>
     <p text-center class="p2">
       <ion-icon ios="ios-create" md="md-create"></ion-icon>
-      很酷,不说话
+      {{user_display.autograph}}
     </p>
 </div>
 </ion-header>

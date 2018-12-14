@@ -24,35 +24,35 @@ export class AttentionPage {
       status:1,
       headerSrc:"assets/imgs/header_4.jpg",
       name:"佳琦琦琦",
-      signature:"来自 个人主页",
-      buttonValue:"互相关注"
+      signature:4,
+      buttonValue:"互相关注",
     },
     {
       status:0,
       headerSrc:"assets/imgs/header_7.jpg",
       name:"大头大头",
-      signature:"来自 个人主页",
+      signature:4,
       buttonValue:"√ 已关注"
     },
     {
       status:0,
       headerSrc:"assets/imgs/header_1.jpg",
       name:"hhh_",
-      signature:"来自 推荐",
+      signature:2,
       buttonValue:"√ 已关注"
     },
     {
       status:0,
       headerSrc:"assets/imgs/header_6.jpg",
       name:"啊哈哈",
-      signature:"来自 推荐",
+      signature:3,
       buttonValue:"√ 已关注"
     },
     {
       status:1,
       headerSrc:"assets/imgs/header_2.jpg",
       name:"123",
-      signature:"来自 推荐",
+      signature:2,
       buttonValue:"互相关注"
     },
   ];

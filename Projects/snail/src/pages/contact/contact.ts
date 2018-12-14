@@ -8,6 +8,7 @@ import { AttentionPage } from '../attention/attention';
 import { StrategyPage } from '../strategy/strategy';
 import { CollectionPage } from '../collection/collection';
 import { MyselfPage } from '../myself/myself';
+import { RegisterPage } from '../register/register';
 
 @Component({
   selector: 'page-contact',
@@ -16,7 +17,14 @@ import { MyselfPage } from '../myself/myself';
 export class ContactPage {
   attention_volume;
   fans_volume;
+  public static user = {
+    headerSrc: "assets/imgs/header_1.jpg",
+    name: "杏仁",
+    autograph: "跟我一起旅游吧"
+  };
+  user_display;
   constructor(public navCtrl: NavController) {
+    this.user_display = ContactPage.user;
   }
   ionViewWillEnter() { //page初始化时
     this.attention_volume = AttentionPage.attentionarr.length;
@@ -63,9 +71,12 @@ export class ContactPage {
       title : '我的收藏'
     });
   }
-
+  goRegister(){
+    this.navCtrl.push(RegisterPage,{
+      title : '登录'
+    });
+  }
   Clear(){
-    // console.log("清除");
     localStorage.clear();
   }
 }
