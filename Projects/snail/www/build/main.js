@@ -645,6 +645,9 @@ var ContactPage = /** @class */ (function () {
         if (this.gonglue.username == null) {
             this.gonglue.username = "请点击登录";
         }
+        if (this.gonglue.headerSrc == null) {
+            this.gonglue.headerSrc = "assets/imgs/un_register.jpg";
+        }
     }
     ContactPage.prototype.ionViewWillEnter = function () {
         this.attention_volume = __WEBPACK_IMPORTED_MODULE_6__attention_attention__["a" /* AttentionPage */].attentionarr.length;
@@ -699,13 +702,22 @@ var ContactPage = /** @class */ (function () {
     ContactPage.prototype.Clear = function () {
         localStorage.clear();
     };
+    ContactPage.prototype.goJudge = function () {
+        if (this.gonglue.username == "请点击登录") {
+            this.goRegister();
+        }
+        else {
+            this.goMyself();
+        }
+    };
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"D:\Whatever\Projects\snail\src\pages\contact\contact.html"*/'<!-- 我的 -->\n\n<ion-header>\n\n  <div class="top">\n\n        <img src="" alt="头像" onerror="this.src=\'assets/imgs/un_register.jpg\'"/> \n\n        <p text-center class="p1">\n\n          {{gonglue.name}}\n\n        </p>\n\n</div>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="con1">\n\n    <ul>\n\n      <li (click)="goFans()">\n\n        <p text-center class="p1">{{fans_volume}}</p>\n\n        <p text-center class="p2">粉丝</p>\n\n      </li>\n\n      <li (click)="goAttention()">\n\n        <p text-center class="p1">{{attention_volume}}</p>\n\n        <p text-center class="p2">关注</p>\n\n      </li>\n\n      <li (click)="goStrategy()">\n\n        <p text-center class="p1">32</p>\n\n        <p text-center class="p2">我的攻略</p>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n  <div class="con2">\n\n    <ul>\n\n      <li (click)="goCollection()">\n\n        <ion-icon ios="logo-codepen" md="logo-codepen" class="icon1"></ion-icon>\n\n        <span>我的收藏</span>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goMessage()">\n\n        <ion-icon ios="ios-text" md="md-text" class="icon1"></ion-icon>\n\n        <span>我的消息</span>\n\n        <ion-icon name="notifications-outline" class="bell"></ion-icon>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goConcerning()">\n\n          <ion-icon ios="ios-people" md="md-people" class="icon1"></ion-icon>\n\n          <span>关于我们</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goOpinion()">\n\n          <ion-icon ios="ios-create" md="md-create" class="icon1"></ion-icon>\n\n          <span>意见反馈</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goRegister();Clear()">\n\n          <ion-icon ios="ios-close-circle" md="md-close-circle" class="icon1"></ion-icon>\n\n          <span>退出登录</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Whatever\Projects\snail\src\pages\contact\contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"D:\Whatever\Projects\snail\src\pages\contact\contact.html"*/'<!-- 我的 -->\n\n<ion-header>\n\n  <div class="top" class="goJudge()">\n\n    <img src="{{gonglue.headerSrc}}" alt="头像" />\n\n    <p text-center class="p1">\n\n      {{gonglue.username}}\n\n    </p>\n\n  </div>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="con1">\n\n    <ul>\n\n      <li (click)="goFans()">\n\n        <p text-center class="p1">{{fans_volume}}</p>\n\n        <p text-center class="p2">粉丝</p>\n\n      </li>\n\n      <li (click)="goAttention()">\n\n        <p text-center class="p1">{{attention_volume}}</p>\n\n        <p text-center class="p2">关注</p>\n\n      </li>\n\n      <li (click)="goStrategy()">\n\n        <p text-center class="p1">32</p>\n\n        <p text-center class="p2">我的攻略</p>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n  <div class="con2">\n\n    <ul>\n\n      <li (click)="goCollection()">\n\n        <ion-icon ios="logo-codepen" md="logo-codepen" class="icon1"></ion-icon>\n\n        <span>我的收藏</span>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goMessage()">\n\n        <ion-icon ios="ios-text" md="md-text" class="icon1"></ion-icon>\n\n        <span>我的消息</span>\n\n        <ion-icon name="notifications-outline" class="bell"></ion-icon>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goConcerning()">\n\n          <ion-icon ios="ios-people" md="md-people" class="icon1"></ion-icon>\n\n          <span>关于我们</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goOpinion()">\n\n          <ion-icon ios="ios-create" md="md-create" class="icon1"></ion-icon>\n\n          <span>意见反馈</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goRegister();Clear()">\n\n          <ion-icon ios="ios-close-circle" md="md-close-circle" class="icon1"></ion-icon>\n\n          <span>退出登录</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Whatever\Projects\snail\src\pages\contact\contact.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["a" /* HttpClient */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object])
     ], ContactPage);
     return ContactPage;
+    var _a, _b;
 }());
 
 //# sourceMappingURL=contact.js.map
