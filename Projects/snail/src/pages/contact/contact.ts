@@ -36,6 +36,9 @@ export class ContactPage {
       // console.log('1',this.tel);
       console.log(data);
     });
+    if(this.gonglue.username==null){
+      this.gonglue.username = "请点击登录"
+    }
   }
   ionViewWillEnter() { //page初始化时
     this.attention_volume = AttentionPage.attentionarr.length;

@@ -1,17 +1,10 @@
 <!-- 我的 -->
 <ion-header>
   <div class="top">
-    <!-- <li *ngFor="let item of gonglue">  -->
-      <!-- <img src="{{user_display.headerSrc}}" alt="头像" (click)="goMyself()"> -->
-      <p text-center class="p1">
-        <ion-icon ios="ios-create" md="md-create"></ion-icon>
-        <li *ngFor="let item of gonglue"> {{item.username}}</li>
-      </p>
-      <p text-center class="p2">
-        <ion-icon ios="ios-create" md="md-create"></ion-icon>
-        <li *ngFor="let item of gonglue"> {{item.signature}} </li>
-      </p>
-    <!-- </li> -->
+        <img src="" alt="头像" onerror="this.src='assets/imgs/un_register.jpg'"/> 
+        <p text-center class="p1">
+          {{gonglue.name}}
+        </p>
 </div>
 </ion-header>
 
