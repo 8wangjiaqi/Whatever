@@ -8,18 +8,14 @@
     <img src="assets/imgs/蜗牛.png" alt="图标">
   </div>
   <div class="box">
-    <div class="pn">
+    <!-- <div class="pn">
       <label>
         <ion-icon name="contact"></ion-icon>
         <input type="text" placeholder="手机号/邮箱" class="text-input">
       </label>
     </div>
     <div class="vc">
-      <label>
-        <ion-icon name="checkmark"></ion-icon>
-        <input type="number" placeholder="验证码" class="text-input">
-        <button ion-button>发送验证码</button>
-      </label>
+   
     </div>
     <div class="pw">
       <label>
@@ -28,6 +24,21 @@
       </label>
     </div>
     <button ion-button block>注册</button>
+  </div> -->
+  <form  (ngSubmit)="logForm()">
+  <ion-item>
+ 
+    <ion-input type="text" placeholder="用户名" name="username" [(ngModel)]="tel"></ion-input>
+  </ion-item>
+
+  <ion-item>
+
+    <ion-input type="password" placeholder="密码" name='pass' [(ngModel)]="pwd"></ion-input>
+  </ion-item>
+  <button ion-button block>注册</button>
+
+
+</form>
   </div>
   <div class="buttom">
     <span float-left (click)="goRegister()">已有账号？去登陆</span>

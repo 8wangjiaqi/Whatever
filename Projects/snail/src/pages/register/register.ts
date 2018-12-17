@@ -21,6 +21,7 @@ export class RegisterPage {
 
   tel;
   pwd;
+  public static t;
 
   constructor(public app:App,public alertCtrl:AlertController,public http:HttpClient,public navCtrl: NavController, public navParams: NavParams){
   // RegisterPage.t=this.tel;
@@ -30,7 +31,7 @@ export class RegisterPage {
     this.navCtrl.push(EnrollPage,{
       title : '注册'
     });
-    console.log("EnrollPage");
+    // console.log("EnrollPage");
   }  
   goTabs(){
     this.navCtrl.push(TabsPage);
@@ -43,10 +44,10 @@ doPost(){
     "pwd":this.pwd
   },{
     headers:this.headers,
-    //responseType:"text"  //返回字符串形式
   }).subscribe((data)=>{
-    console.log(data);
-    console.log(this.tel);
+    RegisterPage.t=this.tel;
+    // console.log(data);
+    // console.log(this.tel);
         //1成功 0密码空 -1用户不存在 -2密码错误 -3用户名空
     switch(data){
       case 0:
@@ -56,10 +57,14 @@ doPost(){
           this.goHome();
           break;
       case -1:
-          this.presentPrompt('该手机号未注册');
+          this.presentPrompt('该用户名未注册');
           break;
       case -2:
           this.presentPrompt('密码错误');
+          break;
+        
+      case -3:
+          this.presentPrompt('用户名不能为空');
           break;
     }
   });
@@ -81,13 +86,14 @@ presentPrompt(str) {
         text: '确认',
         role: 'cancel',
         handler: data => {
-          console.log('Confirm clicked');
+          // console.log('Confirm clicked');
         }
       }
     ]
   });
   alert.present();
 }
+
 
 
 }

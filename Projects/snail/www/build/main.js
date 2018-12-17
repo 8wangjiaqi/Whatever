@@ -1,16 +1,16 @@
 webpackJsonp([0],{
 
-/***/ 100:
+/***/ 102:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact_contact__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shouyeqq_shouyeqq__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact_contact__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shouyeqq_shouyeqq__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__addpage_addpage__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__addpage_addpage__ = __webpack_require__(222);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -41,7 +41,7 @@ var TabsPage = /** @class */ (function () {
         }, false);
     };
     TabsPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\tabs\tabs.html"*/'<ion-tabs>\n  <ion-tab [root]="tab1Root" tabTitle="首页" tabIcon="information-circle"></ion-tab>\n  <ion-tab tabIcon="md-add-circle"></ion-tab>\n  <ion-tab [root]="tab2Root" tabTitle="助手" tabIcon="md-build"></ion-tab>\n  \n  <ion-tab [root]="tab3Root" tabTitle="我" tabIcon="contacts"></ion-tab>\n</ion-tabs>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\tabs\tabs.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\tabs\tabs.html"*/'<ion-tabs>\n\n  <ion-tab [root]="tab1Root" tabTitle="首页" tabIcon="information-circle"></ion-tab>\n\n  <ion-tab tabIcon="md-add-circle"></ion-tab>\n\n  <ion-tab [root]="tab2Root" tabTitle="助手" tabIcon="md-build"></ion-tab>\n\n  \n\n  <ion-tab [root]="tab3Root" tabTitle="我" tabIcon="contacts"></ion-tab>\n\n</ion-tabs>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\tabs\tabs.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ionic_angular__["h" /* ModalController */]])
     ], TabsPage);
@@ -52,14 +52,14 @@ var TabsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 101:
+/***/ 103:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FansPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__attention_attention__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__attention_attention__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -159,7 +159,7 @@ var FansPage = /** @class */ (function () {
     ];
     FansPage = FansPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-fans',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\fans\fans.html"*/'<!-- 粉丝 -->\n<ion-header text-center no-border>\n  <ion-navbar color="major">\n    <ion-title>{{titleTitle}}</ion-title>\n    <ion-buttons end>\n      <button ion-button>\n        <ion-icon></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="fans">\n    <ul>\n      <li *ngFor="let item of fans;let i = index">\n        <div class="header">\n          <img src="{{item.headerSrc}}" alt="头像">\n        </div>\n        <div class="center">\n          <div class="name">\n            {{item.name}}\n          </div>\n          <div class="signature">\n            粉丝&nbsp;&nbsp;{{item.signature}}\n          </div>\n        </div>\n        <div class="right">\n          <button [ngClass]="{\'only\':item.status == 0,\'each\':item.status == 1}" (click)="show(i);showConfirm($event);">{{item.buttonValue}}</button>\n        </div>\n      </li>\n    </ul>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\fans\fans.html"*/,
+            selector: 'page-fans',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\fans\fans.html"*/'<!-- 粉丝 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="fans">\n\n    <ul>\n\n      <li *ngFor="let item of fans;let i = index">\n\n        <div class="header">\n\n          <img src="{{item.headerSrc}}" alt="头像">\n\n        </div>\n\n        <div class="center">\n\n          <div class="name">\n\n            {{item.name}}\n\n          </div>\n\n          <div class="signature">\n\n            粉丝&nbsp;&nbsp;{{item.signature}}\n\n          </div>\n\n        </div>\n\n        <div class="right">\n\n          <button [ngClass]="{\'only\':item.status == 0,\'each\':item.status == 1}" (click)="show(i);showConfirm($event);">{{item.buttonValue}}</button>\n\n        </div>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\fans\fans.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
     ], FansPage);
@@ -171,14 +171,14 @@ var FansPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 102:
+/***/ 104:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AttentionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fans_fans__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fans_fans__ = __webpack_require__(103);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -279,7 +279,7 @@ var AttentionPage = /** @class */ (function () {
     ];
     AttentionPage = AttentionPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-attention',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\attention\attention.html"*/'<!-- 关注 -->\n<ion-header text-center no-border>\n  <ion-navbar color="major">\n    <ion-title>{{titleTitle}}</ion-title>\n    <ion-buttons end>\n      <button ion-button>\n        <ion-icon></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n  \n<ion-content padding>\n  <div class="fans">\n    <ul>\n        <li *ngFor="let item of attention;let i = index">\n        <div class="header">\n          <img src="{{item.headerSrc}}" alt="头像">\n        </div>\n        <div class="center">\n          <div class="name">\n              {{item.name}}\n          </div>\n          <div class="signature">\n              粉丝&nbsp;&nbsp;{{item.signature}}\n          </div>\n        </div>\n        <div class="right">\n          <button [ngClass]="{\'only\':item.status == 0,\'each\':item.status == 1}" (click)="show(i);showConfirm()">{{item.buttonValue}}</button>\n        </div>\n      </li>\n    </ul>\n  </div>\n</ion-content>'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\attention\attention.html"*/,
+            selector: 'page-attention',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\attention\attention.html"*/'<!-- 关注 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n  \n\n<ion-content padding>\n\n  <div class="fans">\n\n    <ul>\n\n        <li *ngFor="let item of attention;let i = index">\n\n        <div class="header">\n\n          <img src="{{item.headerSrc}}" alt="头像">\n\n        </div>\n\n        <div class="center">\n\n          <div class="name">\n\n              {{item.name}}\n\n          </div>\n\n          <div class="signature">\n\n              粉丝&nbsp;&nbsp;{{item.signature}}\n\n          </div>\n\n        </div>\n\n        <div class="right">\n\n          <button [ngClass]="{\'only\':item.status == 0,\'each\':item.status == 1}" (click)="show(i);showConfirm()">{{item.buttonValue}}</button>\n\n        </div>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\attention\attention.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
     ], AttentionPage);
@@ -291,15 +291,15 @@ var AttentionPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 103:
+/***/ 105:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShouyeqqPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gonglue_gonglue__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__gonglue_gonglue__ = __webpack_require__(220);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -490,7 +490,7 @@ var ShouyeqqPage = /** @class */ (function () {
     };
     ShouyeqqPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-shouyeqq',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\shouyeqq\shouyeqq.html"*/'<ion-header>\n  <ion-navbar color="blu">\n      <ion-searchbar class="search1">\n          [(ngModel)]="myInput"\n          [showCancelButton]="shouldShowCancel"\n          (ionInput)="onInput($event)"\n          (ionCancel)="onCancel($event)">\n      </ion-searchbar>\n      <ul class="navList">\n        <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx">{{arr[idx]}}</li>\n      </ul>\n  </ion-navbar>\n</ion-header>\n<ion-content>\n  <div [ngSwitch]="isActive">\n    <div *ngSwitchCase="0">\n     <ion-slides pager="true" autoplay="1000" loop="true" class="sli" style="width:100%;height:10%;">\n            <ion-slide>\n              <img src="assets/imgs/1.jpg" alt="" calss="slide-image" style="width:100%;">\n            </ion-slide>\n            <ion-slide>\n              <img src="assets/imgs/5.jpg" alt="" calss="slide-image" style="width:100%;">\n            </ion-slide>\n            <ion-slide>\n              <img src="assets/imgs/6.jpg" alt="" calss="slide-image" style="width:100%;">\n            </ion-slide>\n     </ion-slides>\n     <div class="articles" style="width:90%;margin-left:5%;" *ngFor="let user of users;let idx=index;">\n      <div calss="div1">\n       <img src="{{user.touxiang}}" class="touxiang">\n        <span class="username">{{user.name}}</span>\n       <button calss="guanzhu" style="position:absolute;width:15%;margin-left:70%;margin-top:3%">+关注</button>\n      </div>\n      <div calss="div2">\n        <p class="title" style="position:relative;" (click)="goGongluePage(idx)">{{user.title}}</p>\n        <p class="content" style="width:70%;margin-top:5%;" (click)="goGongluePage(idx)">{{user.content}}</p>\n       <img src="{{user.imgUrl}}" alt="" class="articleimg" style="position:absolute;margin-left:75%;margin-top:-20%;width:25%;height:40%;" (click)="goGongluePage(idx)">\n      </div>\n      <div calss="div3" style="margin-top:3%;">\n         <span>{{user.agree}}赞同</span>\n         <span style="position:relative;">{{user.pinglun}}评论</span>\n         <span class="time" style="position:absolute;margin-left:45%;">{{user.time}}</span>\n      </div>\n      <hr style="margin-top:3%;margin-bottom:3%;">\n     </div>\n    </div>\n    <div *ngSwitchCase="1">\n      <ion-slides pager="true" autoplay="1000" loop="true" class="sli" style="width:100%;height:10%;">\n        <ion-slide>\n          <img src="assets/imgs/1.jpg" alt="" calss="slide-image" style="width:100%;">\n        </ion-slide>\n        <ion-slide>\n          <img src="assets/imgs/5.jpg" alt="" calss="slide-image" style="width:100%;">\n        </ion-slide>\n        <ion-slide>\n          <img src="assets/imgs/6.jpg" alt="" calss="slide-image" style="width:100%;">\n        </ion-slide>\n      </ion-slides>\n      <div class="articles" style="width:90%;margin-left:5%;" *ngFor="let user of users2;let idx=index;">\n      <div calss="div1">\n       <img src="{{user.touxiang}}" class="touxiang">\n        <span class="username">{{user.name}}</span>\n       <button calss="guanzhu" style="position:absolute;width:15%;margin-left:70%;margin-top:3%">+关注</button>\n      </div>\n      <div calss="div2">\n        <p class="title" style="position:relative;" (click)="goGongluePage(idx)">{{user.title}}</p>\n        <p class="content" style="width:70%;margin-top:5%;" (click)="goGongluePage(idx)">{{user.content}}</p>\n       <img src="{{user.imgUrl}}" alt="" class="articleimg" style="position:absolute;margin-left:75%;margin-top:-20%;width:25%;height:40%;" (click)="goGongluePage(idx)">\n      </div>\n      <div calss="div3" style="margin-top:3%;">\n        <span>{{user.agree}}赞同</span>\n        <span style="position:relative;">{{user.pinglun}}评论</span>\n        <span class="time" style="position:absolute;margin-left:45%;">{{user.time}}</span>\n      </div>\n      <hr style="margin-top:3%;margin-bottom:3%;">\n     </div>\n    </div>\n  </div>\n</ion-content>\n\n\n\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\shouyeqq\shouyeqq.html"*/
+            selector: 'page-shouyeqq',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\shouyeqq\shouyeqq.html"*/'<ion-header>\n\n  <ion-navbar color="blu">\n\n      <ion-searchbar class="search1">\n\n          [(ngModel)]="myInput"\n\n          [showCancelButton]="shouldShowCancel"\n\n          (ionInput)="onInput($event)"\n\n          (ionCancel)="onCancel($event)">\n\n      </ion-searchbar>\n\n      <ul class="navList">\n\n        <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx">{{arr[idx]}}</li>\n\n      </ul>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n  <div [ngSwitch]="isActive">\n\n    <div *ngSwitchCase="0">\n\n     <ion-slides pager="true" autoplay="1000" loop="true" class="sli" style="width:100%;height:10%;">\n\n            <ion-slide>\n\n              <img src="assets/imgs/1.jpg" alt="" calss="slide-image" style="width:100%;">\n\n            </ion-slide>\n\n            <ion-slide>\n\n              <img src="assets/imgs/5.jpg" alt="" calss="slide-image" style="width:100%;">\n\n            </ion-slide>\n\n            <ion-slide>\n\n              <img src="assets/imgs/6.jpg" alt="" calss="slide-image" style="width:100%;">\n\n            </ion-slide>\n\n     </ion-slides>\n\n     <div class="articles" style="width:90%;margin-left:5%;" *ngFor="let user of users;let idx=index;">\n\n      <div calss="div1">\n\n       <img src="{{user.touxiang}}" class="touxiang">\n\n        <span class="username">{{user.name}}</span>\n\n       <button calss="guanzhu" style="position:absolute;width:15%;margin-left:70%;margin-top:3%">+关注</button>\n\n      </div>\n\n      <div calss="div2">\n\n        <p class="title" style="position:relative;" (click)="goGongluePage(idx)">{{user.title}}</p>\n\n        <p class="content" style="width:70%;margin-top:5%;" (click)="goGongluePage(idx)">{{user.content}}</p>\n\n       <img src="{{user.imgUrl}}" alt="" class="articleimg" style="position:absolute;margin-left:75%;margin-top:-20%;width:25%;height:40%;" (click)="goGongluePage(idx)">\n\n      </div>\n\n      <div calss="div3" style="margin-top:3%;">\n\n         <span>{{user.agree}}赞同</span>\n\n         <span style="position:relative;">{{user.pinglun}}评论</span>\n\n         <span class="time" style="position:absolute;margin-left:45%;">{{user.time}}</span>\n\n      </div>\n\n      <hr style="margin-top:3%;margin-bottom:3%;">\n\n     </div>\n\n    </div>\n\n    <div *ngSwitchCase="1">\n\n      <ion-slides pager="true" autoplay="1000" loop="true" class="sli" style="width:100%;height:10%;">\n\n        <ion-slide>\n\n          <img src="assets/imgs/1.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n        <ion-slide>\n\n          <img src="assets/imgs/5.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n        <ion-slide>\n\n          <img src="assets/imgs/6.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n      </ion-slides>\n\n      <div class="articles" style="width:90%;margin-left:5%;" *ngFor="let user of users2;let idx=index;">\n\n      <div calss="div1">\n\n       <img src="{{user.touxiang}}" class="touxiang">\n\n        <span class="username">{{user.name}}</span>\n\n       <button calss="guanzhu" style="position:absolute;width:15%;margin-left:70%;margin-top:3%">+关注</button>\n\n      </div>\n\n      <div calss="div2">\n\n        <p class="title" style="position:relative;" (click)="goGongluePage(idx)">{{user.title}}</p>\n\n        <p class="content" style="width:70%;margin-top:5%;" (click)="goGongluePage(idx)">{{user.content}}</p>\n\n       <img src="{{user.imgUrl}}" alt="" class="articleimg" style="position:absolute;margin-left:75%;margin-top:-20%;width:25%;height:40%;" (click)="goGongluePage(idx)">\n\n      </div>\n\n      <div calss="div3" style="margin-top:3%;">\n\n        <span>{{user.agree}}赞同</span>\n\n        <span style="position:relative;">{{user.pinglun}}评论</span>\n\n        <span class="time" style="position:absolute;margin-left:45%;">{{user.time}}</span>\n\n      </div>\n\n      <hr style="margin-top:3%;margin-bottom:3%;">\n\n     </div>\n\n    </div>\n\n  </div>\n\n</ion-content>\n\n\n\n\n\n\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\shouyeqq\shouyeqq.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], ShouyeqqPage);
@@ -501,7 +501,7 @@ var ShouyeqqPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 115:
+/***/ 117:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -514,11 +514,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 115;
+webpackEmptyAsyncContext.id = 117;
 
 /***/ }),
 
-/***/ 157:
+/***/ 159:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -531,19 +531,20 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 157;
+webpackEmptyAsyncContext.id = 159;
 
 /***/ }),
 
-/***/ 201:
+/***/ 202:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EnrollPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_tabs__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_tabs__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -553,6 +554,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -564,21 +566,75 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var EnrollPage = /** @class */ (function () {
-    function EnrollPage(navCtrl, navParams) {
+    function EnrollPage(app, alertCtrl, http, navCtrl, navParams) {
+        this.app = app;
+        this.alertCtrl = alertCtrl;
+        this.http = http;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.headers = new __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' });
     }
+    EnrollPage.prototype.logForm = function () {
+        var _this = this;
+        console.log(this.tel);
+        console.log(this.pwd);
+        this.http.post('/api/send', {
+            "tel": this.tel,
+            "pwd": this.pwd,
+        }, {
+            headers: this.headers,
+        }).subscribe(function (data) {
+            console.log(data);
+            // -1 用户名为空 -2 密码为空 0 成功 1 用户名重复
+            switch (data) {
+                case -1:
+                    _this.presentPrompt('用户名不能为空');
+                    break;
+                case -2:
+                    _this.presentPrompt('密码不能为空');
+                    break;
+                case 1:
+                    _this.presentPrompt('用户名重复');
+                    break;
+                case 0:
+                    _this.goHome();
+                    break;
+            }
+        });
+    };
     EnrollPage.prototype.goTabs = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__tabs_tabs__["a" /* TabsPage */]);
     };
     EnrollPage.prototype.goRegister = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__register_register__["a" /* RegisterPage */]);
     };
+    EnrollPage.prototype.goHome = function () {
+        //跳转到tabs页并将用户tel传给tabs
+        this.app.getRootNavs()[0].setRoot(__WEBPACK_IMPORTED_MODULE_2__tabs_tabs__["a" /* TabsPage */], { username: this.tel });
+        console.log(this.tel);
+    };
+    EnrollPage.prototype.presentPrompt = function (str) {
+        console.log(str);
+        var alert = this.alertCtrl.create({
+            title: '登录失败',
+            subTitle: str + '，请重新输入。',
+            buttons: [
+                {
+                    text: '确认',
+                    role: 'cancel',
+                    handler: function (data) {
+                        console.log('Confirm clicked');
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
     EnrollPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-enroll',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\enroll\enroll.html"*/'<!-- 注册 -->\n<ion-content padding>\n  <div class="close">\n      <ion-icon class="over" (click)="goTabs()">跳过</ion-icon>\n      <!-- <ion-icon ios="ios-close" md="md-close"></ion-icon> -->\n  </div>\n  <div class="header">\n    <img src="assets/imgs/蜗牛.png" alt="图标">\n  </div>\n  <div class="box">\n    <div class="pn">\n      <label>\n        <ion-icon name="contact"></ion-icon>\n        <input type="text" placeholder="手机号/邮箱" class="text-input">\n      </label>\n    </div>\n    <div class="vc">\n      <label>\n        <ion-icon name="checkmark"></ion-icon>\n        <input type="number" placeholder="验证码" class="text-input">\n        <button ion-button>发送验证码</button>\n      </label>\n    </div>\n    <div class="pw">\n      <label>\n        <ion-icon name="lock"></ion-icon>\n        <input type="password" placeholder="密码" class="text-input">\n      </label>\n    </div>\n    <button ion-button block>注册</button>\n  </div>\n  <div class="buttom">\n    <span float-left (click)="goRegister()">已有账号？去登陆</span>\n  </div>\n</ion-content>\n  '/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\enroll\enroll.html"*/,
+            selector: 'page-enroll',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\enroll\enroll.html"*/'<!-- 注册 -->\n\n<ion-content padding>\n\n  <div class="close">\n\n      <ion-icon class="over" (click)="goTabs()">跳过</ion-icon>\n\n      <!-- <ion-icon ios="ios-close" md="md-close"></ion-icon> -->\n\n  </div>\n\n  <div class="header">\n\n    <img src="assets/imgs/蜗牛.png" alt="图标">\n\n  </div>\n\n  <div class="box">\n\n    <!-- <div class="pn">\n\n      <label>\n\n        <ion-icon name="contact"></ion-icon>\n\n        <input type="text" placeholder="手机号/邮箱" class="text-input">\n\n      </label>\n\n    </div>\n\n    <div class="vc">\n\n   \n\n    </div>\n\n    <div class="pw">\n\n      <label>\n\n        <ion-icon name="lock"></ion-icon>\n\n        <input type="password" placeholder="密码" class="text-input">\n\n      </label>\n\n    </div>\n\n    <button ion-button block>注册</button>\n\n  </div> -->\n\n  <form  (ngSubmit)="logForm()">\n\n  <ion-item>\n\n \n\n    <ion-input type="text" placeholder="用户名" name="username" [(ngModel)]="tel"></ion-input>\n\n  </ion-item>\n\n\n\n  <ion-item>\n\n\n\n    <ion-input type="password" placeholder="密码" name=\'pass\' [(ngModel)]="pwd"></ion-input>\n\n  </ion-item>\n\n  <button ion-button block>注册</button>\n\n\n\n\n\n</form>\n\n  </div>\n\n  <div class="buttom">\n\n    <span float-left (click)="goRegister()">已有账号？去登陆</span>\n\n  </div>\n\n</ion-content>\n\n  '/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\enroll\enroll.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], EnrollPage);
     return EnrollPage;
 }());
@@ -587,22 +643,23 @@ var EnrollPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 202:
+/***/ 203:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__message_message__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__concerning_concerning__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__opinion_opinion__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__fans_fans__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__attention_attention__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__strategy_strategy__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__collection_collection__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__myself_myself__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__message_message__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__concerning_concerning__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__opinion_opinion__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__fans_fans__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__attention_attention__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__strategy_strategy__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__collection_collection__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__myself_myself__ = __webpack_require__(209);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__register_register__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -612,6 +669,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -624,14 +682,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ContactPage = /** @class */ (function () {
-    function ContactPage(navCtrl) {
+    function ContactPage(navCtrl, http) {
+        var _this = this;
         this.navCtrl = navCtrl;
-        this.user_display = ContactPage_1.user;
+        this.http = http;
+        this.headers = new __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' });
+        // this.user_display = ContactPage.user;
+        this.tel = __WEBPACK_IMPORTED_MODULE_10__register_register__["a" /* RegisterPage */].t;
+        this.http.post('/api/contact', { 'username': this.tel }, { headers: this.headers }).subscribe(function (data) {
+            _this.gonglue = data;
+            // console.log('1',this.tel);
+            console.log(data);
+        });
     }
-    ContactPage_1 = ContactPage;
     ContactPage.prototype.ionViewWillEnter = function () {
         this.attention_volume = __WEBPACK_IMPORTED_MODULE_6__attention_attention__["a" /* AttentionPage */].attentionarr.length;
         this.fans_volume = __WEBPACK_IMPORTED_MODULE_5__fans_fans__["a" /* FansPage */].fansarr.length;
+        this.tel = __WEBPACK_IMPORTED_MODULE_10__register_register__["a" /* RegisterPage */].t;
     };
     ContactPage.prototype.goMyself = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_9__myself_myself__["a" /* MyselfPage */], {
@@ -681,26 +748,20 @@ var ContactPage = /** @class */ (function () {
     ContactPage.prototype.Clear = function () {
         localStorage.clear();
     };
-    ContactPage.user = {
-        headerSrc: "assets/imgs/header_1.jpg",
-        name: "杏仁",
-        autograph: "跟我一起旅游吧"
-    };
-    ContactPage = ContactPage_1 = __decorate([
+    ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\contact\contact.html"*/'<!-- 我的 -->\n<ion-header>\n  <div class="top">\n    <img src="{{user_display.headerSrc}}" alt="头像" (click)="goMyself()">\n    <p text-center class="p1">\n      <ion-icon ios="ios-create" md="md-create"></ion-icon>\n      {{user_display.name}}\n    </p>\n    <p text-center class="p2">\n      <ion-icon ios="ios-create" md="md-create"></ion-icon>\n      {{user_display.autograph}}\n    </p>\n</div>\n</ion-header>\n\n<ion-content>\n  <div class="con1">\n    <ul>\n      <li (click)="goFans()">\n        <p text-center class="p1">{{fans_volume}}</p>\n        <p text-center class="p2">粉丝</p>\n      </li>\n      <li (click)="goAttention()">\n        <p text-center class="p1">{{attention_volume}}</p>\n        <p text-center class="p2">关注</p>\n      </li>\n      <li (click)="goStrategy()">\n        <p text-center class="p1">32</p>\n        <p text-center class="p2">我的攻略</p>\n      </li>\n    </ul>\n  </div>\n  <div class="con2">\n    <ul>\n      <li (click)="goCollection()">\n        <ion-icon ios="logo-codepen" md="logo-codepen" class="icon1"></ion-icon>\n        <span>我的收藏</span>\n        <span float-right class="right">></span>\n      </li>\n      <li (click)="goMessage()">\n        <ion-icon ios="ios-text" md="md-text" class="icon1"></ion-icon>\n        <span>我的消息</span>\n        <ion-icon name="notifications-outline" class="bell"></ion-icon>\n        <span float-right class="right">></span>\n      </li>\n      <li (click)="goConcerning()">\n          <ion-icon ios="ios-people" md="md-people" class="icon1"></ion-icon>\n          <span>关于我们</span>\n          <span float-right class="right">></span>\n      </li>\n      <li (click)="goOpinion()">\n          <ion-icon ios="ios-create" md="md-create" class="icon1"></ion-icon>\n          <span>意见反馈</span>\n          <span float-right class="right">></span>\n      </li>\n      <li (click)="goRegister();Clear()">\n          <ion-icon ios="ios-close-circle" md="md-close-circle" class="icon1"></ion-icon>\n          <span>退出登录</span>\n          <span float-right class="right">></span>\n      </li>\n    </ul>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\contact\contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\contact\contact.html"*/'<!-- 我的 -->\n\n<ion-header>\n\n  <div class="top">\n\n    <li *ngFor="let item of gonglue"> \n\n      <!-- <img src="{{user_display.headerSrc}}" alt="头像" (click)="goMyself()"> -->\n\n      <p text-center class="p1">\n\n        <!-- <ion-icon ios="ios-create" md="md-create"></ion-icon> -->\n\n        {{item.username}}\n\n      </p>\n\n      <p text-center class="p2">\n\n        <!-- <ion-icon ios="ios-create" md="md-create"></ion-icon> -->\n\n        {{item.signature}}\n\n      </p>\n\n    </li>\n\n</div>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="con1">\n\n    <ul>\n\n      <li (click)="goFans()">\n\n        <p text-center class="p1">{{fans_volume}}</p>\n\n        <p text-center class="p2">粉丝</p>\n\n      </li>\n\n      <li (click)="goAttention()">\n\n        <p text-center class="p1">{{attention_volume}}</p>\n\n        <p text-center class="p2">关注</p>\n\n      </li>\n\n      <li (click)="goStrategy()">\n\n        <p text-center class="p1">32</p>\n\n        <p text-center class="p2">我的攻略</p>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n  <div class="con2">\n\n    <ul>\n\n      <li (click)="goCollection()">\n\n        <ion-icon ios="logo-codepen" md="logo-codepen" class="icon1"></ion-icon>\n\n        <span>我的收藏</span>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goMessage()">\n\n        <ion-icon ios="ios-text" md="md-text" class="icon1"></ion-icon>\n\n        <span>我的消息</span>\n\n        <ion-icon name="notifications-outline" class="bell"></ion-icon>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goConcerning()">\n\n          <ion-icon ios="ios-people" md="md-people" class="icon1"></ion-icon>\n\n          <span>关于我们</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goOpinion()">\n\n          <ion-icon ios="ios-create" md="md-create" class="icon1"></ion-icon>\n\n          <span>意见反馈</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goRegister();Clear()">\n\n          <ion-icon ios="ios-close-circle" md="md-close-circle" class="icon1"></ion-icon>\n\n          <span>退出登录</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\contact\contact.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["a" /* HttpClient */]])
     ], ContactPage);
     return ContactPage;
-    var ContactPage_1;
 }());
 
 //# sourceMappingURL=contact.js.map
 
 /***/ }),
 
-/***/ 203:
+/***/ 204:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -732,7 +793,7 @@ var MessagePage = /** @class */ (function () {
     }
     MessagePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-message',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\message\message.html"*/'<!-- 我的消息 -->\n<ion-header text-center no-border>\n  <ion-navbar color="major">\n    <ion-title>{{titleTitle}}</ion-title>\n    <ion-buttons end>\n      <button ion-button>\n        <ion-icon></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n<ul>\n  <li>\n    <div class="header">\n      <img src="assets/imgs/header_3.jpg" alt="头像">\n    </div>\n    <div class="center">\n      <div class="name">\n        佳琦琦琦\n      </div>\n      <div class="signature">\n        ##每一天要开心\n      </div>\n    </div>\n    <div class="right">\n      <div class="imformation" text-right>\n        赞了我\n      </div>\n      <div class="time" text-right>\n        2018-11-24\n      </div>\n    </div>\n  </li>\n  <li>\n    <div class="header">\n      <img src="assets/imgs/header_2.jpg" alt="头像">\n    </div>\n    <div class="center">\n      <div class="name">\n        嘻嘻嘻呀\n      </div>\n      <div class="signature">\n        蜗牛旅行\n      </div>\n    </div>\n    <div class="right">\n      <div class="imformation" text-right>\n        私信了我\n      </div>\n      <div class="time" text-right>\n        2018-11-24\n      </div>\n    </div>\n  </li>\n  <li>\n    <div class="header">\n      <img src="assets/imgs/header_4.jpg" alt="头像">\n    </div>\n    <div class="center">\n      <div class="name">\n        snail\n      </div>\n      <div class="signature">\n        坦然\n      </div>\n    </div>\n    <div class="right">\n      <div class="imformation" text-right>\n        私信了我\n      </div>\n      <div class="time" text-right>\n        2018-11-24\n      </div>\n    </div>\n  </li>\n  <li>\n    <div class="header">\n      <img src="assets/imgs/header_5.jpg" alt="头像">\n    </div>\n    <div class="center">\n      <div class="name">\n        大可爱\n      </div>\n      <div class="signature">\n        跟我一起旅游吧\n      </div>\n    </div>\n    <div class="right">\n      <div class="imformation" text-right>\n        评论了我\n      </div>\n      <div class="time" text-right>\n        2018-11-24\n      </div>\n    </div>\n  </li>\n</ul>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\message\message.html"*/,
+            selector: 'page-message',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\message\message.html"*/'<!-- 我的消息 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n<ul>\n\n  <li>\n\n    <div class="header">\n\n      <img src="assets/imgs/header_3.jpg" alt="头像">\n\n    </div>\n\n    <div class="center">\n\n      <div class="name">\n\n        佳琦琦琦\n\n      </div>\n\n      <div class="signature">\n\n        ##每一天要开心\n\n      </div>\n\n    </div>\n\n    <div class="right">\n\n      <div class="imformation" text-right>\n\n        赞了我\n\n      </div>\n\n      <div class="time" text-right>\n\n        2018-11-24\n\n      </div>\n\n    </div>\n\n  </li>\n\n  <li>\n\n    <div class="header">\n\n      <img src="assets/imgs/header_2.jpg" alt="头像">\n\n    </div>\n\n    <div class="center">\n\n      <div class="name">\n\n        嘻嘻嘻呀\n\n      </div>\n\n      <div class="signature">\n\n        蜗牛旅行\n\n      </div>\n\n    </div>\n\n    <div class="right">\n\n      <div class="imformation" text-right>\n\n        私信了我\n\n      </div>\n\n      <div class="time" text-right>\n\n        2018-11-24\n\n      </div>\n\n    </div>\n\n  </li>\n\n  <li>\n\n    <div class="header">\n\n      <img src="assets/imgs/header_4.jpg" alt="头像">\n\n    </div>\n\n    <div class="center">\n\n      <div class="name">\n\n        snail\n\n      </div>\n\n      <div class="signature">\n\n        坦然\n\n      </div>\n\n    </div>\n\n    <div class="right">\n\n      <div class="imformation" text-right>\n\n        私信了我\n\n      </div>\n\n      <div class="time" text-right>\n\n        2018-11-24\n\n      </div>\n\n    </div>\n\n  </li>\n\n  <li>\n\n    <div class="header">\n\n      <img src="assets/imgs/header_5.jpg" alt="头像">\n\n    </div>\n\n    <div class="center">\n\n      <div class="name">\n\n        大可爱\n\n      </div>\n\n      <div class="signature">\n\n        跟我一起旅游吧\n\n      </div>\n\n    </div>\n\n    <div class="right">\n\n      <div class="imformation" text-right>\n\n        评论了我\n\n      </div>\n\n      <div class="time" text-right>\n\n        2018-11-24\n\n      </div>\n\n    </div>\n\n  </li>\n\n</ul>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\message\message.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], MessagePage);
@@ -743,7 +804,7 @@ var MessagePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 204:
+/***/ 205:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -775,7 +836,7 @@ var ConcerningPage = /** @class */ (function () {
     }
     ConcerningPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-concerning',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\concerning\concerning.html"*/'<!-- 关于我们 -->\n<ion-header text-center no-border>\n  <ion-navbar color="major">\n    <ion-title>{{titleTitle}}</ion-title>\n    <ion-buttons end>\n      <button ion-button>\n        <ion-icon></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="picture">\n    <img src="assets/imgs/蜗牛.png" alt="logo">\n  </div>\n  <div class="font">\n    <div class="title" text-center>蜗牛旅行</div>\n    <div class="platform" text-center>v1.0.0</div>\n  </div>\n  <div class="list">\n    <ul>\n      <li>\n          <span>功能介绍</span>\n          <span float-right class="right">></span>\n      </li>\n      <li>\n          <span>协议及声明</span>\n          <span float-right class="right">></span>\n      </li>\n    </ul>\n  </div>\n  <div class="bottom">\n    <div class="statement" text-center>\n      <span><a href="">服务条款&nbsp;&nbsp;&nbsp;</a></span>\n      |\n      <span><a href="">&nbsp;&nbsp;&nbsp;隐私声明</a></span>\n    </div>\n    <div class="copyright" text-center>\n        Copyright © 2018-2018 SnailTravel.All Righr Reserved.\n    </div>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\concerning\concerning.html"*/,
+            selector: 'page-concerning',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\concerning\concerning.html"*/'<!-- 关于我们 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="picture">\n\n    <img src="assets/imgs/蜗牛.png" alt="logo">\n\n  </div>\n\n  <div class="font">\n\n    <div class="title" text-center>蜗牛旅行</div>\n\n    <div class="platform" text-center>v1.0.0</div>\n\n  </div>\n\n  <div class="list">\n\n    <ul>\n\n      <li>\n\n          <span>功能介绍</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li>\n\n          <span>协议及声明</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n  <div class="bottom">\n\n    <div class="statement" text-center>\n\n      <span><a href="">服务条款&nbsp;&nbsp;&nbsp;</a></span>\n\n      |\n\n      <span><a href="">&nbsp;&nbsp;&nbsp;隐私声明</a></span>\n\n    </div>\n\n    <div class="copyright" text-center>\n\n        Copyright © 2018-2018 SnailTravel.All Righr Reserved.\n\n    </div>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\concerning\concerning.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], ConcerningPage);
@@ -786,7 +847,7 @@ var ConcerningPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 205:
+/***/ 206:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -818,7 +879,7 @@ var OpinionPage = /** @class */ (function () {
     }
     OpinionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-opinion',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\opinion\opinion.html"*/'<!-- 意见反馈 -->\n<ion-header text-center no-border>\n  <ion-navbar color="major">\n    <ion-title>{{titleTitle}}</ion-title>\n    <ion-buttons end>\n      <button ion-button>\n        <ion-icon></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="content">\n    <div class="c1">\n      <div class="font">您的问题或建议：</div>\n      <div class="text">\n        <label>\n          <input type="text" placeholder="意见反馈:" class="text-input">\n        </label>\n      </div>\n    </div>\n  </div>\n  <div class="content">\n    <div class="c1">\n      <div class="font">您联系方式：</div>\n      <div class="text">\n        <label>\n          <input type="text" placeholder="请输入电话号码" class="text-input">\n        </label>\n      </div>\n    </div>\n  </div>\n  <div class="comfirm">\n    <button ion-button block>确认</button>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\opinion\opinion.html"*/,
+            selector: 'page-opinion',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\opinion\opinion.html"*/'<!-- 意见反馈 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="content">\n\n    <div class="c1">\n\n      <div class="font">您的问题或建议：</div>\n\n      <div class="text">\n\n        <label>\n\n          <input type="text" placeholder="意见反馈:" class="text-input">\n\n        </label>\n\n      </div>\n\n    </div>\n\n  </div>\n\n  <div class="content">\n\n    <div class="c1">\n\n      <div class="font">您联系方式：</div>\n\n      <div class="text">\n\n        <label>\n\n          <input type="text" placeholder="请输入电话号码" class="text-input">\n\n        </label>\n\n      </div>\n\n    </div>\n\n  </div>\n\n  <div class="comfirm">\n\n    <button ion-button block>确认</button>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\opinion\opinion.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], OpinionPage);
@@ -829,7 +890,7 @@ var OpinionPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 206:
+/***/ 207:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -861,7 +922,7 @@ var StrategyPage = /** @class */ (function () {
     }
     StrategyPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-strategy',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\strategy\strategy.html"*/'<!-- 我的攻略 -->\n<ion-header text-center no-border>\n  <ion-navbar color="major">\n    <ion-title>{{titleTitle}}</ion-title>\n    <ion-buttons end>\n      <button ion-button>\n        <ion-icon></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div class="s_content">\n    \n    <ul>\n      <li>\n        <div class="list">\n          <div class="title">\n            <p>八月去北京，这份攻略你一定要看</p>\n          </div>\n          <div class="c_content">\n            <p>说到北京，我算是很有发言权了，前后和不同的人去过三次，每次感受都不同，分享给你：\n              第一次...</p>\n          </div>\n          <div class="picture">\n            <img src="assets/imgs/北京攻略.jpg" alt="北京攻略图片">\n          </div>\n          <div class="bottom">\n            <span>赞 345</span>\n            <span>评论 12</span>\n            <span float-right>2018-11-24</span>\n          </div>\n        </div>\n      </li>\n      <li>\n        <div class="list">\n          <div class="title">\n            <p>半梦半醒间，醉美崂山</p>\n          </div>\n          <div class="c_content">\n            <p>第 1 天\n              初看山是山，水是水\n              继而山不是山，水不是水\n              终乃山还是山，水还是水。夜晚的仰口沙滩上...</p>\n          </div>\n          <div class="picture">\n            <img src="assets/imgs/青岛攻略.jpg" alt="青岛攻略图片">\n          </div>\n          <div class="bottom">\n            <span>赞 345</span>\n            <span>评论 12</span>\n            <span float-right>2018-11-24</span>\n          </div>\n        </div>\n      </li>\n      <li>\n        <div class="list">\n          <div class="title">\n            <p>一篇攻略告诉你，到了四川该怎么玩？</p>\n          </div>\n          <div class="c_content">\n            <p>成都必去—也是网红打卡圣地---稻城亚丁：成都-康定-日瓦-稻城亚丁，这路上的风景堪称一绝，简直是...</p>\n          </div>\n          <div class="picture">\n            <img src="assets/imgs/成都攻略.jpg" alt="四川攻略图片">\n          </div>\n          <div class="bottom">\n            <span>赞 345</span>\n            <span>评论 12</span>\n            <span float-right>2018-11-24</span>\n          </div>\n        </div>\n      </li>\n      <li>\n        <div class="list">\n          <div class="title">\n            <p>就是现在跟我去西藏吧</p>\n          </div>\n          <div class="c_content">\n            <p>“人间天堂，天上西藏”，很多人把去西藏视为人生的朝圣之旅，净化心灵，洗涤灵魂的旅程。\n              每年的5...</p>\n          </div>\n          <div class="picture">\n            <img src="assets/imgs/西藏攻略.jpg" alt="西藏攻略图片">\n          </div>\n          <div class="bottom">\n            <span>赞 345</span>\n            <span>评论 12</span>\n            <span float-right>2018-11-24</span>\n          </div>\n        </div>\n      </li>\n    </ul>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\strategy\strategy.html"*/,
+            selector: 'page-strategy',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\strategy\strategy.html"*/'<!-- 我的攻略 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="s_content">\n\n    \n\n    <ul>\n\n      <li>\n\n        <div class="list">\n\n          <div class="title">\n\n            <p>八月去北京，这份攻略你一定要看</p>\n\n          </div>\n\n          <div class="c_content">\n\n            <p>说到北京，我算是很有发言权了，前后和不同的人去过三次，每次感受都不同，分享给你：\n\n              第一次...</p>\n\n          </div>\n\n          <div class="picture">\n\n            <img src="assets/imgs/北京攻略.jpg" alt="北京攻略图片">\n\n          </div>\n\n          <div class="bottom">\n\n            <span>赞 345</span>\n\n            <span>评论 12</span>\n\n            <span float-right>2018-11-24</span>\n\n          </div>\n\n        </div>\n\n      </li>\n\n      <li>\n\n        <div class="list">\n\n          <div class="title">\n\n            <p>半梦半醒间，醉美崂山</p>\n\n          </div>\n\n          <div class="c_content">\n\n            <p>第 1 天\n\n              初看山是山，水是水\n\n              继而山不是山，水不是水\n\n              终乃山还是山，水还是水。夜晚的仰口沙滩上...</p>\n\n          </div>\n\n          <div class="picture">\n\n            <img src="assets/imgs/青岛攻略.jpg" alt="青岛攻略图片">\n\n          </div>\n\n          <div class="bottom">\n\n            <span>赞 345</span>\n\n            <span>评论 12</span>\n\n            <span float-right>2018-11-24</span>\n\n          </div>\n\n        </div>\n\n      </li>\n\n      <li>\n\n        <div class="list">\n\n          <div class="title">\n\n            <p>一篇攻略告诉你，到了四川该怎么玩？</p>\n\n          </div>\n\n          <div class="c_content">\n\n            <p>成都必去—也是网红打卡圣地---稻城亚丁：成都-康定-日瓦-稻城亚丁，这路上的风景堪称一绝，简直是...</p>\n\n          </div>\n\n          <div class="picture">\n\n            <img src="assets/imgs/成都攻略.jpg" alt="四川攻略图片">\n\n          </div>\n\n          <div class="bottom">\n\n            <span>赞 345</span>\n\n            <span>评论 12</span>\n\n            <span float-right>2018-11-24</span>\n\n          </div>\n\n        </div>\n\n      </li>\n\n      <li>\n\n        <div class="list">\n\n          <div class="title">\n\n            <p>就是现在跟我去西藏吧</p>\n\n          </div>\n\n          <div class="c_content">\n\n            <p>“人间天堂，天上西藏”，很多人把去西藏视为人生的朝圣之旅，净化心灵，洗涤灵魂的旅程。\n\n              每年的5...</p>\n\n          </div>\n\n          <div class="picture">\n\n            <img src="assets/imgs/西藏攻略.jpg" alt="西藏攻略图片">\n\n          </div>\n\n          <div class="bottom">\n\n            <span>赞 345</span>\n\n            <span>评论 12</span>\n\n            <span float-right>2018-11-24</span>\n\n          </div>\n\n        </div>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\strategy\strategy.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], StrategyPage);
@@ -872,7 +933,7 @@ var StrategyPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 207:
+/***/ 208:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -904,7 +965,7 @@ var CollectionPage = /** @class */ (function () {
     }
     CollectionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-collection',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\collection\collection.html"*/'<!-- 我的收藏 -->\n<ion-header text-center no-border>\n  <ion-navbar color="major">\n    <ion-title>{{titleTitle}}</ion-title>\n    <ion-buttons end>\n      <button ion-button>\n        <ion-icon></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content>\n  <div class="s_content">\n    <ul>\n      <li>\n        <div class="list">\n          <div class="name">\n            <img src="assets/imgs/header_1.jpg" alt="头像">\n            <span>佳琦琦琦</span>\n          </div>\n          <div class="title">\n            <p>八月去北京，这份攻略你一定要看</p>\n          </div>\n          <div class="c_content">\n            <p>说到北京，我算是很有发言权了，前后和不同的人去过三次，每次感受都不同，分享给你：\n              第一次...</p>\n          </div>\n          <div class="picture">\n            <img src="assets/imgs/北京攻略.jpg" alt="北京攻略图片">\n          </div>\n          <div class="bottom">\n            <span>赞 345</span>\n            <span>评论 12</span>\n            <span float-right>2018-11-24</span>\n          </div>\n        </div>\n      </li>\n      <li>\n        <div class="list">\n          <div class="name">\n              <img src="assets/imgs/header_2.jpg" alt="头像">\n              <span>琦琦琦</span>\n          </div>\n          <div class="title">\n            <p>半梦半醒间，醉美崂山</p>\n          </div>\n          <div class="c_content">\n            <p>第 1 天\n              初看山是山，水是水\n              继而山不是山，水不是水\n              终乃山还是山，水还是水。夜晚的仰口沙滩上...</p>\n          </div>\n          <div class="picture">\n            <img src="assets/imgs/青岛攻略.jpg" alt="青岛攻略图片">\n          </div>\n          <div class="bottom">\n            <span>赞 345</span>\n            <span>评论 12</span>\n            <span float-right>2018-11-24</span>\n          </div>\n        </div>\n      </li>\n      <li>\n        <div class="list">\n          <div class="name">\n              <img src="assets/imgs/header_3.jpg" alt="头像">\n              <span>琦琦琦</span>\n          </div>\n          <div class="title">\n            <p>一篇攻略告诉你，到了四川该怎么玩？</p>\n          </div>\n          <div class="c_content">\n            <p>成都必去—也是网红打卡圣地---稻城亚丁：成都-康定-日瓦-稻城亚丁，这路上的风景堪称一绝，简直是...</p>\n          </div>\n          <div class="picture">\n            <img src="assets/imgs/成都攻略.jpg" alt="四川攻略图片">\n          </div>\n          <div class="bottom">\n            <span>赞 345</span>\n            <span>评论 12</span>\n            <span float-right>2018-11-24</span>\n          </div>\n        </div>\n      </li>\n      <li>\n        <div class="list">\n          <div class="name">\n              <img src="assets/imgs/header_4.jpg" alt="头像">\n              <span>曦丫丫丫丫</span>\n          </div>\n          <div class="title">\n            <p>就是现在跟我去西藏吧</p>\n          </div>\n          <div class="c_content">\n            <p>“人间天堂，天上西藏”，很多人把去西藏视为人生的朝圣之旅，净化心灵，洗涤灵魂的旅程。\n              每年的5...</p>\n          </div>\n          <div class="picture">\n            <img src="assets/imgs/西藏攻略.jpg" alt="西藏攻略图片">\n          </div>\n          <div class="bottom">\n            <span>赞 345</span>\n            <span>评论 12</span>\n            <span float-right>2018-11-24</span>\n          </div>\n        </div>\n      </li>\n    </ul>\n  </div>\n</ion-content>'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\collection\collection.html"*/,
+            selector: 'page-collection',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\collection\collection.html"*/'<!-- 我的收藏 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="s_content">\n\n    <ul>\n\n      <li>\n\n        <div class="list">\n\n          <div class="name">\n\n            <img src="assets/imgs/header_1.jpg" alt="头像">\n\n            <span>佳琦琦琦</span>\n\n          </div>\n\n          <div class="title">\n\n            <p>八月去北京，这份攻略你一定要看</p>\n\n          </div>\n\n          <div class="c_content">\n\n            <p>说到北京，我算是很有发言权了，前后和不同的人去过三次，每次感受都不同，分享给你：\n\n              第一次...</p>\n\n          </div>\n\n          <div class="picture">\n\n            <img src="assets/imgs/北京攻略.jpg" alt="北京攻略图片">\n\n          </div>\n\n          <div class="bottom">\n\n            <span>赞 345</span>\n\n            <span>评论 12</span>\n\n            <span float-right>2018-11-24</span>\n\n          </div>\n\n        </div>\n\n      </li>\n\n      <li>\n\n        <div class="list">\n\n          <div class="name">\n\n              <img src="assets/imgs/header_2.jpg" alt="头像">\n\n              <span>琦琦琦</span>\n\n          </div>\n\n          <div class="title">\n\n            <p>半梦半醒间，醉美崂山</p>\n\n          </div>\n\n          <div class="c_content">\n\n            <p>第 1 天\n\n              初看山是山，水是水\n\n              继而山不是山，水不是水\n\n              终乃山还是山，水还是水。夜晚的仰口沙滩上...</p>\n\n          </div>\n\n          <div class="picture">\n\n            <img src="assets/imgs/青岛攻略.jpg" alt="青岛攻略图片">\n\n          </div>\n\n          <div class="bottom">\n\n            <span>赞 345</span>\n\n            <span>评论 12</span>\n\n            <span float-right>2018-11-24</span>\n\n          </div>\n\n        </div>\n\n      </li>\n\n      <li>\n\n        <div class="list">\n\n          <div class="name">\n\n              <img src="assets/imgs/header_3.jpg" alt="头像">\n\n              <span>琦琦琦</span>\n\n          </div>\n\n          <div class="title">\n\n            <p>一篇攻略告诉你，到了四川该怎么玩？</p>\n\n          </div>\n\n          <div class="c_content">\n\n            <p>成都必去—也是网红打卡圣地---稻城亚丁：成都-康定-日瓦-稻城亚丁，这路上的风景堪称一绝，简直是...</p>\n\n          </div>\n\n          <div class="picture">\n\n            <img src="assets/imgs/成都攻略.jpg" alt="四川攻略图片">\n\n          </div>\n\n          <div class="bottom">\n\n            <span>赞 345</span>\n\n            <span>评论 12</span>\n\n            <span float-right>2018-11-24</span>\n\n          </div>\n\n        </div>\n\n      </li>\n\n      <li>\n\n        <div class="list">\n\n          <div class="name">\n\n              <img src="assets/imgs/header_4.jpg" alt="头像">\n\n              <span>曦丫丫丫丫</span>\n\n          </div>\n\n          <div class="title">\n\n            <p>就是现在跟我去西藏吧</p>\n\n          </div>\n\n          <div class="c_content">\n\n            <p>“人间天堂，天上西藏”，很多人把去西藏视为人生的朝圣之旅，净化心灵，洗涤灵魂的旅程。\n\n              每年的5...</p>\n\n          </div>\n\n          <div class="picture">\n\n            <img src="assets/imgs/西藏攻略.jpg" alt="西藏攻略图片">\n\n          </div>\n\n          <div class="bottom">\n\n            <span>赞 345</span>\n\n            <span>评论 12</span>\n\n            <span float-right>2018-11-24</span>\n\n          </div>\n\n        </div>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\collection\collection.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], CollectionPage);
@@ -915,14 +976,14 @@ var CollectionPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 208:
+/***/ 209:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyselfPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sub_header_sub_header__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__sub_header_sub_header__ = __webpack_require__(210);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -957,7 +1018,7 @@ var MyselfPage = /** @class */ (function () {
     };
     MyselfPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-myself',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\myself\myself.html"*/'<!-- 个人信息 -->\n<ion-header text-center no-border>\n  <ion-navbar color="major">\n    <ion-title>{{titleTitle}}</ion-title>\n    <ion-buttons end>\n      <button ion-button>\n        <ion-icon></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n  <div class="information">\n    <ul>\n      <li class="header" (click)="subHeader()">\n        <span>头像</span>\n        <span float-right class="right">></span>\n      </li>\n      <li>\n        <span>名字</span>\n        <span float-right class="right">></span>\n      </li>\n      <li>\n        <span>个性签名</span>\n        <span float-right class="right">></span>\n      </li>\n    </ul>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\myself\myself.html"*/,
+            selector: 'page-myself',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\myself\myself.html"*/'<!-- 个人信息 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="information">\n\n    <ul>\n\n      <li class="header" (click)="subHeader()">\n\n        <span>头像</span>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li>\n\n        <span>名字</span>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li>\n\n        <span>个性签名</span>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\myself\myself.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], MyselfPage);
@@ -968,15 +1029,14 @@ var MyselfPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 209:
+/***/ 210:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SubHeaderPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(299);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__contact_contact__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(211);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -986,7 +1046,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -1005,7 +1064,7 @@ var SubHeaderPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.titleTitle = this.navParams.get('title');
-        this.imgUrl = __WEBPACK_IMPORTED_MODULE_3__contact_contact__["a" /* ContactPage */].user.headerSrc;
+        // this.imgUrl = ContactPage.user.headerSrc;
     }
     SubHeaderPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad SubHeaderPage');
@@ -1048,7 +1107,7 @@ var SubHeaderPage = /** @class */ (function () {
     };
     SubHeaderPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-sub-header',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\sub-header\sub-header.html"*/'<!-- 个人头像 -->\n<ion-header text-center no-border>\n    <ion-navbar color="major">\n      <ion-title>{{titleTitle}}</ion-title>\n      <ion-buttons end>\n        <button ion-button block (click)="openMenu()">\n          <ion-icon name="more"></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n  </ion-header>\n\n<ion-content padding>\n  <div class="picture">\n    <img src="{{imgUrl}}" alt="您的头像">\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\sub-header\sub-header.html"*/,
+            selector: 'page-sub-header',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\sub-header\sub-header.html"*/'<!-- 个人头像 -->\n\n<ion-header text-center no-border>\n\n    <ion-navbar color="major">\n\n      <ion-title>{{titleTitle}}</ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button block (click)="openMenu()">\n\n          <ion-icon name="more"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="picture">\n\n    <img src="{{imgUrl}}" alt="您的头像">\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\sub-header\sub-header.html"*/,
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _e || Object])
     ], SubHeaderPage);
@@ -1060,15 +1119,15 @@ var SubHeaderPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 210:
+/***/ 212:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__jizhangben_jizhangben__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__triplan_triplan__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__jizhangben_jizhangben__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__triplan_triplan__ = __webpack_require__(216);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1094,7 +1153,7 @@ var HomePage = /** @class */ (function () {
     };
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\home\home.html"*/'<ion-content>\n  <div id="banner">\n    <img src="assets/imgs/lang.png">\n    <p>生活不止眼前的苟且，还有诗和远方~</p>\n  </div>\n  <p id="word">蜗牛旅行，我们一直都在~</p>\n  <div id="div0">\n    <div id="div1" (click)="gosub()">\n      <ion-icon name="md-list-box"></ion-icon>\n      <p>旅行账本</p>\n    </div>\n    <div id="div2" (click)="goplan()">\n      <ion-icon name="md-create"></ion-icon>\n      <p>旅行计划</p>\n    </div>\n    \n    \n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\home\home.html"*/'<ion-content>\n\n  <div id="banner">\n\n    <img src="assets/imgs/lang.png">\n\n    <p>生活不止眼前的苟且，还有诗和远方~</p>\n\n  </div>\n\n  <p id="word">蜗牛旅行，我们一直都在~</p>\n\n  <div id="div0">\n\n    <div id="div1" (click)="gosub()">\n\n      <ion-icon name="md-list-box"></ion-icon>\n\n      <p>旅行账本</p>\n\n    </div>\n\n    <div id="div2" (click)="goplan()">\n\n      <ion-icon name="md-create"></ion-icon>\n\n      <p>旅行计划</p>\n\n    </div>\n\n    \n\n    \n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
     ], HomePage);
@@ -1105,15 +1164,15 @@ var HomePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 211:
+/***/ 213:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return JizhangbenPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nullpage_nullpage__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mingxi_mingxi__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nullpage_nullpage__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mingxi_mingxi__ = __webpack_require__(215);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1158,7 +1217,7 @@ var JizhangbenPage = /** @class */ (function () {
     ], JizhangbenPage.prototype, "navBar", void 0);
     JizhangbenPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-jizhangben',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\jizhangben\jizhangben.html"*/'<ion-header>\n  <ion-navbar id="a" color="blu">\n    <ion-title text-center>记一笔&nbsp;&nbsp;<ion-icon name="md-create"></ion-icon></ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name=""></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  \n</ion-header>\n\n\n<ion-content>\n  <img src="assets/imgs/plan.png">\n  <button ion-button full (click)="gonullpage()" >添加记录</button>\n\n  <div id="listdiv">\n    <ul id="list" text-center [(ngModel)]="arr" ngDefaultControl>\n      <li  ngDefaultControl *ngFor="let item of arr;let i = index;" (click)="gomingxi(i)" >{{item.goodtype}}:{{item.money}}&nbsp;&nbsp;&nbsp;date:{{item.time}}\n      </li>  \n      \n    </ul>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\jizhangben\jizhangben.html"*/,
+            selector: 'page-jizhangben',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\jizhangben\jizhangben.html"*/'<ion-header>\n\n  <ion-navbar id="a" color="blu">\n\n    <ion-title text-center>记一笔&nbsp;&nbsp;<ion-icon name="md-create"></ion-icon></ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only>\n\n        <ion-icon name=""></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  \n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <img src="assets/imgs/plan.png">\n\n  <button ion-button full (click)="gonullpage()" >添加记录</button>\n\n\n\n  <div id="listdiv">\n\n    <ul id="list" text-center [(ngModel)]="arr" ngDefaultControl>\n\n      <li  ngDefaultControl *ngFor="let item of arr;let i = index;" (click)="gomingxi(i)" >{{item.goodtype}}:{{item.money}}&nbsp;&nbsp;&nbsp;date:{{item.time}}\n\n      </li>  \n\n      \n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\jizhangben\jizhangben.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], JizhangbenPage);
@@ -1169,7 +1228,7 @@ var JizhangbenPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 212:
+/***/ 214:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1224,7 +1283,7 @@ var NullpagePage = /** @class */ (function () {
     };
     NullpagePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-nullpage',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\nullpage\nullpage.html"*/'<ion-header>\n\n    <ion-navbar id="a" color="blu">\n      <ion-title text-center>记一笔&nbsp;&nbsp;<ion-icon name="md-create"></ion-icon></ion-title>\n      <ion-buttons end>\n        <button ion-button icon-only>\n          <ion-icon name=""></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n    \n  </ion-header>\n\n\n<ion-content color="lgrey">\n    <ion-item id="money">\n      <ion-label color="blu">花销:</ion-label>\n      <ion-input [(ngModel)]="money"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label color="blu">类别:</ion-label>\n      <ion-select [(ngModel)]="goodtype" multiple="true">\n        <ion-option>食品</ion-option>\n        <ion-option>交通</ion-option>\n        <ion-option>娱乐</ion-option>\n        <ion-option>购物</ion-option>\n        <ion-option>门票</ion-option>\n        <ion-option>住宿</ion-option>\n        <ion-option>其他</ion-option>\n      </ion-select>\n    </ion-item>\n\n\n    <ion-item>\n      <ion-label color="blu">时间:</ion-label>\n      <ion-input [(ngModel)]="time"></ion-input>\n    </ion-item>\n\n    <ion-item>\n      <ion-label color="blu">付款类型:</ion-label>\n      <ion-select [(ngModel)]="typemoney" multiple="true">\n        <ion-option>现金</ion-option>\n        <ion-option>支付宝</ion-option>\n        <ion-option>微信</ion-option>\n        <ion-option>储蓄卡</ion-option>\n        <ion-option>信用卡</ion-option>\n        <ion-option>花呗</ion-option>\n        <ion-option>其他</ion-option>\n      </ion-select>\n    </ion-item>\n\n    <ion-item>\n      <ion-label color="blu">备注:</ion-label>\n      <ion-input [(ngModel)]="more"></ion-input>\n    </ion-item>\n    <br/><br/><br/><br/><br/>\n\n    <button ion-button round type="submit" ion-button (click)="getSubmit()">保存</button>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\nullpage\nullpage.html"*/,
+            selector: 'page-nullpage',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\nullpage\nullpage.html"*/'<ion-header>\n\n\n\n    <ion-navbar id="a" color="blu">\n\n      <ion-title text-center>记一笔&nbsp;&nbsp;<ion-icon name="md-create"></ion-icon></ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-only>\n\n          <ion-icon name=""></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n    \n\n  </ion-header>\n\n\n\n\n\n<ion-content color="lgrey">\n\n    <ion-item id="money">\n\n      <ion-label color="blu">花销:</ion-label>\n\n      <ion-input [(ngModel)]="money"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label color="blu">类别:</ion-label>\n\n      <ion-select [(ngModel)]="goodtype" multiple="true">\n\n        <ion-option>食品</ion-option>\n\n        <ion-option>交通</ion-option>\n\n        <ion-option>娱乐</ion-option>\n\n        <ion-option>购物</ion-option>\n\n        <ion-option>门票</ion-option>\n\n        <ion-option>住宿</ion-option>\n\n        <ion-option>其他</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n\n\n\n\n    <ion-item>\n\n      <ion-label color="blu">时间:</ion-label>\n\n      <ion-input [(ngModel)]="time"></ion-input>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label color="blu">付款类型:</ion-label>\n\n      <ion-select [(ngModel)]="typemoney" multiple="true">\n\n        <ion-option>现金</ion-option>\n\n        <ion-option>支付宝</ion-option>\n\n        <ion-option>微信</ion-option>\n\n        <ion-option>储蓄卡</ion-option>\n\n        <ion-option>信用卡</ion-option>\n\n        <ion-option>花呗</ion-option>\n\n        <ion-option>其他</ion-option>\n\n      </ion-select>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label color="blu">备注:</ion-label>\n\n      <ion-input [(ngModel)]="more"></ion-input>\n\n    </ion-item>\n\n    <br/><br/><br/><br/><br/>\n\n\n\n    <button ion-button round type="submit" ion-button (click)="getSubmit()">保存</button>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\nullpage\nullpage.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], NullpagePage);
@@ -1235,7 +1294,7 @@ var NullpagePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 213:
+/***/ 215:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1283,7 +1342,7 @@ var MingxiPage = /** @class */ (function () {
     };
     MingxiPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-mingxi',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\mingxi\mingxi.html"*/'<ion-header>\n\n  <ion-navbar id="a" color="blu">\n    <ion-title text-center>明细&nbsp;&nbsp;<ion-icon name="md-create"></ion-icon></ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name=""></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  \n</ion-header>\n\n\n<ion-content color="lgrey">\n  <ion-item id="money">\n    <ion-label color="blu">花销:&nbsp;&nbsp;{{userInfo.money}}</ion-label>\n  </ion-item>\n\n  <ion-item id="money">\n    <ion-label color="blu">类别:&nbsp;&nbsp;{{userInfo.goodtype}}</ion-label>\n  </ion-item>\n\n\n  <ion-item id="money">\n    <ion-label color="blu">时间:&nbsp;&nbsp;{{userInfo.time}}</ion-label>\n  </ion-item>\n\n  <ion-item id="money">\n    <ion-label color="blu">付款类型:&nbsp;&nbsp;{{userInfo.typemoney}}</ion-label>\n  </ion-item>\n\n\n  <ion-item id="money">\n    <ion-label color="blu">备注:&nbsp;&nbsp;{{userInfo.more}}</ion-label>\n  </ion-item>\n\n  <br/><br/><br/>\n  <button ion-button round (click)="deletelist()">删除</button>\n</ion-content>'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\mingxi\mingxi.html"*/,
+            selector: 'page-mingxi',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\mingxi\mingxi.html"*/'<ion-header>\n\n\n\n  <ion-navbar id="a" color="blu">\n\n    <ion-title text-center>明细&nbsp;&nbsp;<ion-icon name="md-create"></ion-icon></ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only>\n\n        <ion-icon name=""></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  \n\n</ion-header>\n\n\n\n\n\n<ion-content color="lgrey">\n\n  <ion-item id="money">\n\n    <ion-label color="blu">花销:&nbsp;&nbsp;{{userInfo.money}}</ion-label>\n\n  </ion-item>\n\n\n\n  <ion-item id="money">\n\n    <ion-label color="blu">类别:&nbsp;&nbsp;{{userInfo.goodtype}}</ion-label>\n\n  </ion-item>\n\n\n\n\n\n  <ion-item id="money">\n\n    <ion-label color="blu">时间:&nbsp;&nbsp;{{userInfo.time}}</ion-label>\n\n  </ion-item>\n\n\n\n  <ion-item id="money">\n\n    <ion-label color="blu">付款类型:&nbsp;&nbsp;{{userInfo.typemoney}}</ion-label>\n\n  </ion-item>\n\n\n\n\n\n  <ion-item id="money">\n\n    <ion-label color="blu">备注:&nbsp;&nbsp;{{userInfo.more}}</ion-label>\n\n  </ion-item>\n\n\n\n  <br/><br/><br/>\n\n  <button ion-button round (click)="deletelist()">删除</button>\n\n</ion-content>'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\mingxi\mingxi.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], MingxiPage);
@@ -1294,15 +1353,15 @@ var MingxiPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 214:
+/***/ 216:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TriplanPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addplan_addplan__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zongji_zongji__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addplan_addplan__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zongji_zongji__ = __webpack_require__(218);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1338,7 +1397,7 @@ var TriplanPage = /** @class */ (function () {
     };
     TriplanPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-triplan',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\triplan\triplan.html"*/'<ion-header>\n  <ion-navbar id="a" color="blu">\n    <ion-title text-center>我的计划</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only (click)="goaddplan()" >\n        <ion-icon name="md-add" id="icony"></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  \n</ion-header>\n\n\n<ion-content>\n  \n  <div id="listdiv">\n    <ul id="list" text-center>\n      <li  ngDefaultControl *ngFor="let item of arr;let i = index;" (click)="gomingxi2(i)" >\n        第{{item.days}}\n        <br/>\n        上午:{{item.shangwu}} <br/>\n        中午:{{item.zhongwu}}<br/>\n        下午:{{item.xiawu}}<br/>\n        晚上:{{item.wanshang}}\n      </li>  \n      \n    </ul>\n  </div>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\triplan\triplan.html"*/,
+            selector: 'page-triplan',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\triplan\triplan.html"*/'<ion-header>\n\n  <ion-navbar id="a" color="blu">\n\n    <ion-title text-center>我的计划</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only (click)="goaddplan()" >\n\n        <ion-icon name="md-add" id="icony"></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  \n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  \n\n  <div id="listdiv">\n\n    <ul id="list" text-center>\n\n      <li  ngDefaultControl *ngFor="let item of arr;let i = index;" (click)="gomingxi2(i)" >\n\n        第{{item.days}}\n\n        <br/>\n\n        上午:{{item.shangwu}} <br/>\n\n        中午:{{item.zhongwu}}<br/>\n\n        下午:{{item.xiawu}}<br/>\n\n        晚上:{{item.wanshang}}\n\n      </li>  \n\n      \n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\triplan\triplan.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], TriplanPage);
@@ -1349,7 +1408,7 @@ var TriplanPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 215:
+/***/ 217:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1398,7 +1457,7 @@ var AddplanPage = /** @class */ (function () {
     };
     AddplanPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addplan',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\addplan\addplan.html"*/'<ion-header>\n  <ion-navbar id="a" color="blu">\n    <ion-title text-center>添加计划</ion-title>\n    <ion-buttons end>\n      <button ion-button icon-only>\n        <ion-icon name=""></ion-icon>\n        <ion-icon name=""></ion-icon>\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n  \n</ion-header>\n\n\n<ion-content>\n  <ion-item id="item1">\n    <ion-label color="blu">第几天：</ion-label>\n    <ion-select [(ngModel)]="days" multiple="true">\n      <ion-option>1天</ion-option>\n      <ion-option>2天</ion-option>\n      <ion-option>3天</ion-option>\n      <ion-option>4天</ion-option>\n      <ion-option>5天</ion-option>\n      <ion-option>6天</ion-option>\n      <ion-option>7天</ion-option>\n      <ion-option>8天</ion-option>\n      <ion-option>9天</ion-option>\n    </ion-select>\n  </ion-item>\n\n  <ion-item>\n    <ion-label color="blu" stacked>上午：</ion-label>\n    <ion-input type="text" [(ngModel)]="shangwu"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label color="blu" stacked>中午：</ion-label>\n    <ion-input type="text" [(ngModel)]="zhongwu"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label color="blu" stacked>下午：</ion-label>\n    <ion-input type="text" [(ngModel)]="xiawu"></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label color="blu" stacked>晚上：</ion-label>\n    <ion-input type="text" [(ngModel)]="wanshang"></ion-input>\n  </ion-item>\n\n  <button ion-button round type="submit" ion-button (click)="saveplan()">保存</button>\n\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\addplan\addplan.html"*/,
+            selector: 'page-addplan',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\addplan\addplan.html"*/'<ion-header>\n\n  <ion-navbar id="a" color="blu">\n\n    <ion-title text-center>添加计划</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button icon-only>\n\n        <ion-icon name=""></ion-icon>\n\n        <ion-icon name=""></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n  \n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-item id="item1">\n\n    <ion-label color="blu">第几天：</ion-label>\n\n    <ion-select [(ngModel)]="days" multiple="true">\n\n      <ion-option>1天</ion-option>\n\n      <ion-option>2天</ion-option>\n\n      <ion-option>3天</ion-option>\n\n      <ion-option>4天</ion-option>\n\n      <ion-option>5天</ion-option>\n\n      <ion-option>6天</ion-option>\n\n      <ion-option>7天</ion-option>\n\n      <ion-option>8天</ion-option>\n\n      <ion-option>9天</ion-option>\n\n    </ion-select>\n\n  </ion-item>\n\n\n\n  <ion-item>\n\n    <ion-label color="blu" stacked>上午：</ion-label>\n\n    <ion-input type="text" [(ngModel)]="shangwu"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label color="blu" stacked>中午：</ion-label>\n\n    <ion-input type="text" [(ngModel)]="zhongwu"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label color="blu" stacked>下午：</ion-label>\n\n    <ion-input type="text" [(ngModel)]="xiawu"></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label color="blu" stacked>晚上：</ion-label>\n\n    <ion-input type="text" [(ngModel)]="wanshang"></ion-input>\n\n  </ion-item>\n\n\n\n  <button ion-button round type="submit" ion-button (click)="saveplan()">保存</button>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\addplan\addplan.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], AddplanPage);
@@ -1409,7 +1468,7 @@ var AddplanPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 216:
+/***/ 218:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1455,7 +1514,7 @@ var ZongjiPage = /** @class */ (function () {
     };
     ZongjiPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-zongji',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\zongji\zongji.html"*/'<ion-header>\n    <ion-navbar id="a" color="blu">\n      <ion-title text-center>我的计划</ion-title>\n      <ion-buttons end>\n        <button ion-button icon-only>\n          <ion-icon name=""></ion-icon>\n          <ion-icon name=""></ion-icon>\n        </button>\n      </ion-buttons>\n    </ion-navbar>\n    \n  </ion-header>\n\n\n<ion-content>\n  <ion-item>\n    <ion-label color="primary">第{{list.days}}</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label color="primary">上午:{{list.shangwu}}</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label color="primary">中午:{{list.zhongwu}}</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label color="primary">下午:{{list.xiawu}}</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n  <ion-item>\n    <ion-label color="primary">晚上:{{list.wanshang}}</ion-label>\n    <ion-input></ion-input>\n  </ion-item>\n\n  <br/><br/><br/>\n  <button ion-button round (click)="deletelist()">删除</button>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\zongji\zongji.html"*/,
+            selector: 'page-zongji',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\zongji\zongji.html"*/'<ion-header>\n\n    <ion-navbar id="a" color="blu">\n\n      <ion-title text-center>我的计划</ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button icon-only>\n\n          <ion-icon name=""></ion-icon>\n\n          <ion-icon name=""></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n    \n\n  </ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-item>\n\n    <ion-label color="primary">第{{list.days}}</ion-label>\n\n    <ion-input></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label color="primary">上午:{{list.shangwu}}</ion-label>\n\n    <ion-input></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label color="primary">中午:{{list.zhongwu}}</ion-label>\n\n    <ion-input></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label color="primary">下午:{{list.xiawu}}</ion-label>\n\n    <ion-input></ion-input>\n\n  </ion-item>\n\n  <ion-item>\n\n    <ion-label color="primary">晚上:{{list.wanshang}}</ion-label>\n\n    <ion-input></ion-input>\n\n  </ion-item>\n\n\n\n  <br/><br/><br/>\n\n  <button ion-button round (click)="deletelist()">删除</button>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\zongji\zongji.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], ZongjiPage);
@@ -1466,15 +1525,15 @@ var ZongjiPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 218:
+/***/ 220:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GongluePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pinglun_pinglun__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shouyeqq_shouyeqq__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pinglun_pinglun__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shouyeqq_shouyeqq__ = __webpack_require__(105);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1519,7 +1578,7 @@ var GongluePage = /** @class */ (function () {
     };
     GongluePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-gonglue',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\gonglue\gonglue.html"*/'\n<ion-header>\n\n  <ion-navbar color="blu">\n    <ion-title (click)="goHomePage()"></ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding class="ioncontent">\n  <div class="fixed1">\n      <p class="title">{{userInfo.title}}</p>\n    <hr>\n    <img src="{{userInfo.touxiang}}" alt="" class="touxiang">\n    <span class="username">{{userInfo.name}}</span>\n    <p class="content">{{userInfo.content}}</p>\n    <img src="{{userInfo.imgUrl}}" alt="" class="articleimg">\n  </div>\n    \n    \n</ion-content>\n<ion-footer>\n    <div  class="fixed">\n        <!-- <p class="time">发布于{{userInfo.time}}--著作权归作者所有</p> -->\n        <!-- <img src="../assets/imgs/3.jpg" alt="" class="mytouxiang">\n        <input type="text" placeholder="添加评论..." class="pinglun"> -->\n        <div class="last">\n         <!-- <button class="agree"> <ion-icon ios="ios-arrow-dropup" md="md-arrow-dropup"></ion-icon>赞同</button>\n         <button class="argue"> <ion-icon ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon></button> -->\n          <div class="divs">\n            <div class="div1">\n              <ion-icon ios="ios-heart" md="md-heart" class="icon"></ion-icon>\n              <p>感谢</p>\n            </div>\n            <div class="div2">\n              <ion-icon ios="ios-star" md="md-star" class="icon"></ion-icon>\n              <p>收藏</p>\n            </div>\n            <div class="div3" (click)="goPinglunPage()">\n              <ion-icon ios="ios-menu" md="md-menu" class="icon"></ion-icon>\n              <p>评论</p>\n            </div>\n          </div>\n        </div>\n      </div>\n</ion-footer>\n\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\gonglue\gonglue.html"*/,
+            selector: 'page-gonglue',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\gonglue\gonglue.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="blu">\n\n    <ion-title (click)="goHomePage()"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="ioncontent">\n\n  <div class="fixed1">\n\n      <p class="title">{{userInfo.title}}</p>\n\n    <hr>\n\n    <img src="{{userInfo.touxiang}}" alt="" class="touxiang">\n\n    <span class="username">{{userInfo.name}}</span>\n\n    <p class="content">{{userInfo.content}}</p>\n\n    <img src="{{userInfo.imgUrl}}" alt="" class="articleimg">\n\n  </div>\n\n    \n\n    \n\n</ion-content>\n\n<ion-footer>\n\n    <div  class="fixed">\n\n        <!-- <p class="time">发布于{{userInfo.time}}--著作权归作者所有</p> -->\n\n        <!-- <img src="../assets/imgs/3.jpg" alt="" class="mytouxiang">\n\n        <input type="text" placeholder="添加评论..." class="pinglun"> -->\n\n        <div class="last">\n\n         <!-- <button class="agree"> <ion-icon ios="ios-arrow-dropup" md="md-arrow-dropup"></ion-icon>赞同</button>\n\n         <button class="argue"> <ion-icon ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon></button> -->\n\n          <div class="divs">\n\n            <div class="div1">\n\n              <ion-icon ios="ios-heart" md="md-heart" class="icon"></ion-icon>\n\n              <p>感谢</p>\n\n            </div>\n\n            <div class="div2">\n\n              <ion-icon ios="ios-star" md="md-star" class="icon"></ion-icon>\n\n              <p>收藏</p>\n\n            </div>\n\n            <div class="div3" (click)="goPinglunPage()">\n\n              <ion-icon ios="ios-menu" md="md-menu" class="icon"></ion-icon>\n\n              <p>评论</p>\n\n            </div>\n\n          </div>\n\n        </div>\n\n      </div>\n\n</ion-footer>\n\n\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\gonglue\gonglue.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], GongluePage);
@@ -1530,7 +1589,7 @@ var GongluePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 219:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1578,7 +1637,7 @@ var PinglunPage = /** @class */ (function () {
     };
     PinglunPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-pinglun',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\pinglun\pinglun.html"*/'<!--\n  Generated template for the PinglunPage page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n    <ion-navbar color="blu">\n      <ion-title>评论</ion-title>\n    </ion-navbar>\n  </ion-header>\n  \n  <ion-content>\n     <p class="allpinglun">全部评论</p>\n    <div *ngFor="let comment of comment[\'comment\'];let idx=index;" class="pingluns">\n        <img src="{{comment.touxiang}}" alt="" class="touxiang">\n        <span class="username">{{comment.name}}</span>\n        <div class="div1">\n            <p>{{comment.content}}</p>\n        </div>\n        <div class="other">\n          <span class="time">{{comment.time}}</span>\n          <span class="huifu">查看回复</span>\n          <div class="zanpinglun">\n              <div class="zan">\n                <span>{{comment.zan}}</span><ion-icon  md="md-hand" (click)="inceresezan(idx)" class="dianzan"></ion-icon>\n              </div>\n              <div class="pinglun">\n                <span>{{comment.pinglun}}</span><ion-icon md="md-chatbubbles" (click)="increasecomment(idx)"></ion-icon>\n              </div>\n          </div>\n        </div>\n    </div>\n  </ion-content>\n  '/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\pinglun\pinglun.html"*/,
+            selector: 'page-pinglun',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\pinglun\pinglun.html"*/'<!--\n\n  Generated template for the PinglunPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n    <ion-navbar color="blu">\n\n      <ion-title>评论</ion-title>\n\n    </ion-navbar>\n\n  </ion-header>\n\n  \n\n  <ion-content>\n\n     <p class="allpinglun">全部评论</p>\n\n    <div *ngFor="let comment of comment[\'comment\'];let idx=index;" class="pingluns">\n\n        <img src="{{comment.touxiang}}" alt="" class="touxiang">\n\n        <span class="username">{{comment.name}}</span>\n\n        <div class="div1">\n\n            <p>{{comment.content}}</p>\n\n        </div>\n\n        <div class="other">\n\n          <span class="time">{{comment.time}}</span>\n\n          <span class="huifu">查看回复</span>\n\n          <div class="zanpinglun">\n\n              <div class="zan">\n\n                <span>{{comment.zan}}</span><ion-icon  md="md-hand" (click)="inceresezan(idx)" class="dianzan"></ion-icon>\n\n              </div>\n\n              <div class="pinglun">\n\n                <span>{{comment.pinglun}}</span><ion-icon md="md-chatbubbles" (click)="increasecomment(idx)"></ion-icon>\n\n              </div>\n\n          </div>\n\n        </div>\n\n    </div>\n\n  </ion-content>\n\n  '/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\pinglun\pinglun.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], PinglunPage);
@@ -1590,7 +1649,7 @@ var PinglunPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 220:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1641,7 +1700,7 @@ var AddpagePage = /** @class */ (function () {
     };
     AddpagePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-addpage',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\addpage\addpage.html"*/'<ion-header >\n  <ion-navbar color="blu">\n    <ion-buttons style="position: absolute;left:2%">\n      <button ion-button icon-only (click)="showConfirm()">\n        取消       \n      </button>\n    </ion-buttons>  \n    <ion-title text-center>在路上</ion-title>\n    <ion-buttons style="position: absolute;right:2%;top:25%;">\n      <button ion-button icon-only>\n        发布\n      </button>\n    </ion-buttons>\n  </ion-navbar>\n</ion-header>\n\n\n<ion-content>\n  <ion-list>\n    <ion-item>\n      <ion-textarea placeholder="分享你的旅行攻略，你的心情。。。"></ion-textarea>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>禁止转载</ion-label>\n      <ion-toggle [(ngModel)]="zhuanzai"></ion-toggle>\n    </ion-item>\n    \n    <ion-item>\n      <ion-label>匿名身份</ion-label>\n      <ion-toggle [(ngModel)]="niming"></ion-toggle>\n    </ion-item>\n\n    <ion-item>\n      <ion-label>公开</ion-label>\n      <ion-toggle [(ngModel)]="gongkai"></ion-toggle>\n    </ion-item>\n\n  </ion-list>\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\addpage\addpage.html"*/,
+            selector: 'page-addpage',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\addpage\addpage.html"*/'<ion-header >\n\n  <ion-navbar color="blu">\n\n    <ion-buttons style="position: absolute;left:2%">\n\n      <button ion-button icon-only (click)="showConfirm()">\n\n        取消       \n\n      </button>\n\n    </ion-buttons>  \n\n    <ion-title text-center>在路上</ion-title>\n\n    <ion-buttons style="position: absolute;right:2%;top:25%;">\n\n      <button ion-button icon-only>\n\n        发布\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <ion-list>\n\n    <ion-item>\n\n      <ion-textarea placeholder="分享你的旅行攻略，你的心情。。。"></ion-textarea>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label>禁止转载</ion-label>\n\n      <ion-toggle [(ngModel)]="zhuanzai"></ion-toggle>\n\n    </ion-item>\n\n    \n\n    <ion-item>\n\n      <ion-label>匿名身份</ion-label>\n\n      <ion-toggle [(ngModel)]="niming"></ion-toggle>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label>公开</ion-label>\n\n      <ion-toggle [(ngModel)]="gongkai"></ion-toggle>\n\n    </ion-item>\n\n\n\n  </ion-list>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\addpage\addpage.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
     ], AddpagePage);
@@ -1652,13 +1711,13 @@ var AddpagePage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 222:
+/***/ 223:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(223);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(243);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(224);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(244);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -1666,7 +1725,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 243:
+/***/ 244:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1674,37 +1733,37 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(285);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(299);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_about_about__ = __webpack_require__(298);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_contact_contact__ = __webpack_require__(202);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__ = __webpack_require__(200);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_jizhangben_jizhangben__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_mingxi_mingxi__ = __webpack_require__(213);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_addplan_addplan__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_triplan_triplan__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_zongji_zongji__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_nullpage_nullpage__ = __webpack_require__(212);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_gonglue_gonglue__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_pinglun_pinglun__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_shouyeqq_shouyeqq__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_collection_collection__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_strategy_strategy__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_attention_attention__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(286);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_about_about__ = __webpack_require__(299);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_contact_contact__ = __webpack_require__(203);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(212);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__ = __webpack_require__(201);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_jizhangben_jizhangben__ = __webpack_require__(213);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_mingxi_mingxi__ = __webpack_require__(215);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_addplan_addplan__ = __webpack_require__(217);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_triplan_triplan__ = __webpack_require__(216);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_zongji_zongji__ = __webpack_require__(218);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_nullpage_nullpage__ = __webpack_require__(214);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_gonglue_gonglue__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_pinglun_pinglun__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_shouyeqq_shouyeqq__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_collection_collection__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_strategy_strategy__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_attention_attention__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_register_register__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_enroll_enroll__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_concerning_concerning__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_message_message__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_opinion_opinion__ = __webpack_require__(205);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_fans_fans__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_addpage_addpage__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__angular_common_http__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_myself_myself__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_sub_header_sub_header__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_enroll_enroll__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_concerning_concerning__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_message_message__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_opinion_opinion__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_fans_fans__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_addpage_addpage__ = __webpack_require__(222);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__angular_common_http__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_myself_myself__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_sub_header_sub_header__ = __webpack_require__(210);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1835,15 +1894,15 @@ var AppModule = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 285:
+/***/ 286:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(200);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(201);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_register_register__ = __webpack_require__(50);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1868,7 +1927,7 @@ var MyApp = /** @class */ (function () {
         });
     }
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\app\app.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
@@ -1879,7 +1938,7 @@ var MyApp = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 298:
+/***/ 299:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -1903,7 +1962,7 @@ var AboutPage = /** @class */ (function () {
     }
     AboutPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-about',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\about\about.html"*/'<ion-header>\n  <ion-navbar>\n    <ion-title>\n      About\n    </ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\about\about.html"*/
+            selector: 'page-about',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\about\about.html"*/'<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>\n\n      About\n\n    </ion-title>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\about\about.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]])
     ], AboutPage);
@@ -1921,9 +1980,9 @@ var AboutPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__enroll_enroll__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__enroll_enroll__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(102);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(51);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1955,11 +2014,12 @@ var RegisterPage = /** @class */ (function () {
         this.headers = new __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' });
         // RegisterPage.t=this.tel;
     }
+    RegisterPage_1 = RegisterPage;
     RegisterPage.prototype.goEnroll = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__enroll_enroll__["a" /* EnrollPage */], {
             title: '注册'
         });
-        console.log("EnrollPage");
+        // console.log("EnrollPage");
     };
     RegisterPage.prototype.goTabs = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__tabs_tabs__["a" /* TabsPage */]);
@@ -1973,8 +2033,9 @@ var RegisterPage = /** @class */ (function () {
         }, {
             headers: this.headers,
         }).subscribe(function (data) {
-            console.log(data);
-            console.log(_this.tel);
+            RegisterPage_1.t = _this.tel;
+            // console.log(data);
+            // console.log(this.tel);
             //1成功 0密码空 -1用户不存在 -2密码错误 -3用户名空
             switch (data) {
                 case 0:
@@ -1984,10 +2045,13 @@ var RegisterPage = /** @class */ (function () {
                     _this.goHome();
                     break;
                 case -1:
-                    _this.presentPrompt('该手机号未注册');
+                    _this.presentPrompt('该用户名未注册');
                     break;
                 case -2:
                     _this.presentPrompt('密码错误');
+                    break;
+                case -3:
+                    _this.presentPrompt('用户名不能为空');
                     break;
             }
         });
@@ -2006,25 +2070,26 @@ var RegisterPage = /** @class */ (function () {
                     text: '确认',
                     role: 'cancel',
                     handler: function (data) {
-                        console.log('Confirm clicked');
+                        // console.log('Confirm clicked');
                     }
                 }
             ]
         });
         alert.present();
     };
-    RegisterPage = __decorate([
+    RegisterPage = RegisterPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-register',template:/*ion-inline-start:"D:\project\Whatever\Projects\snail\src\pages\register\register.html"*/'<!-- 登录 -->\n<ion-content padding>\n  <div class="close">\n      <!-- <ion-icon ios="ios-close" md="md-close" (click)="goTabs()"></ion-icon> -->\n      <ion-icon class="over" (click)="goTabs()">跳过</ion-icon>\n  </div>\n  <div class="header">\n    <img src="assets/imgs/蜗牛.png" alt="图标">\n  </div>\n  <div class="box">\n    <div class="pn">\n      <label>\n        <ion-icon name="contact"></ion-icon>\n        <input type="text" placeholder="手机号/邮箱" class="text-input" [(ngModel)]="tel">\n      </label>\n    </div>\n    <div class="pw">\n      <label>\n        <ion-icon name="lock"></ion-icon>\n        <input type="password" placeholder="密码" class="text-input" [(ngModel)]="pwd">\n      </label>\n    </div>\n    <button ion-button block (click)="do()">登录</button>\n  </div>\n  <div class="buttom">\n    <span float-left (click)="goEnroll()">没有账号？立即注册</span>\n    <span class="psw">忘记密码</span>\n  </div>\n</ion-content>\n  '/*ion-inline-end:"D:\project\Whatever\Projects\snail\src\pages\register\register.html"*/,
+            selector: 'page-register',template:/*ion-inline-start:"F:\aaa\Whatever\Projects\snail\src\pages\register\register.html"*/'<!-- 登录 -->\n\n<ion-content padding>\n\n  <div class="close">\n\n      <!-- <ion-icon ios="ios-close" md="md-close" (click)="goTabs()"></ion-icon> -->\n\n      <ion-icon class="over" (click)="goTabs()">跳过</ion-icon>\n\n  </div>\n\n  <div class="header">\n\n    <img src="assets/imgs/蜗牛.png" alt="图标">\n\n  </div>\n\n  <div class="box">\n\n    <div class="pn">\n\n      <label>\n\n        <ion-icon name="contact"></ion-icon>\n\n        <input type="text" placeholder="手机号/邮箱" class="text-input" [(ngModel)]="tel">\n\n      </label>\n\n    </div>\n\n    <div class="pw">\n\n      <label>\n\n        <ion-icon name="lock"></ion-icon>\n\n        <input type="password" placeholder="密码" class="text-input" [(ngModel)]="pwd">\n\n      </label>\n\n    </div>\n\n    <button ion-button block (click)="doPost()">登录</button>\n\n  </div>\n\n  <div class="buttom">\n\n    <span float-left (click)="goEnroll()">没有账号？立即注册</span>\n\n    <span class="psw">忘记密码</span>\n\n  </div>\n\n</ion-content>\n\n  '/*ion-inline-end:"F:\aaa\Whatever\Projects\snail\src\pages\register\register.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], RegisterPage);
     return RegisterPage;
+    var RegisterPage_1;
 }());
 
 //# sourceMappingURL=register.js.map
 
 /***/ })
 
-},[222]);
+},[223]);
 //# sourceMappingURL=main.js.map

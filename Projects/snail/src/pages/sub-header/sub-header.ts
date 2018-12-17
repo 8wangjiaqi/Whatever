@@ -21,7 +21,7 @@ export class SubHeaderPage {
   imgUrl:string;
   constructor(private camera: Camera,public platform: Platform,public actionsheetCtrl: ActionSheetController,public navCtrl: NavController, public navParams: NavParams) {
     this.titleTitle =this.navParams.get('title');
-    this.imgUrl = ContactPage.user.headerSrc;
+    // this.imgUrl = ContactPage.user.headerSrc;
   }
 
   ionViewDidLoad() {

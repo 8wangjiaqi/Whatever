@@ -9,6 +9,7 @@ import { StrategyPage } from '../strategy/strategy';
 import { CollectionPage } from '../collection/collection';
 import { MyselfPage } from '../myself/myself';
 import { RegisterPage } from '../register/register';
+import { HttpHeaders, HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'page-contact',
@@ -17,18 +18,29 @@ import { RegisterPage } from '../register/register';
 export class ContactPage {
   attention_volume;
   fans_volume;
-  public static user = {
-    headerSrc: "assets/imgs/header_1.jpg",
-    name: "杏仁",
-    autograph: "跟我一起旅游吧"
-  };
+  // public static user = {
+  //   headerSrc: "assets/imgs/header_1.jpg",
+  //   name: "杏仁",
+  //   autograph: "跟我一起旅游吧"
+  // };
   user_display;
-  constructor(public navCtrl: NavController) {
-    this.user_display = ContactPage.user;
+  private headers=new HttpHeaders({'Content-Type':'application/json'});
+  gonglue;
+  tel;
+  constructor(public navCtrl: NavController,public http:HttpClient,) {
+    // this.user_display = ContactPage.user;
+    this.tel=RegisterPage.t;
+    this.http.post('/api/contact',{'username':this.tel},
+      {  headers:this.headers}).subscribe((data)=>{
+      this.gonglue=data;
+      // console.log('1',this.tel);
+      console.log(data);
+    });
   }
   ionViewWillEnter() { //page初始化时
     this.attention_volume = AttentionPage.attentionarr.length;
     this.fans_volume = FansPage.fansarr.length;
+    this.tel=RegisterPage.t;
   }
   
   goMyself(){
@@ -79,4 +91,5 @@ export class ContactPage {
   Clear(){
     localStorage.clear();
   }
+
 }
