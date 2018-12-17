@@ -13,7 +13,7 @@
 
 
 <ion-content color="lgrey">
-    <ion-item id="money">
+    <!-- <ion-item id="money">
       <ion-label color="blu">花销:</ion-label>
       <ion-input [(ngModel)]="money"></ion-input>
     </ion-item>
@@ -54,7 +54,24 @@
       <ion-label color="blu">备注:</ion-label>
       <ion-input [(ngModel)]="more"></ion-input>
     </ion-item>
-    <br/><br/><br/><br/><br/>
+    <br/><br/><br/><br/><br/> -->
+    <form  (ngSubmit)="logForm()">
+        <ion-item>
+          <ion-input type="text" placeholder="花销" name="huaxiao" [(ngModel)]="money"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input type="text" placeholder="时间" name='shijian' [(ngModel)]="time"></ion-input>
+        </ion-item>
 
-    <button ion-button round type="submit" ion-button (click)="getSubmit()">保存</button>
-</ion-content>
+        <ion-item>
+          <ion-input type="text" placeholder="付款方式" name='fangshi' [(ngModel)]="style"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" placeholder="备注" name='beizhu' [(ngModel)]="other"></ion-input>
+          </ion-item>
+        <button ion-button block>保存</button>
+    <!-- <button ion-button round type="submit" ion-button (click)="getSubmit()">保存</button> -->
+  </form>
+  </ion-content>

@@ -1,17 +1,17 @@
 <!-- 我的 -->
 <ion-header>
   <div class="top">
-    <li *ngFor="let item of gonglue"> 
+    <!-- <li *ngFor="let item of gonglue">  -->
       <!-- <img src="{{user_display.headerSrc}}" alt="头像" (click)="goMyself()"> -->
       <p text-center class="p1">
-        <!-- <ion-icon ios="ios-create" md="md-create"></ion-icon> -->
-        {{item.username}}
+        <ion-icon ios="ios-create" md="md-create"></ion-icon>
+        <li *ngFor="let item of gonglue"> {{item.username}}</li>
       </p>
       <p text-center class="p2">
-        <!-- <ion-icon ios="ios-create" md="md-create"></ion-icon> -->
-        {{item.signature}}
+        <ion-icon ios="ios-create" md="md-create"></ion-icon>
+        <li *ngFor="let item of gonglue"> {{item.signature}} </li>
       </p>
-    </li>
+    <!-- </li> -->
 </div>
 </ion-header>
 
