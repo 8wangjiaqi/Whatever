@@ -38,42 +38,29 @@ page-enroll {
                 line-height: 35px;
                 font-size: 28px;
             }
-            .pn{
+            .text-input-md {
+                margin: 0; 
+                padding: 0;
+            }
+            .username{
                 padding: 0;
                 margin: 0;
                 width: 100%;
                 height: 35px;
-            }
-            .vc{
-                margin-top: 10px;
-                width: 100%;
-                height: 35px;
-                input{
-                    width: 65%;
-                }
-                button{
-                    margin: 0 0 10px 0!important;
-                    // margin-bottom: 3px;
-                    padding: 0;
-                    width: 25%;
-                    font-size: 14px;
-                color: #505050;
-                // margin-top: 30px;
-                height: 35px; 
-                background-color: rgba($color: #616464, $alpha: 0.4);
-                }
             }
             .pw{
                 margin-top: 10px;
                 width: 100%;
                 height: 35px;
             }
-            input{
+            ion-input{
+                margin-top: 10px;
                 padding-left: 5px;
                 width: 90%;
                 height: 35px;
-                border: 0.5px solid #b9adad;
+                border: 0.5px solid #797878;
                 background-color: transparent;
+                line-height: 35px;
             }
             button{
                 font-size: 16px;
@@ -85,14 +72,17 @@ page-enroll {
             .text-input::-webkit-input-placeholder {
                 font-size: 14px;
                 color: #cec7c7;
+                width: 80%;
             }    
             .text-input:-ms-input-placeholder {
                 font-size: 14px;
                 color: #cec7c7; 
+                width: 80%;
             }    
             .text-input::-moz-placeholder {
                 font-size: 14px;
-                color: #cec7c7;    
+                color: #cec7c7; 
+                width: 80%;
             }    
         }
         .buttom{
@@ -109,4 +99,9 @@ page-enroll {
             }
         }
     }
+}
+form, input, optgroup, select {
+    margin: 0;
+    *font: inherit; 
+    // color: inherit;
 }
