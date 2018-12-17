@@ -1,0 +1,31 @@
+page-addplan {
+    ion-content{
+        background: url(../assets/imgs/bgplan.png);
+        ion-item{
+            ion-select{
+                width: 20%!important;
+                height: auto;
+
+            }
+        }
+        .input-wrapper{
+            width: 20%!important;
+            height: auto;
+
+        }
+        #item1{
+            // width: 80%!important;
+            height: auto;
+        }
+
+        .button-round-md{
+            background-color: #207b94;
+            width: 80%;
+            display: block;
+            margin: 40px auto;
+        }
+
+
+
+    }
+}

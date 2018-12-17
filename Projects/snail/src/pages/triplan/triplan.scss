@@ -1,0 +1,21 @@
+page-triplan {
+    ion-content{
+        background: url(../assets/imgs/bgplan.png);
+
+
+
+        #list{
+            li{
+                width: 100%;
+                list-style: none;
+                background-color: white;
+                margin-left: -6%;
+                margin-top: 10px;
+                //height: 65px;
+                border-radius: 30%;
+            }
+        }
+    }
+
+   
+}

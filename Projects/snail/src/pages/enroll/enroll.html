@@ -1,0 +1,47 @@
+<!-- 注册 -->
+<ion-content padding>
+  <div class="close">
+      <ion-icon class="over" (click)="goTabs()">跳过</ion-icon>
+      <!-- <ion-icon ios="ios-close" md="md-close"></ion-icon> -->
+  </div>
+  <div class="header">
+    <img src="assets/imgs/蜗牛.png" alt="图标">
+  </div>
+  <div class="box">
+    <!-- <div class="pn">
+      <label>
+        <ion-icon name="contact"></ion-icon>
+        <input type="text" placeholder="手机号/邮箱" class="text-input">
+      </label>
+    </div>
+    <div class="vc">
+   
+    </div>
+    <div class="pw">
+      <label>
+        <ion-icon name="lock"></ion-icon>
+        <input type="password" placeholder="密码" class="text-input">
+      </label>
+    </div>
+    <button ion-button block>注册</button>
+  </div> -->
+  <form  (ngSubmit)="logForm()">
+  <ion-item>
+ 
+    <ion-input type="text" placeholder="用户名" name="username" [(ngModel)]="tel"></ion-input>
+  </ion-item>
+
+  <ion-item>
+
+    <ion-input type="password" placeholder="密码" name='pass' [(ngModel)]="pwd"></ion-input>
+  </ion-item>
+  <button ion-button block>注册</button>
+
+
+</form>
+  </div>
+  <div class="buttom">
+    <span float-left (click)="goRegister()">已有账号？去登陆</span>
+  </div>
+</ion-content>
+  

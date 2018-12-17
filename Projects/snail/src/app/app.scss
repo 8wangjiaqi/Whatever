@@ -1,0 +1,28 @@
+ul,li{
+    list-style: none;
+  }
+  .navList{
+    padding-left: 0!important;
+    margin: 0;
+    height: 44px;
+    line-height: 44px;
+    .first{
+        border-bottom:2px solid #ffdb2c;
+    }
+    li{
+        height: 44px;
+        text-align: center;
+        float: left;
+        width: 25%;
+    }
+  }
+  .ion-md-add-circle:before{
+    font-size: 36px;
+  }
+  
+  li{
+    list-style: none;
+  }
+  a{
+      text-decoration: none;
+  }

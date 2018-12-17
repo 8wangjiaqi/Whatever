@@ -1,0 +1,64 @@
+page-shouyeqq {
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .search1{
+        border-radius:20px;
+        width: 80%;
+        height: 3%;
+        margin-left: 10%;
+        margin-top: 2%;
+    }
+    .navList{
+        li{
+            width: 30%;
+            margin-left:13%;
+        }
+    }
+   .sli{
+       width:100%;
+       height:10%;
+       .slide-image{
+           width:100%;
+           height:98%;
+       }
+   }
+   .articles{
+       position:relative;
+   }
+   .div1{
+       height: 10%;
+   }
+   .div2{
+       height: 80%;
+   }
+   .div3{
+       height: 10%;
+   }
+   .content{
+    overflow: hidden!important;
+    display: -webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3!important;
+    //设置文本超过三行时开始隐藏
+   }
+    .touxiang{
+         width: 50px;
+         height: 50px;
+        border-radius: 50%;
+        position:relative;
+    }
+    .username{
+        position:absolute;
+        margin-top:3%;
+    }
+    .guanzhu{
+        position:absolute;
+        margin-right:70%;
+    }
+    .title{
+         font-size: 18px;
+         font-weight: bolder;
+    }
+}

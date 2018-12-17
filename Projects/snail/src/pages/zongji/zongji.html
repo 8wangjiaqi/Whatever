@@ -1,0 +1,39 @@
+<ion-header>
+    <ion-navbar id="a" color="blu">
+      <ion-title text-center>我的计划</ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only>
+          <ion-icon name=""></ion-icon>
+          <ion-icon name=""></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+    
+  </ion-header>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label color="primary">第{{list.days}}</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">上午:{{list.shangwu}}</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">中午:{{list.zhongwu}}</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">下午:{{list.xiawu}}</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label color="primary">晚上:{{list.wanshang}}</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <br/><br/><br/>
+  <button ion-button round (click)="deletelist()">删除</button>
+</ion-content>

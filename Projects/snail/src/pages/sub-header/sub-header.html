@@ -1,0 +1,17 @@
+<!-- 个人头像 -->
+<ion-header text-center no-border>
+    <ion-navbar color="major">
+      <ion-title>{{titleTitle}}</ion-title>
+      <ion-buttons end>
+        <button ion-button block (click)="openMenu()">
+          <ion-icon name="more"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+<ion-content padding>
+  <div class="picture">
+    <img src="{{imgUrl}}" alt="您的头像">
+  </div>
+</ion-content>

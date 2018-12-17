@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar id="a" color="blu">
+    <ion-title text-center>我的计划</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="goaddplan()" >
+        <ion-icon name="md-add" id="icony"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+  
+</ion-header>
+
+
+<ion-content>
+  
+  <div id="listdiv">
+    <ul id="list" text-center>
+      <li  ngDefaultControl *ngFor="let item of arr;let i = index;" (click)="gomingxi2(i)" >
+        第{{item.days}}
+        <br/>
+        上午:{{item.shangwu}} <br/>
+        中午:{{item.zhongwu}}<br/>
+        下午:{{item.xiawu}}<br/>
+        晚上:{{item.wanshang}}
+      </li>  
+      
+    </ul>
+  </div>
+</ion-content>

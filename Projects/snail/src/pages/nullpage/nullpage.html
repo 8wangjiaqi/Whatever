@@ -1,0 +1,77 @@
+<ion-header>
+
+    <ion-navbar id="a" color="blu">
+      <ion-title text-center>记一笔&nbsp;&nbsp;<ion-icon name="md-create"></ion-icon></ion-title>
+      <ion-buttons end>
+        <button ion-button icon-only>
+          <ion-icon name=""></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+    
+  </ion-header>
+
+
+<ion-content color="lgrey">
+    <!-- <ion-item id="money">
+      <ion-label color="blu">花销:</ion-label>
+      <ion-input [(ngModel)]="money"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="blu">类别:</ion-label>
+      <ion-select [(ngModel)]="goodtype" multiple="true">
+        <ion-option>食品</ion-option>
+        <ion-option>交通</ion-option>
+        <ion-option>娱乐</ion-option>
+        <ion-option>购物</ion-option>
+        <ion-option>门票</ion-option>
+        <ion-option>住宿</ion-option>
+        <ion-option>其他</ion-option>
+      </ion-select>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label color="blu">时间:</ion-label>
+      <ion-input [(ngModel)]="time"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="blu">付款类型:</ion-label>
+      <ion-select [(ngModel)]="typemoney" multiple="true">
+        <ion-option>现金</ion-option>
+        <ion-option>支付宝</ion-option>
+        <ion-option>微信</ion-option>
+        <ion-option>储蓄卡</ion-option>
+        <ion-option>信用卡</ion-option>
+        <ion-option>花呗</ion-option>
+        <ion-option>其他</ion-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label color="blu">备注:</ion-label>
+      <ion-input [(ngModel)]="more"></ion-input>
+    </ion-item>
+    <br/><br/><br/><br/><br/> -->
+    <form  (ngSubmit)="logForm()">
+        <ion-item>
+          <ion-input type="text" placeholder="花销" name="huaxiao" [(ngModel)]="money"></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-input type="text" placeholder="时间" name='shijian' [(ngModel)]="time"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-input type="text" placeholder="付款方式" name='fangshi' [(ngModel)]="style"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-input type="text" placeholder="备注" name='beizhu' [(ngModel)]="other"></ion-input>
+          </ion-item>
+        <button ion-button block>保存</button>
+    <!-- <button ion-button round type="submit" ion-button (click)="getSubmit()">保存</button> -->
+  </form>
+  </ion-content>

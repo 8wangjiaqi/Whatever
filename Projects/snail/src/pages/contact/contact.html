@@ -1,0 +1,58 @@
+<!-- 我的 -->
+<ion-header>
+  <div class="top">
+        <img src="" alt="头像" onerror="this.src='assets/imgs/un_register.jpg'"/> 
+        <p text-center class="p1">
+          {{gonglue.name}}
+        </p>
+</div>
+</ion-header>
+
+<ion-content>
+  <div class="con1">
+    <ul>
+      <li (click)="goFans()">
+        <p text-center class="p1">{{fans_volume}}</p>
+        <p text-center class="p2">粉丝</p>
+      </li>
+      <li (click)="goAttention()">
+        <p text-center class="p1">{{attention_volume}}</p>
+        <p text-center class="p2">关注</p>
+      </li>
+      <li (click)="goStrategy()">
+        <p text-center class="p1">32</p>
+        <p text-center class="p2">我的攻略</p>
+      </li>
+    </ul>
+  </div>
+  <div class="con2">
+    <ul>
+      <li (click)="goCollection()">
+        <ion-icon ios="logo-codepen" md="logo-codepen" class="icon1"></ion-icon>
+        <span>我的收藏</span>
+        <span float-right class="right">></span>
+      </li>
+      <li (click)="goMessage()">
+        <ion-icon ios="ios-text" md="md-text" class="icon1"></ion-icon>
+        <span>我的消息</span>
+        <ion-icon name="notifications-outline" class="bell"></ion-icon>
+        <span float-right class="right">></span>
+      </li>
+      <li (click)="goConcerning()">
+          <ion-icon ios="ios-people" md="md-people" class="icon1"></ion-icon>
+          <span>关于我们</span>
+          <span float-right class="right">></span>
+      </li>
+      <li (click)="goOpinion()">
+          <ion-icon ios="ios-create" md="md-create" class="icon1"></ion-icon>
+          <span>意见反馈</span>
+          <span float-right class="right">></span>
+      </li>
+      <li (click)="goRegister();Clear()">
+          <ion-icon ios="ios-close-circle" md="md-close-circle" class="icon1"></ion-icon>
+          <span>退出登录</span>
+          <span float-right class="right">></span>
+      </li>
+    </ul>
+  </div>
+</ion-content>

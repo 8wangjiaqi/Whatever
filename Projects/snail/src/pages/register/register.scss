@@ -1,0 +1,93 @@
+page-register {
+    ion-content{//整个全屏
+        background: url(../assets/imgs/register_background.png);
+        background-size: cover;
+        .close{
+            width: 100%;
+            ion-icon{
+                font-size: 25px;
+                color: #fff;
+            }
+            .over{
+                width: 40px;
+                height: 22px;
+                float: right;
+                color: #207b94;
+                border: #207b94 0.5px solid;
+                border-radius: 3px;
+                font-size: 16px;
+                line-height: 22px;
+                text-align: center;
+            }
+        }
+        .header{
+            margin-top: 50px;
+            text-align: center;
+            width: 100%;
+            height: 170px;
+            img{
+                width: 120px;
+                height: 120px;
+                vertical-align: middle;;
+            }
+        }
+        .box{
+            ion-icon{
+                width: 24px;
+                color: #505050;
+                line-height: 35px;
+                font-size: 28px;
+            }
+            .pn{
+                padding: 0;
+                margin: 0;
+                width: 100%;
+                height: 35px;
+            }
+            .pw{
+                margin-top: 10px;
+                width: 100%;
+                height: 35px;
+            }
+            input{
+                padding-left: 5px;
+                width: 90%;
+                height: 35px;
+                border: 0.5px solid #696969;
+                background-color: transparent;
+            }
+            button{
+                font-size: 16px;
+                color: #505050;
+                margin-top: 30px;
+                height: 40px; 
+                background-color: rgba($color: #207b94, $alpha: 0.4);
+            }
+            .text-input::-webkit-input-placeholder {
+                font-size: 14px;
+                color: #696969;
+            }    
+            .text-input:-ms-input-placeholder {
+                font-size: 14px;
+                color: #696969; 
+            }    
+            .text-input::-moz-placeholder {
+                font-size: 14px;
+                color: #696969;    
+            }    
+        }
+        .buttom{
+            width: 100%;
+            position: absolute;
+            bottom:2%;
+            span{
+                color: #d8d5d5;
+                padding: 10px;
+            }
+            .psw{
+                position: absolute;
+                right: 10%;
+            }
+        }
+    }
+}
