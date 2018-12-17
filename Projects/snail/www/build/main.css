@@ -36798,7 +36798,7 @@ page-contact .top {
 page-contact .top img {
   position: absolute;
   top: 12%;
-  left: 37%;
+  left: 36%;
   width: 100px;
   height: 100px;
   border-radius: 100px;
@@ -36942,31 +36942,16 @@ page-enroll ion-content .box ion-icon {
   font-size: 28px;
 }
 
-page-enroll ion-content .box .pn {
+page-enroll ion-content .box .text-input-md {
+  margin: 0;
+  padding: 0;
+}
+
+page-enroll ion-content .box .username {
   padding: 0;
   margin: 0;
   width: 100%;
   height: 35px;
-}
-
-page-enroll ion-content .box .vc {
-  margin-top: 10px;
-  width: 100%;
-  height: 35px;
-}
-
-page-enroll ion-content .box .vc input {
-  width: 65%;
-}
-
-page-enroll ion-content .box .vc button {
-  margin: 0 0 10px 0 !important;
-  padding: 0;
-  width: 25%;
-  font-size: 14px;
-  color: #505050;
-  height: 35px;
-  background-color: rgba(97, 100, 100, 0.4);
 }
 
 page-enroll ion-content .box .pw {
@@ -36975,12 +36960,14 @@ page-enroll ion-content .box .pw {
   height: 35px;
 }
 
-page-enroll ion-content .box input {
+page-enroll ion-content .box ion-input {
+  margin-top: 10px;
   padding-left: 5px;
   width: 90%;
   height: 35px;
-  border: 0.5px solid #b9adad;
+  border: 0.5px solid #797878;
   background-color: transparent;
+  line-height: 35px;
 }
 
 page-enroll ion-content .box button {
@@ -36994,16 +36981,19 @@ page-enroll ion-content .box button {
 page-enroll ion-content .box .text-input::-webkit-input-placeholder {
   font-size: 14px;
   color: #cec7c7;
+  width: 80%;
 }
 
 page-enroll ion-content .box .text-input:-ms-input-placeholder {
   font-size: 14px;
   color: #cec7c7;
+  width: 80%;
 }
 
 page-enroll ion-content .box .text-input::-moz-placeholder {
   font-size: 14px;
   color: #cec7c7;
+  width: 80%;
 }
 
 page-enroll ion-content .buttom {
@@ -37020,6 +37010,11 @@ page-enroll ion-content .buttom span {
 page-enroll ion-content .buttom .psw {
   position: absolute;
   right: 10%;
+}
+
+form, input, optgroup, select {
+  margin: 0;
+  *font: inherit;
 }
 
 page-fans ion-header ion-navbar ion-buttons {

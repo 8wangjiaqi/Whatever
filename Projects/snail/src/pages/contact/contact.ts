@@ -20,7 +20,7 @@ export class ContactPage {
   fans_volume;
   // public static user = {
   //   headerSrc: "assets/imgs/header_1.jpg",
-  //   name: "杏仁",
+  //   username: "杏仁",
   //   autograph: "跟我一起旅游吧"
   // };
   user_display;
@@ -38,6 +38,9 @@ export class ContactPage {
     });
     if(this.gonglue.username==null){
       this.gonglue.username = "请点击登录"
+    }
+    if(this.gonglue.headerSrc==null){
+      this.gonglue.headerSrc = "assets/imgs/un_register.jpg"
     }
   }
   ionViewWillEnter() { //page初始化时
@@ -94,5 +97,11 @@ export class ContactPage {
   Clear(){
     localStorage.clear();
   }
-
+  goJudge(){
+    if(this.gonglue.username == "请点击登录"){
+      this.goRegister();
+    }else{
+      this.goMyself();
+    }
+  }
 }
