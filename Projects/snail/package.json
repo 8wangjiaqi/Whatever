@@ -45,7 +45,7 @@
       "cordova-sqlite-storage": {},
       "cordova-plugin-camera": {},
       "cordova-plugin-telerik-imagepicker": {
-        "PHOTO_LIBRARY_USAGE_DESCRIPTION": "camera-snail"
+        "PHOTO_LIBRARY_USAGE_DESCRIPTION": "your usage message"
       }
     }
   }

@@ -712,7 +712,7 @@ var ContactPage = /** @class */ (function () {
     };
     ContactPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"D:\Whatever\Projects\snail\src\pages\contact\contact.html"*/'<!-- 我的 -->\n\n<ion-header>\n\n  <div class="top" class="goJudge()">\n\n    <img src="{{gonglue.headerSrc}}" alt="头像" />\n\n    <p text-center class="p1">\n\n      {{gonglue.username}}\n\n    </p>\n\n  </div>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="con1">\n\n    <ul>\n\n      <li (click)="goFans()">\n\n        <p text-center class="p1">{{fans_volume}}</p>\n\n        <p text-center class="p2">粉丝</p>\n\n      </li>\n\n      <li (click)="goAttention()">\n\n        <p text-center class="p1">{{attention_volume}}</p>\n\n        <p text-center class="p2">关注</p>\n\n      </li>\n\n      <li (click)="goStrategy()">\n\n        <p text-center class="p1">32</p>\n\n        <p text-center class="p2">我的攻略</p>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n  <div class="con2">\n\n    <ul>\n\n      <li (click)="goCollection()">\n\n        <ion-icon ios="logo-codepen" md="logo-codepen" class="icon1"></ion-icon>\n\n        <span>我的收藏</span>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goMessage()">\n\n        <ion-icon ios="ios-text" md="md-text" class="icon1"></ion-icon>\n\n        <span>我的消息</span>\n\n        <ion-icon name="notifications-outline" class="bell"></ion-icon>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goConcerning()">\n\n          <ion-icon ios="ios-people" md="md-people" class="icon1"></ion-icon>\n\n          <span>关于我们</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goOpinion()">\n\n          <ion-icon ios="ios-create" md="md-create" class="icon1"></ion-icon>\n\n          <span>意见反馈</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goRegister();Clear()">\n\n          <ion-icon ios="ios-close-circle" md="md-close-circle" class="icon1"></ion-icon>\n\n          <span>退出登录</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Whatever\Projects\snail\src\pages\contact\contact.html"*/
+            selector: 'page-contact',template:/*ion-inline-start:"D:\Whatever\Projects\snail\src\pages\contact\contact.html"*/'<!-- 我的 -->\n\n<ion-header>\n\n  <div class="top" (click)="goJudge()">\n\n    <img src="{{gonglue.headerSrc}}" alt="头像" />\n\n    <p text-center class="p1">\n\n      {{gonglue.username}}\n\n    </p>\n\n    <img src="assets/imgs/header_1.jpg" alt="">\n\n  </div>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="con1">\n\n    <ul>\n\n      <li (click)="goFans()">\n\n        <p text-center class="p1">{{fans_volume}}</p>\n\n        <p text-center class="p2">粉丝</p>\n\n      </li>\n\n      <li (click)="goAttention()">\n\n        <p text-center class="p1">{{attention_volume}}</p>\n\n        <p text-center class="p2">关注</p>\n\n      </li>\n\n      <li (click)="goStrategy()">\n\n        <p text-center class="p1">32</p>\n\n        <p text-center class="p2">我的攻略</p>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n  <div class="con2">\n\n    <ul>\n\n      <li (click)="goCollection()">\n\n        <ion-icon ios="logo-codepen" md="logo-codepen" class="icon1"></ion-icon>\n\n        <span>我的收藏</span>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goMessage()">\n\n        <ion-icon ios="ios-text" md="md-text" class="icon1"></ion-icon>\n\n        <span>我的消息</span>\n\n        <ion-icon name="notifications-outline" class="bell"></ion-icon>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goConcerning()">\n\n          <ion-icon ios="ios-people" md="md-people" class="icon1"></ion-icon>\n\n          <span>关于我们</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goOpinion()">\n\n          <ion-icon ios="ios-create" md="md-create" class="icon1"></ion-icon>\n\n          <span>意见反馈</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goRegister();Clear()">\n\n          <ion-icon ios="ios-close-circle" md="md-close-circle" class="icon1"></ion-icon>\n\n          <span>退出登录</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Whatever\Projects\snail\src\pages\contact\contact.html"*/
         }),
         __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["a" /* HttpClient */]) === "function" && _b || Object])
     ], ContactPage);
@@ -1070,13 +1070,92 @@ var SubHeaderPage = /** @class */ (function () {
     };
     SubHeaderPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-sub-header',template:/*ion-inline-start:"D:\Whatever\Projects\snail\src\pages\sub-header\sub-header.html"*/'<!-- 个人头像 -->\n\n<ion-header text-center no-border>\n\n    <ion-navbar color="major">\n\n      <ion-title>{{titleTitle}}</ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button block (click)="openMenu()">\n\n          <ion-icon name="more"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="picture">\n\n    <img src="{{imgUrl}}" alt="您的头像">\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"D:\Whatever\Projects\snail\src\pages\sub-header\sub-header.html"*/,
+            selector: 'page-sub-header',template:/*ion-inline-start:"D:\Whatever\Projects\snail\src\pages\sub-header\sub-header.html"*/'<!-- 个人头像 -->\n\n<ion-header text-center no-border>\n\n    <ion-navbar color="major">\n\n      <ion-title>{{titleTitle}}</ion-title>\n\n      <ion-buttons end>\n\n        <button ion-button block (click)="openMenu()">\n\n          <ion-icon name="more"></ion-icon>\n\n        </button>\n\n      </ion-buttons>\n\n    </ion-navbar>\n\n  </ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="picture">\n\n    <img src="{{imgUrl}}" alt="您的头像">\n\n  </div>\n\n</ion-content>\n\n\n\n<!-- <ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>编辑</ion-title>\n\n\n\n    <ion-buttons end>\n\n      <button ion-button>保存</button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="header-image" tappable [ngStyle]="{\'background-image\': \'url(\'+avatar+\')\'}" (click)="presentActionSheet()"></div>\n\n</ion-content> -->\n\n'/*ion-inline-end:"D:\Whatever\Projects\snail\src\pages\sub-header\sub-header.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["l" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["a" /* ActionSheetController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _e || Object])
     ], SubHeaderPage);
     return SubHeaderPage;
+    var _a, _b, _c, _d, _e;
 }());
 
+// import {Component} from '@angular/core';
+// import {IonicPage, NavController, NavParams, ActionSheetController, AlertController} from 'ionic-angular';
+// import {ImagePicker, ImagePickerOptions} from "@ionic-native/image-picker";
+// import {Camera, CameraOptions} from "@ionic-native/camera";
+// @IonicPage()
+// @Component({
+//   selector: 'page-edit',
+//   templateUrl: 'edit.html',
+// })
+// export class EditPage {
+//   avatar: string = "";
+//   constructor(public navCtrl: NavController, public navParams: NavParams, public actionSheetCtrl: ActionSheetController, public alertCtrl: AlertController, public imagePicker: ImagePicker, public camera: Camera) {
+//   }
+//   presentActionSheet() {
+//     let actionSheet = this.actionSheetCtrl.create({
+//       buttons: [{
+//         text: '拍照',
+//         role: 'takePhoto',
+//         handler: () => {
+//           this.takePhoto();
+//         }
+//       }, {
+//         text: '从相册选择',
+//         role: 'chooseFromAlbum',
+//         handler: () => {
+//           this.chooseFromAlbum();
+//         }
+//       }, {
+//         text: '取消',
+//         role: 'cancel',
+//         handler: () => {
+//           console.log("cancel");
+//         }
+//       }]
+//     });
+//     actionSheet.present().then(value => {
+//       return value;
+//     });
+//   }
+//   takePhoto() {
+//     const options: CameraOptions = {
+//       quality: 100,
+//       allowEdit: true,
+//       targetWidth: 200,
+//       targetHeight: 200,
+//       saveToPhotoAlbum: true,
+//     };
+//     this.camera.getPicture(options).then(image => {
+//       console.log('Image URI: ' + image);
+//       this.avatar = image.slice(7);
+//     }, error => {
+//       console.log('Error: ' + error);
+//     });
+//   }
+//   chooseFromAlbum() {
+//     const options: ImagePickerOptions = {
+//       maximumImagesCount: 1,
+//       width: 200,
+//       height: 200
+//     };
+//     this.imagePicker.getPictures(options).then(images => {
+//       if (images.length > 1) {
+//         this.presentAlert();
+//       } else if (images.length === 1) {
+//         console.log('Image URI: ' + images[0]);
+//         this.avatar = images[0].slice(7);
+//       }
+//     }, error => {
+//       console.log('Error: ' + error);
+//     });
+//   }
+//   presentAlert() {
+//     let alert = this.alertCtrl.create({title: "上传失败", message: "只能选择一张图片作为头像哦", buttons: ["确定"]});
+//     alert.present().then(value => {
+//       return value;
+//     });
+//   }
+// }
 //# sourceMappingURL=sub-header.js.map
 
 /***/ }),

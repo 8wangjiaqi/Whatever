@@ -40,6 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { MyselfPage } from '../pages/myself/myself';
 import { SubHeaderPage } from '../pages/sub-header/sub-header';
 
+import {ImagePicker} from "@ionic-native/image-picker";
+
 @NgModule({
   declarations: [
     MyApp,
@@ -111,6 +113,7 @@ import { SubHeaderPage } from '../pages/sub-header/sub-header';
     StatusBar,
     SplashScreen,
     Camera,
+    ImagePicker,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     // LocalStorageProvider
   ]

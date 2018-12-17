@@ -104,4 +104,5 @@ export class ContactPage {
       this.goMyself();
     }
   }
+  
 }
