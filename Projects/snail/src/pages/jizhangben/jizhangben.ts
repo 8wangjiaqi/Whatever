@@ -1,7 +1,8 @@
-import { Component,ViewChild } from '@angular/core';
-import {NavController, NavParams,Navbar} from 'ionic-angular';
+import { Component} from '@angular/core';
+import {NavController, NavParams} from 'ionic-angular';
 import { NullpagePage } from '../nullpage/nullpage';
-import { MingxiPage } from '../mingxi/mingxi';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { RegisterPage } from '../register/register';
 
 
 
@@ -11,31 +12,25 @@ import { MingxiPage } from '../mingxi/mingxi';
 
 })
 export class JizhangbenPage {
-  @ViewChild(Navbar)  navBar: Navbar;
-  arr=[];
-  i;
 
-  constructor(public navCtrl: NavController, public params: NavParams) {
-
+  private headers=new HttpHeaders({'Content-Type':'application/json'});
+  write;
+  tel;
+  constructor(public http:HttpClient,public navCtrl: NavController, public params: NavParams) {
+    this.tel=RegisterPage.t;
+    this.http.post('/api/zhangben',{'username':this.tel},
+      {  headers:this.headers}).subscribe((data)=>{
+      this.write=data;
+      // console.log('1',this.tel);
+      console.log(data);
+    });
   }
 
-  ionViewWillEnter() {  
-    this.arr=[];
-    this.arr=JSON.parse(window.localStorage.getItem('list1'));
-  }
-  ionViewDidLoad() { 
-    this.navBar.backButtonClick = this.backButtonClick;
-    this.arr=JSON.parse(window.localStorage.getItem('list1'));   
-  }
-  backButtonClick = (e: UIEvent) => {
-    this.navCtrl.pop();
+  ionViewWillEnter() { //page初始化时
+    this.tel=RegisterPage.t;
   }
   gonullpage(){
     this.navCtrl.push(NullpagePage);
-  }
-  gomingxi(i){
-    this.navCtrl.push(MingxiPage,{index:i,arr:this.arr});
-    console.log("chuani",i);
   }
 
 }

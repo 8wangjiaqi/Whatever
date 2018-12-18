@@ -3,6 +3,7 @@ import {NavController, NavParams, App, AlertController } from 'ionic-angular';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { RegisterPage } from '../register/register';
 import { TabsPage } from '../tabs/tabs';
+import { JizhangbenPage } from '../jizhangben/jizhangben';
 
 @Component({
   selector: 'page-nullpage',
@@ -54,7 +55,7 @@ export class NullpagePage {
   presentPrompt(str) {
     console.log(str);
     let alert = this.alertCtrl.create({
-      title: '登录失败',
+      title: '添加失败',
       subTitle:str+'，请重新输入。',
       buttons: [
         {
@@ -70,8 +71,9 @@ export class NullpagePage {
   }
   goHome(){
     //跳转到tabs页并将用户tel传给tabs
-    this.app.getRootNavs()[0].setRoot(TabsPage,{username:this.tel});
-   
+    // this.app.getRootNavs()[0].setRoot(TabsPage,{username:this.tel});
+    // this.navCtrl.popToRoot();   //回到自己的root
+    this.navCtrl.push(JizhangbenPage);
     console.log(this.tel);
   }
   ionViewWillEnter() { //page初始化时
