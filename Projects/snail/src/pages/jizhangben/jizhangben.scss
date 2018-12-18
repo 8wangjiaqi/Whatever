@@ -24,4 +24,32 @@ page-jizhangben {
             
         }
     }
+    .front{
+        width: 60%;
+        font-size:16px;
+        color: grey;
+    }
+    .later{
+        width: 40%;
+        font-size:16px;
+        //color: grey;
+    }
+    .table{
+        margin-left: 5%;
+        background: rgb(240, 240, 240);
+        //color: grey;
+
+       
+    }
+    td{
+        border:0px;
+    }
+    div{
+        margin-top: 5px;
+        hr{
+            size:12px;
+        }
+
+    }
+
 }

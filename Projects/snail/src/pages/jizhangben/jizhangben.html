@@ -7,7 +7,6 @@
       </button>
     </ion-buttons>
   </ion-navbar>
-  
 </ion-header>
 
 
@@ -15,21 +14,21 @@
   <img src="assets/imgs/plan.png">
   <button ion-button full (click)="gonullpage()" >添加记录</button>
 
-    <li *ngFor="let item of write">
-      <table>
+    <div (click)="gomingxipage(i)" *ngFor="let item of write;let i =index;">
+      <table style="width: 90%" class="table">
           <tr >
-            <td>时间:</td> 
-            <td>{{item.time}}</td> 
+            <td class="front"><ion-icon ios="ios-clock" md="md-clock"></ion-icon>&nbsp;&nbsp;时间：</td> 
+            <td class="later" align="right" >{{item.time}}</td> 
           </tr>
         <tr>
-          <td>种类:</td>
-          <td align="left">{{item.style}}</td>
+          <td class="front"> <ion-icon ios="ios-keypad" md="md-keypad"></ion-icon>&nbsp;&nbsp;支付方式：</td>
+          <td class="later" align="right">{{item.style}}</td>
         </tr>
         <tr>
-          <td>花销:</td>
-          <td>{{item.money}}</td>
+          <td class="front"><ion-icon ios="logo-usd" md="logo-usd"></ion-icon>&nbsp;&nbsp;花费：</td>
+          <td class="later" align="right">{{item.money}}</td>
         </tr>
-        
       </table>
-    </li>
+      <hr style="height:3px;">
+    </div>
 </ion-content>

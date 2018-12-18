@@ -6,6 +6,7 @@ import { GongluePage } from '../gonglue/gonglue';
 import { NavParams } from 'ionic-angular';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { RegisterPage } from '../register/register';
+import { AddpagePage } from '../addpage/addpage';
 @Component({
   selector: 'page-shouyeqq',
   templateUrl: 'shouyeqq.html'
@@ -15,13 +16,13 @@ export class ShouyeqqPage {
   isClick(i){
     this.isActive=i;
   };
-  arr=["你的攻略","我的关注"];
+  arr=["攻略","关注"];
   private headers=new HttpHeaders({'Content-Type':'application/json'});
   tel;
-
+a;
   write;
-  constructor(public http:HttpClient,public navCtrl: NavController, public params: NavParams) {
-    // this.tel=RegisterPage.t;
+  constructor(public http:HttpClient,public navCtrl: NavController, public params: NavParams,public modalCtrl: ModalController) {
+    this.tel=RegisterPage.t;
     
     this.http.post('/api/home',
       {  headers:this.headers}).subscribe((data)=>{
@@ -30,10 +31,25 @@ export class ShouyeqqPage {
       // console.log('1',this.tel);
       console.log(data);
     });
+
+    this.http.post('/api/home/a',{"username":this.tel},
+    {  headers:this.headers}).subscribe((data)=>{
+    // this.id=data[idx].ID;
+    this.a=data;
+    // console.log()
+    // console.log('1',this.tel);
+    console.log('a:',data);
+  });
   }
 
   ionViewWillEnter() { //page初始化时
     this.tel=RegisterPage.t;
+  }
+  ionViewDidLoad(){
+    document.querySelector('.ion-md-add').addEventListener('click',()=>{
+      let profileModal = this.modalCtrl.create(AddpagePage);
+      profileModal.present();
+    },false);
   }
 
 
@@ -49,13 +65,9 @@ export class ShouyeqqPage {
 
       this.navCtrl.push(GongluePage,{
         username:this.write[idx].username,
-        touxiang:this.write[idx].touxiang,
+        // touxiang:this.write[idx].src,
         title:this.write[idx].title,
-        content:this.write[idx].description,
-        // href:this.write[idx].href,
-        // time:this.users[idx].time,
-        // comment:this.users[idx].comment,
-        // data:this.data
+        content:this.write[idx].article,
       });
       }
 //      }else{

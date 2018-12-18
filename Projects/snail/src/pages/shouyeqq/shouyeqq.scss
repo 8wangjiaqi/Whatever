@@ -3,17 +3,31 @@ page-shouyeqq {
         margin:0px;
         padding:0px;
     }
+    // .toolbar-content-md{
+    //     height: 20%;
+    // }
+    .ion{
+        color: white;
+        float: right;
+        display: block;
+        // margin-top: 10px;
+       font-size:5ex;
+        // background-color: yellow;
+        margin-top: -24%;
+        margin-right: 2%;
+    }
     .search1{
         border-radius:20px;
-        width: 80%;
-        height: 3%;
-        margin-left: 10%;
+        width: 73%;
+        height: 1%!important;
+        margin-left: 12%;
         margin-top: 2%;
     }
     .navList{
         li{
             width: 30%;
             margin-left:13%;
+            color: white;
         }
     }
    .sli{
@@ -31,7 +45,8 @@ page-shouyeqq {
        height: 10%;
    }
    .div2{
-       height: 80%;
+        margin-top:30px;
+       height: 150px;
    }
    .div3{
        height: 10%;

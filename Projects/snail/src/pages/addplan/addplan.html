@@ -47,23 +47,36 @@
 
   <button ion-button round type="submit" ion-button (click)="saveplan()">保存</button> -->
 
-
   <form  (ngSubmit)="logForm()">
-      <ion-item>
-        <ion-input type="text" placeholder="第几天" name="tian" [(ngModel)]="days"></ion-input>
-      </ion-item>
-    
-      <ion-item>
-        <ion-input type="text" placeholder="上午：" name='shangwu' [(ngModel)]="morning"></ion-input>
-      </ion-item>
+    <!-- <ion-item>
+      <ion-input type="text" placeholder="第几天" name="tian" [(ngModel)]="days"></ion-input>
+    </ion-item> -->
+   <ion-item id="item1">
+  <ion-label color="blu">第几天：</ion-label>
+  <ion-select [(ngModel)]="days" multiple="true" name="tian">
+    <ion-option>1天</ion-option>
+    <ion-option>2天</ion-option>
+    <ion-option>3天</ion-option>
+    <ion-option>4天</ion-option>
+    <ion-option>5天</ion-option>
+    <ion-option>6天</ion-option>
+    <ion-option>7天</ion-option>
+    <ion-option>8天</ion-option>
+    <ion-option>9天</ion-option>
+  </ion-select>
+</ion-item>
+  
+    <ion-item>
+      <ion-input type="text" placeholder="上午：" name='shangwu' [(ngModel)]="morning"></ion-input>
+    </ion-item>
 
-      <ion-item>
-        <ion-input type="text" placeholder="下午：" name='xiawu' [(ngModel)]="afternoon"></ion-input>
-      </ion-item>
+    <ion-item>
+      <ion-input type="text" placeholder="下午：" name='xiawu' [(ngModel)]="afternoon"></ion-input>
+    </ion-item>
 
-      <ion-item>
-          <ion-input type="text" placeholder="晚上：" name='wanshang' [(ngModel)]="evening"></ion-input>
-        </ion-item>
-      <button ion-button block>保存</button>
-  </form>
+    <ion-item>
+        <ion-input type="text" placeholder="晚上：" name='wanshang' [(ngModel)]="evening"></ion-input>
+      </ion-item>
+    <button ion-button block id="button">保存</button>
+</form>
 </ion-content>

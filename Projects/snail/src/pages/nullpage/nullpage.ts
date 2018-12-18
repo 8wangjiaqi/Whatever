@@ -10,6 +10,13 @@ import { JizhangbenPage } from '../jizhangben/jizhangben';
   templateUrl: 'nullpage.html',
 })
 export class NullpagePage {
+  arr=[];
+  obj=
+    {money:'',
+      time:'',
+      style:'',
+      other:''  
+  };
   private headers=new HttpHeaders({'Content-Type':'application/json'} )
   tel;
   money;
@@ -79,4 +86,13 @@ export class NullpagePage {
   ionViewWillEnter() { //page初始化时
     this.tel=RegisterPage.t;
   } 
+  // gojizhangben(i){
+   
+  //   this.navCtrl.push(JizhangbenPage,{
+  //     money:this.money,
+  //     time:this.time,
+  //     style:this.style,
+  //     other:this.other
+  //   });
+  // }
 }

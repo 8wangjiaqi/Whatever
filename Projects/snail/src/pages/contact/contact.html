@@ -1,10 +1,21 @@
 <!-- 我的 -->
 <ion-header>
   <div class="top" (click)="goJudge()">
-    <img src="{{gonglue.headerSrc}}" alt="头像" />
-    <p text-center class="p1">
-      {{gonglue.username}}
-    </p>
+    <li *ngFor="let item of gonglue">
+        <div class="image">
+            <img src="../../assets/imgs/header_1.jpg" alt="头像" />
+        </div>
+        <div class="name">
+          <span text-center class="p1">
+         {{item.username}}
+          </span>
+        </div>
+        <div class="signature">
+          <span text-center class="p2">
+              {{item.signature}}
+          </span> 
+        </div>
+        </li>
   </div>
 </ion-header>
 

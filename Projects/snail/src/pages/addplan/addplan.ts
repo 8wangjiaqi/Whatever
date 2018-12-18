@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import {NavController, NavParams, App, AlertController } from 'ionic-angular';
-import { HttpHeaders, HttpClient } from '@angular/common/http';
-import { RegisterPage } from '../register/register';
+import {NavController, NavParams, AlertController, App } from 'ionic-angular';
 import { TriplanPage } from '../triplan/triplan';
+import { RegisterPage } from '../register/register';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 
 @Component({
@@ -16,15 +16,22 @@ export class AddplanPage {
   // xiawu;
   // wanshang;
   // arr=[];
-  // list={
-  //   days:"",
-  //   shangwu:"",
-  //   zhongwu:"",
-  //   xiawu:"",
-  //   wanshang:""
-  // };
+  // constructor(public navCtrl: NavController, public params: NavParams) {
+  //   console.log(this.days);
+  // }
+
+  // saveplan(){
+  //   this.navCtrl.push(TriplanPage,{
  
-  private headers=new HttpHeaders({'Content-Type':'application/json'} )
+  //     days:this.days,
+  //     shangwu:this.shangwu,
+  //     zhongwu:this.zhongwu,
+  //     xiawu:this.xiawu,
+  //     wanshang:this.wanshang
+  //   });
+  // }
+
+  private headers=new HttpHeaders({'Content-Type':'application/json'} );
   tel;
   days;
   morning;
@@ -87,22 +94,4 @@ export class AddplanPage {
     this.tel=RegisterPage.t;
   } 
 
-
-  // saveplan(){
-  //   this.navCtrl.pop();
-
-  //   if(window.localStorage.getItem('list2')){
-  //     this.arr=JSON.parse(window.localStorage.getItem('list2'));
-  //   }
-  //   this.list.days = this.days;
-  //   console.log(this.days);
-  //   this.list.shangwu = this.shangwu;
-  //   this.list.zhongwu = this.zhongwu;
-  //   this.list.xiawu = this.xiawu;
-  //   this.list.wanshang = this.wanshang;
-  //   console.log(this.arr);
-  //   this.arr.push(this.list);
-  //   window.localStorage.setItem('list2', JSON.stringify(this.arr));
-  // }
-  
 }

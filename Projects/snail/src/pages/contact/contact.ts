@@ -35,18 +35,27 @@ export class ContactPage {
       this.gonglue=data;
       // console.log('1',this.tel);
       console.log(data);
+      console.log(this.gonglue);
+      // console.log(this.gonglue[0].username);
+
     });
-    if(this.gonglue.username==null){
-      this.gonglue.username = "请点击登录"
-    }
-    if(this.gonglue.headerSrc==null){
-      this.gonglue.headerSrc = "assets/imgs/un_register.jpg"
-    }
+    // if(this.gonglue.username==undefined){
+    //   this.gonglue.username = "请点击登录"
+    // }
+    // if(this.gonglue.headerSrc==null){
+    //   this.gonglue.headerSrc = "assets/imgs/un_register.jpg"
+    // }
   }
   ionViewWillEnter() { //page初始化时
     this.attention_volume = AttentionPage.attentionarr.length;
     this.fans_volume = FansPage.fansarr.length;
     this.tel=RegisterPage.t;
+    // if(this.gonglue[0].username==undefined){
+    //   this.gonglue[0].username = "请点击登录"
+    // }
+    // if(this.gonglue.headerSrc==null){
+    //   this.gonglue.headerSrc = "assets/imgs/un_register.jpg"
+    // }
   }
   
   goMyself(){
