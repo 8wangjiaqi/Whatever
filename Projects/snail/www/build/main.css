@@ -40769,46 +40769,20 @@ page-mingxi .button-round-md {
   background-color: #207b94 !important;
 }
 
+page-myself ion-header ion-navbar {
+  z-index: 0;
+}
+
 page-myself ion-header ion-navbar ion-buttons {
   width: 44px;
 }
 
-page-myself ion-content .information {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-page-myself ion-content .information ul {
-  margin: 0;
-  padding: 0;
-}
-
-page-myself ion-content .information ul .header {
-  border-top: 0.5px solid #dfdede;
-  width: 100%;
-  height: 70px;
-}
-
-page-myself ion-content .information ul .header span {
-  line-height: 69px;
-}
-
-page-myself ion-content .information ul li {
-  border-bottom: 0.5px solid #dfdede;
-  height: 35px;
-  width: 100%;
-}
-
-page-myself ion-content .information ul li span {
-  font-size: 16px;
-  line-height: 35px;
-}
-
-page-myself ion-content .information ul li .right {
-  color: #999999;
-  font-size: 22px;
-  margin-right: 8px;
+page-myself ion-content #button {
+  background-color: #207b94 !important;
+  width: 30%;
+  margin-left: 50%;
+  margin-top: -45%;
+  border-radius: 15px;
 }
 
 page-nullpage ion-content {

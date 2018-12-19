@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content padding>
-  <div class="information">
+  <!-- <div class="information">
     <ul>
       <li class="header" (click)="subHeader()">
         <span>头像</span>
@@ -26,5 +26,20 @@
         <span float-right class="right">></span>
       </li>
     </ul>
-  </div>
+  </div> -->
+  <form (ngSubmit)="logForm()">
+    <!-- <ion-item>
+      <ion-label>Todo</ion-label>
+      <ion-input type="text" [(ngModel)]="tit" name="title"></ion-input>
+    </ion-item> -->
+    <ion-item>
+      <!-- <ion-label>description</ion-label> -->
+      <ion-input  type="text" [(ngModel)]="ousername" name="yonghuming" placeholder="用户名"></ion-input>
+    </ion-item>
+    <ion-item>
+      <!-- <ion-label>description</ion-label> -->
+      <ion-input  type="text" [(ngModel)]="signature" name="qianming" placeholder="个性签名"></ion-input>
+    </ion-item>
+    <button ion-button type="submit" block id="button"><ion-icon name="md-add" class="ion"></ion-icon>确认</button>
+  </form>
 </ion-content>

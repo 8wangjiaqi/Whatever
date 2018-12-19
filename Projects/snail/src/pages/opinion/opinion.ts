@@ -28,7 +28,7 @@ export class OpinionPage {
   pho;
    logForm() {
     console.log('tel',this.tel);
-  this.http.post('/api/say',{
+    this.http.post('/api/say',{
     "username":this.tel,
     "say":this.say,
     "phone":this.pho,
