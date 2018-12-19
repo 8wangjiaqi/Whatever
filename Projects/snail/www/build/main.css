@@ -40160,6 +40160,11 @@ page-contact .top .image {
   height: 100px;
 }
 
+page-contact .top .image ul {
+  padding: 0;
+  margin: 0;
+}
+
 page-contact .top .image img {
   height: 100px;
   width: 100px;
@@ -41118,7 +41123,7 @@ page-shouyeqq .content {
   overflow: hidden !important;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3 !important;
+  -webkit-line-clamp: 4 !important;
 }
 
 page-shouyeqq .touxiang {

@@ -73,8 +73,8 @@ ionViewWillEnter() { //page初始化时
   goHome(){
     // this.app.getRootNavs()[0].setRoot(TabsPage,{username:this.tel});
     // this.navCtrl.popToRoot();
-    // this.navCtrl.push(ShouyeqqPage);
-    console.log(this.tel);
+    this.navCtrl.push(TabsPage);
+    // console.log('1',this.tel);
   }
 
   showConfirm() {

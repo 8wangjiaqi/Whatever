@@ -10,7 +10,8 @@ import { RegisterPage } from '../register/register';
   templateUrl: 'triplan.html',
 })
 export class TriplanPage {
-  @ViewChild(Navbar)  navBar: Navbar;
+  @ViewChild(Navbar) navBar: Navbar;
+
 
   private headers=new HttpHeaders({'Content-Type':'application/json'});
   write;
@@ -40,5 +41,12 @@ export class TriplanPage {
       afternoon:this.write[i].afternoon,
       evening:this.write[i].evening,
     });
+  }
+  ionViewDidLoad() { 
+    this.navBar.backButtonClick = this.backButtonClick; 
+  }
+ backButtonClick = (e: UIEvent) => {
+    // do something
+    this.navCtrl.popToRoot();
   }
 }

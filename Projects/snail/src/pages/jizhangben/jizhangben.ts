@@ -16,7 +16,8 @@ import { RegisterPage } from '../register/register';
 
 })
 export class JizhangbenPage {
-  @ViewChild(Navbar)  navBar: Navbar;
+  @ViewChild(Navbar) navBar: Navbar;
+
 
   private headers=new HttpHeaders({'Content-Type':'application/json'});
   write;
@@ -39,9 +40,6 @@ export class JizhangbenPage {
     // this.item=params.data;
     // console.log(this.item);
   }
-  ionViewDidLoad() { 
-    this.navBar.backButtonClick = this.backButtonClick;  
-  }
   gonullpage(){
     this.navCtrl.push(NullpagePage);
   }
@@ -56,11 +54,13 @@ export class JizhangbenPage {
 
     });
   }
-  // goHomePage(){
-  //   this.navCtrl.push(HomePage);
-  // }
-  backButtonClick = (e: UIEvent) => {
-    this.navCtrl.pop();
+  ionViewDidLoad() { 
+    this.navBar.backButtonClick = this.backButtonClick; 
   }
+ backButtonClick = (e: UIEvent) => {
+    // do something
+    this.navCtrl.popToRoot();
+  }
+  
 }
 

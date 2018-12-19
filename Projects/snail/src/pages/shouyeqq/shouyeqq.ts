@@ -16,11 +16,11 @@ export class ShouyeqqPage {
   isClick(i){
     this.isActive=i;
   };
-  arr=["攻略","关注"];
+  arr=["推荐","关注"];
   private headers=new HttpHeaders({'Content-Type':'application/json'});
   tel;
-a;
   write;
+  a;
   constructor(public http:HttpClient,public navCtrl: NavController, public params: NavParams,public modalCtrl: ModalController) {
     this.tel=RegisterPage.t;
     

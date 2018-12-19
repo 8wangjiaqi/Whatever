@@ -18,6 +18,7 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 export class ContactPage {
   attention_volume;
   fans_volume;
+  a;
   // public static user = {
   //   headerSrc: "assets/imgs/header_1.jpg",
   //   username: "杏仁",
@@ -34,11 +35,19 @@ export class ContactPage {
       {  headers:this.headers}).subscribe((data)=>{
       this.gonglue=data;
       // console.log('1',this.tel);
-      console.log(data);
-      console.log(this.gonglue);
+      console.log('my:',data);
+      //console.log(this.gonglue);
       // console.log(this.gonglue[0].username);
 
     });
+    this.http.post('/api/home/a',{"username":this.tel},
+    {  headers:this.headers}).subscribe((data)=>{
+    // this.id=data[idx].ID;
+    this.a=data;
+    // console.log()
+    // console.log('1',this.tel);
+    console.log('a:',data);
+  });
     // if(this.gonglue.username==undefined){
     //   this.gonglue.username = "请点击登录"
     // }

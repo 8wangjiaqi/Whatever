@@ -1,14 +1,14 @@
 webpackJsonp([0],{
 
-/***/ 102:
+/***/ 103:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return TabsPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact_contact__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact_contact__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__home_home__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shouyeqq_shouyeqq__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shouyeqq_shouyeqq__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular__ = __webpack_require__(3);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -43,14 +43,161 @@ var TabsPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 103:
+/***/ 104:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__message_message__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__concerning_concerning__ = __webpack_require__(207);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__opinion_opinion__ = __webpack_require__(208);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__fans_fans__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__attention_attention__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__strategy_strategy__ = __webpack_require__(209);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__collection_collection__ = __webpack_require__(210);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__myself_myself__ = __webpack_require__(211);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__register_register__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(17);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+
+
+
+
+var ContactPage = /** @class */ (function () {
+    function ContactPage(navCtrl, http) {
+        var _this = this;
+        this.navCtrl = navCtrl;
+        this.http = http;
+        this.headers = new __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' });
+        // this.user_display = ContactPage.user;
+        this.tel = __WEBPACK_IMPORTED_MODULE_10__register_register__["a" /* RegisterPage */].t;
+        this.http.post('/api/contact', { 'username': this.tel }, { headers: this.headers }).subscribe(function (data) {
+            _this.gonglue = data;
+            // console.log('1',this.tel);
+            console.log('my:', data);
+            //console.log(this.gonglue);
+            // console.log(this.gonglue[0].username);
+        });
+        this.http.post('/api/home/a', { "username": this.tel }, { headers: this.headers }).subscribe(function (data) {
+            // this.id=data[idx].ID;
+            _this.a = data;
+            // console.log()
+            // console.log('1',this.tel);
+            console.log('a:', data);
+        });
+        // if(this.gonglue.username==undefined){
+        //   this.gonglue.username = "请点击登录"
+        // }
+        // if(this.gonglue.headerSrc==null){
+        //   this.gonglue.headerSrc = "assets/imgs/un_register.jpg"
+        // }
+    }
+    ContactPage.prototype.ionViewWillEnter = function () {
+        this.attention_volume = __WEBPACK_IMPORTED_MODULE_6__attention_attention__["a" /* AttentionPage */].attentionarr.length;
+        this.fans_volume = __WEBPACK_IMPORTED_MODULE_5__fans_fans__["a" /* FansPage */].fansarr.length;
+        this.tel = __WEBPACK_IMPORTED_MODULE_10__register_register__["a" /* RegisterPage */].t;
+        // if(this.gonglue[0].username==undefined){
+        //   this.gonglue[0].username = "请点击登录"
+        // }
+        // if(this.gonglue.headerSrc==null){
+        //   this.gonglue.headerSrc = "assets/imgs/un_register.jpg"
+        // }
+    };
+    ContactPage.prototype.goMyself = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_9__myself_myself__["a" /* MyselfPage */], {
+            title: '个人信息'
+        });
+    };
+    ContactPage.prototype.goMessage = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__message_message__["a" /* MessagePage */], {
+            title: '我的消息'
+        });
+    };
+    ContactPage.prototype.goConcerning = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__concerning_concerning__["a" /* ConcerningPage */], {
+            title: '关于我们'
+        });
+    };
+    ContactPage.prototype.goOpinion = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__opinion_opinion__["a" /* OpinionPage */], {
+            title: '意见反馈'
+        });
+    };
+    ContactPage.prototype.goFans = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__fans_fans__["a" /* FansPage */], {
+            title: '全部粉丝'
+        });
+    };
+    ContactPage.prototype.goAttention = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__attention_attention__["a" /* AttentionPage */], {
+            title: '我的关注'
+        });
+    };
+    ContactPage.prototype.goStrategy = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__strategy_strategy__["a" /* StrategyPage */], {
+            title: '我的攻略'
+        });
+    };
+    ContactPage.prototype.goCollection = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__collection_collection__["a" /* CollectionPage */], {
+            title: '我的收藏'
+        });
+    };
+    ContactPage.prototype.goRegister = function () {
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_10__register_register__["a" /* RegisterPage */], {
+            title: '登录'
+        });
+    };
+    ContactPage.prototype.Clear = function () {
+        localStorage.clear();
+    };
+    ContactPage.prototype.goJudge = function () {
+        if (this.gonglue.username == "请点击登录") {
+            this.goRegister();
+        }
+        else {
+            this.goMyself();
+        }
+    };
+    ContactPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-contact',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\contact\contact.html"*/'<!-- 我的 -->\n\n<ion-header>\n\n  <div class="top" (click)="goJudge()">\n\n    <li *ngFor="let item of gonglue">\n\n        <div class="image">\n\n            <!-- <img src=" http://192.168.62.144:3000/upload/{{item.src}}" alt="头像" /> -->\n\n            <ul >\n\n                <li *ngFor="let item of a">\n\n                  <img src="http://192.168.62.144:3000/upload/{{item.src}}" alt="头像">\n\n                </li>\n\n            </ul>\n\n        </div>\n\n        <div class="name">\n\n          <span text-center class="p1">\n\n         {{item.username}}\n\n          </span>\n\n        </div>\n\n        <div class="signature">\n\n          <span text-center class="p2">\n\n              {{item.signature}}\n\n          </span> \n\n        </div>\n\n        </li>\n\n  </div>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="con1">\n\n    <ul>\n\n      <li (click)="goFans()">\n\n        <p text-center class="p1">{{fans_volume}}</p>\n\n        <p text-center class="p2">粉丝</p>\n\n      </li>\n\n      <li (click)="goAttention()">\n\n        <p text-center class="p1">{{attention_volume}}</p>\n\n        <p text-center class="p2">关注</p>\n\n      </li>\n\n      <li (click)="goStrategy()">\n\n        <p text-center class="p1">32</p>\n\n        <p text-center class="p2">我的攻略</p>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n  <div class="con2">\n\n    <ul>\n\n      <li (click)="goCollection()">\n\n        <ion-icon ios="logo-codepen" md="logo-codepen" class="icon1"></ion-icon>\n\n        <span>我的收藏</span>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <!-- <li (click)="goMessage()">\n\n        <ion-icon ios="ios-text" md="md-text" class="icon1"></ion-icon>\n\n        <span>我的消息</span>\n\n        <ion-icon name="notifications-outline" class="bell"></ion-icon>\n\n        <span float-right class="right">></span>\n\n      </li> -->\n\n      <li (click)="goConcerning()">\n\n          <ion-icon ios="ios-people" md="md-people" class="icon1"></ion-icon>\n\n          <span>关于我们</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goOpinion()">\n\n          <ion-icon ios="ios-create" md="md-create" class="icon1"></ion-icon>\n\n          <span>意见反馈</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goRegister();Clear()">\n\n          <ion-icon ios="ios-close-circle" md="md-close-circle" class="icon1"></ion-icon>\n\n          <span>退出登录</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\contact\contact.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["a" /* HttpClient */]])
+    ], ContactPage);
+    return ContactPage;
+}());
+
+//# sourceMappingURL=contact.js.map
+
+/***/ }),
+
+/***/ 105:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return FansPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__attention_attention__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__attention_attention__ = __webpack_require__(106);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -162,14 +309,14 @@ var FansPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 104:
+/***/ 106:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AttentionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fans_fans__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__fans_fans__ = __webpack_require__(105);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -282,7 +429,7 @@ var AttentionPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 105:
+/***/ 107:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -290,9 +437,9 @@ var AttentionPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__nullpage_nullpage__ = __webpack_require__(215);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__mingxi_mingxi__ = __webpack_require__(216);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__register_register__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__register_register__ = __webpack_require__(16);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -323,11 +470,9 @@ var JizhangbenPage = /** @class */ (function () {
         this.navCtrl = navCtrl;
         this.params = params;
         this.headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' });
-        // goHomePage(){
-        //   this.navCtrl.push(HomePage);
-        // }
         this.backButtonClick = function (e) {
-            _this.navCtrl.pop();
+            // do something
+            _this.navCtrl.popToRoot();
         };
         this.tel = __WEBPACK_IMPORTED_MODULE_5__register_register__["a" /* RegisterPage */].t;
         this.http.post('/api/zhangben', { 'username': this.tel }, { headers: this.headers }).subscribe(function (data) {
@@ -338,9 +483,6 @@ var JizhangbenPage = /** @class */ (function () {
         // this.item=params.data;
         // console.log(this.item);
     }
-    JizhangbenPage.prototype.ionViewDidLoad = function () {
-        this.navBar.backButtonClick = this.backButtonClick;
-    };
     JizhangbenPage.prototype.gonullpage = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__nullpage_nullpage__["a" /* NullpagePage */]);
     };
@@ -353,6 +495,9 @@ var JizhangbenPage = /** @class */ (function () {
             style: this.write[i].style,
             other: this.write[i].other
         });
+    };
+    JizhangbenPage.prototype.ionViewDidLoad = function () {
+        this.navBar.backButtonClick = this.backButtonClick;
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Navbar */]),
@@ -371,7 +516,7 @@ var JizhangbenPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 106:
+/***/ 108:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -380,8 +525,8 @@ var JizhangbenPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__addplan_addplan__ = __webpack_require__(217);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__zongji_zongji__ = __webpack_require__(218);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__register_register__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__register_register__ = __webpack_require__(16);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -404,6 +549,10 @@ var TriplanPage = /** @class */ (function () {
         this.navParams = navParams;
         this.http = http;
         this.headers = new __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' });
+        this.backButtonClick = function (e) {
+            // do something
+            _this.navCtrl.popToRoot();
+        };
         this.tel = __WEBPACK_IMPORTED_MODULE_5__register_register__["a" /* RegisterPage */].t;
         this.http.post('/api/plan', { 'username': this.tel }, { headers: this.headers }).subscribe(function (data) {
             _this.write = data;
@@ -426,6 +575,9 @@ var TriplanPage = /** @class */ (function () {
             evening: this.write[i].evening,
         });
     };
+    TriplanPage.prototype.ionViewDidLoad = function () {
+        this.navBar.backButtonClick = this.backButtonClick;
+    };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Navbar */]),
         __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Navbar */])
@@ -443,101 +595,7 @@ var TriplanPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 107:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShouyeqqPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gonglue_gonglue__ = __webpack_require__(219);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__register_register__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__addpage_addpage__ = __webpack_require__(221);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-var ShouyeqqPage = /** @class */ (function () {
-    function ShouyeqqPage(http, navCtrl, params, modalCtrl) {
-        var _this = this;
-        this.http = http;
-        this.navCtrl = navCtrl;
-        this.params = params;
-        this.modalCtrl = modalCtrl;
-        this.isActive = 0;
-        this.arr = ["攻略", "关注"];
-        this.headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' });
-        this.tel = __WEBPACK_IMPORTED_MODULE_4__register_register__["a" /* RegisterPage */].t;
-        this.http.post('/api/home', { headers: this.headers }).subscribe(function (data) {
-            // this.id=data[idx].ID;
-            _this.write = data;
-            // console.log('1',this.tel);
-            console.log(data);
-        });
-        this.http.post('/api/home/a', { "username": this.tel }, { headers: this.headers }).subscribe(function (data) {
-            // this.id=data[idx].ID;
-            _this.a = data;
-            // console.log()
-            // console.log('1',this.tel);
-            console.log('a:', data);
-        });
-    }
-    ShouyeqqPage.prototype.isClick = function (i) {
-        this.isActive = i;
-    };
-    ;
-    ShouyeqqPage.prototype.ionViewWillEnter = function () {
-        this.tel = __WEBPACK_IMPORTED_MODULE_4__register_register__["a" /* RegisterPage */].t;
-    };
-    ShouyeqqPage.prototype.ionViewDidLoad = function () {
-        var _this = this;
-        document.querySelector('.ion-md-add').addEventListener('click', function () {
-            var profileModal = _this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__addpage_addpage__["a" /* AddpagePage */]);
-            profileModal.present();
-        }, false);
-    };
-    //  imgUrl:String;
-    //   listData: Object;// 接收数据用
-    //   res: Response;
-    //   constructor(public modalCtrl: ModalController,public navCtrl: NavController,private http: Http,public navParams:NavParams) {
-    //   }
-    ShouyeqqPage.prototype.goGongluePage = function (idx) {
-        console.log(idx);
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__gonglue_gonglue__["a" /* GongluePage */], {
-            username: this.write[idx].username,
-            // touxiang:this.write[idx].src,
-            title: this.write[idx].title,
-            content: this.write[idx].article,
-        });
-    };
-    ShouyeqqPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-shouyeqq',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\shouyeqq\shouyeqq.html"*/'<ion-header>\n\n  <ion-navbar color="blu">\n\n      <ion-searchbar class="search1">\n\n          [(ngModel)]="myInput"\n\n          [showCancelButton]="shouldShowCancel"\n\n          (ionInput)="onInput($event)"\n\n          (ionCancel)="onCancel($event)">\n\n      </ion-searchbar>\n\n      <ul class="navList">\n\n        <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx">{{arr[idx]}}</li>\n\n      </ul>\n\n      <ion-icon name="md-add" class="ion"></ion-icon>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n  <div [ngSwitch]="isActive">\n\n    <div *ngSwitchCase="0">\n\n      <!-- 轮播图 -->\n\n      <!-- <p>1234566</p>\n\n      <ul>\n\n          <li *ngFor="let item of write;">\n\n            {{item.username}}\n\n          </li>\n\n      <li *ngFor="let item of a">\n\n         \n\n          <img src="http://192.168.62.144:3000/upload/{{item.src}}" alt="">\n\n          <img src="/upload/717b9ff291dd58071baafc0e3fd333cb.jpg" alt="">\n\n        </li>\n\n      </ul> -->\n\n     <ion-slides pager="true" autoplay="1000" loop="true" class="sli" style="width:100%;height:240px;">\n\n            <!-- <ion-slide>\n\n              <img src="assets/imgs/北京攻略.jpg" alt="" calss="slide-image" style="width:100%;">\n\n            </ion-slide> -->\n\n            <ion-slide>\n\n              <img src="assets/imgs/5.jpg" alt="" calss="slide-image" style="width:100%;">\n\n            </ion-slide>\n\n            <ion-slide>\n\n              <img src="assets/imgs/6.jpg" alt="" calss="slide-image" style="width:100%;">\n\n            </ion-slide>\n\n     </ion-slides>\n\n\n\n     <div class="articles" style="width:90%;margin-left:5%;margin-top:5%;" *ngFor="let item of write;let idx=index">\n\n      <div calss="div1">\n\n        <img src="assets/imgs/1.jpg" alt="" style="border-radius:50%;width: 40px ;height: 40px;">\n\n        <span class="username">&nbsp;&nbsp;{{item.username}}</span>\n\n       <!-- <button calss="guanzhu" style="position:absolute;width:15%;margin-left:70%;margin-top:3%">+关注</button> -->\n\n      </div>\n\n      <div calss="div2">\n\n        <p class="title" style="position:relative;" (click)="goGongluePage(idx)">{{item.title}}</p>\n\n        <p class="content" style="width:60%;margin-top:5%;color:#808080 " (click)="goGongluePage(idx)">{{item.description}}</p>\n\n        <img src="assets/imgs/北京攻略.jpg" alt="" class="articleimg" style="position:absolute;margin-left:60%;margin-top:-20%;width:40%;height:55%;">\n\n        <!-- <img src="{{user.imgUrl}}" alt="" class="articleimg" style="position:absolute;margin-left:75%;margin-top:-20%;width:25%;height:40%;" (click)="goGongluePage(idx)"> -->\n\n      </div>\n\n      <hr style="margin-top:3%;margin-bottom:3%;">\n\n  \n\n     </div>\n\n    </div>\n\n    <!-- <div *ngSwitchCase="1">\n\n      <ion-slides pager="true" autoplay="1000" loop="true" class="sli" style="width:100%;height:10%;">\n\n        <ion-slide>\n\n          <img src="assets/imgs/1.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n        <ion-slide>\n\n          <img src="assets/imgs/5.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n        <ion-slide>\n\n          <img src="assets/imgs/6.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n      </ion-slides>\n\n      <div class="articles" style="width:90%;margin-left:5%;" *ngFor="let user of users2;let idx=index;">\n\n      <div calss="div1">\n\n       <img src="{{user.touxiang}}" class="touxiang">\n\n        <span class="username">{{user.name}}</span>\n\n       <button calss="guanzhu" style="position:absolute;width:15%;margin-left:70%;margin-top:3%">+关注</button>\n\n      </div>\n\n      <div calss="div2">\n\n        <p class="title" style="position:relative;" (click)="goGongluePage(idx)">{{user.title}}</p>\n\n        <p class="content" style="width:70%;margin-top:5%;" (click)="goGongluePage(idx)">{{user.content}}</p>\n\n       <img src="{{user.imgUrl}}" alt="" class="articleimg" style="position:absolute;margin-left:75%;margin-top:-20%;width:25%;height:40%;" (click)="goGongluePage(idx)">\n\n      </div>\n\n      <div calss="div3" style="margin-top:3%;">\n\n        <span>{{user.agree}}赞同</span>\n\n        <span style="position:relative;">{{user.pinglun}}评论</span>\n\n        <span class="time" style="position:absolute;margin-left:45%;">{{user.time}}</span>\n\n      </div>\n\n      <hr style="margin-top:3%;margin-bottom:3%;">\n\n     </div>\n\n    </div> -->\n\n  </div>\n\n</ion-content>\n\n\n\n\n\n\n\n'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\shouyeqq\shouyeqq.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]])
-    ], ShouyeqqPage);
-    return ShouyeqqPage;
-}());
-
-//# sourceMappingURL=shouyeqq.js.map
-
-/***/ }),
-
-/***/ 119:
+/***/ 120:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -550,37 +608,20 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 119;
+webpackEmptyAsyncContext.id = 120;
 
 /***/ }),
 
-/***/ 161:
-/***/ (function(module, exports) {
-
-function webpackEmptyAsyncContext(req) {
-	// Here Promise.resolve().then() is used instead of new Promise() to prevent
-	// uncatched exception popping up in devtools
-	return Promise.resolve().then(function() {
-		throw new Error("Cannot find module '" + req + "'.");
-	});
-}
-webpackEmptyAsyncContext.keys = function() { return []; };
-webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
-module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 161;
-
-/***/ }),
-
-/***/ 19:
+/***/ 16:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RegisterPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__enroll_enroll__ = __webpack_require__(204);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__enroll_enroll__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(17);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -689,16 +730,33 @@ var RegisterPage = /** @class */ (function () {
 
 /***/ }),
 
-/***/ 204:
+/***/ 162:
+/***/ (function(module, exports) {
+
+function webpackEmptyAsyncContext(req) {
+	// Here Promise.resolve().then() is used instead of new Promise() to prevent
+	// uncatched exception popping up in devtools
+	return Promise.resolve().then(function() {
+		throw new Error("Cannot find module '" + req + "'.");
+	});
+}
+webpackEmptyAsyncContext.keys = function() { return []; };
+webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
+module.exports = webpackEmptyAsyncContext;
+webpackEmptyAsyncContext.id = 162;
+
+/***/ }),
+
+/***/ 205:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EnrollPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_tabs__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__tabs_tabs__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(17);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -759,12 +817,13 @@ var EnrollPage = /** @class */ (function () {
     EnrollPage.prototype.goTabs = function () {
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__tabs_tabs__["a" /* TabsPage */]);
     };
-    EnrollPage.prototype.goRegister = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__register_register__["a" /* RegisterPage */]);
-    };
+    // goRegister(){
+    //   this.navCtrl.push(RegisterPage);
+    // }
     EnrollPage.prototype.goHome = function () {
         //跳转到tabs页并将用户tel传给tabs
-        this.app.getRootNavs()[0].setRoot(__WEBPACK_IMPORTED_MODULE_2__tabs_tabs__["a" /* TabsPage */], { username: this.tel });
+        // this.app.getRootNavs()[0].setRoot(TabsPage,{username:this.tel});
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__register_register__["a" /* RegisterPage */]);
         console.log(this.tel);
     };
     EnrollPage.prototype.presentPrompt = function (str) {
@@ -786,7 +845,7 @@ var EnrollPage = /** @class */ (function () {
     };
     EnrollPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-enroll',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\enroll\enroll.html"*/'<!-- 注册 -->\n\n<ion-content padding>\n\n  <div class="close">\n\n    <ion-icon class="over" (click)="goTabs()">跳过</ion-icon>\n\n    <!-- <ion-icon ios="ios-close" md="md-close"></ion-icon> -->\n\n  </div>\n\n  <div class="header">\n\n    <img src="assets/imgs/蜗牛.png" alt="图标">\n\n  </div>\n\n  <div class="box">\n\n    <!-- <div class="pn">\n\n      <label>\n\n        <ion-icon name="contact"></ion-icon>\n\n        <input type="text" placeholder="手机号/邮箱" class="text-input">\n\n      </label>\n\n    </div>\n\n    <div class="vc">\n\n   \n\n    </div>\n\n    <div class="pw">\n\n      <label>\n\n        <ion-icon name="lock"></ion-icon>\n\n        <input type="password" placeholder="密码" class="text-input">\n\n      </label>\n\n    </div>\n\n  </div> -->\n\n    <form (ngSubmit)="logForm()">\n\n      <div class="username">\n\n        <ion-icon name="contact"></ion-icon>\n\n        <ion-input class="text-input" type="text" placeholder="用户名" name="username" [(ngModel)]="tel"></ion-input>\n\n      </div>\n\n      <div class="pw">\n\n        <ion-icon name="lock"></ion-icon>\n\n        <ion-input class="text-input" type="password" placeholder="密码" name=\'pass\' [(ngModel)]="pwd"></ion-input>\n\n      </div>\n\n      <button ion-button block>注册</button>\n\n    </form>\n\n  </div>\n\n\n\n  <div class="buttom">\n\n    <span float-left (click)="goRegister()">已有账号？去登陆</span>\n\n  </div>\n\n</ion-content>\n\n  '/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\enroll\enroll.html"*/,
+            selector: 'page-enroll',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\enroll\enroll.html"*/'<!-- 注册 -->\n\n<ion-content padding>\n\n  <div class="close">\n\n    <!-- <ion-icon class="over" (click)="goTabs()">跳过</ion-icon> -->\n\n    <!-- <ion-icon ios="ios-close" md="md-close"></ion-icon> -->\n\n  </div>\n\n  <div class="header">\n\n    <img src="assets/imgs/蜗牛.png" alt="图标">\n\n  </div>\n\n  <div class="box">\n\n    <!-- <div class="pn">\n\n      <label>\n\n        <ion-icon name="contact"></ion-icon>\n\n        <input type="text" placeholder="手机号/邮箱" class="text-input">\n\n      </label>\n\n    </div>\n\n    <div class="vc">\n\n   \n\n    </div>\n\n    <div class="pw">\n\n      <label>\n\n        <ion-icon name="lock"></ion-icon>\n\n        <input type="password" placeholder="密码" class="text-input">\n\n      </label>\n\n    </div>\n\n  </div> -->\n\n    <form (ngSubmit)="logForm()">\n\n      <div class="username">\n\n        <ion-icon name="contact"></ion-icon>\n\n        <ion-input class="text-input" type="text" placeholder="用户名" name="username" [(ngModel)]="tel"></ion-input>\n\n      </div>\n\n      <div class="pw">\n\n        <ion-icon name="lock"></ion-icon>\n\n        <ion-input class="text-input" type="password" placeholder="密码" name=\'pass\' [(ngModel)]="pwd"></ion-input>\n\n      </div>\n\n      <button ion-button block>注册</button>\n\n    </form>\n\n  </div>\n\n\n\n  <div class="buttom">\n\n    <span float-left (click)="goRegister()">已有账号？去登陆</span>\n\n  </div>\n\n</ion-content>\n\n  '/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\enroll\enroll.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_4__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], EnrollPage);
@@ -794,146 +853,6 @@ var EnrollPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=enroll.js.map
-
-/***/ }),
-
-/***/ 205:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactPage; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__message_message__ = __webpack_require__(206);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__concerning_concerning__ = __webpack_require__(207);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__opinion_opinion__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__fans_fans__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__attention_attention__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__strategy_strategy__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__collection_collection__ = __webpack_require__(210);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__myself_myself__ = __webpack_require__(211);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__register_register__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__(20);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-
-
-
-
-
-
-
-
-
-
-var ContactPage = /** @class */ (function () {
-    function ContactPage(navCtrl, http) {
-        var _this = this;
-        this.navCtrl = navCtrl;
-        this.http = http;
-        this.headers = new __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' });
-        // this.user_display = ContactPage.user;
-        this.tel = __WEBPACK_IMPORTED_MODULE_10__register_register__["a" /* RegisterPage */].t;
-        this.http.post('/api/contact', { 'username': this.tel }, { headers: this.headers }).subscribe(function (data) {
-            _this.gonglue = data;
-            // console.log('1',this.tel);
-            console.log(data);
-            console.log(_this.gonglue);
-            // console.log(this.gonglue[0].username);
-        });
-        // if(this.gonglue.username==undefined){
-        //   this.gonglue.username = "请点击登录"
-        // }
-        // if(this.gonglue.headerSrc==null){
-        //   this.gonglue.headerSrc = "assets/imgs/un_register.jpg"
-        // }
-    }
-    ContactPage.prototype.ionViewWillEnter = function () {
-        this.attention_volume = __WEBPACK_IMPORTED_MODULE_6__attention_attention__["a" /* AttentionPage */].attentionarr.length;
-        this.fans_volume = __WEBPACK_IMPORTED_MODULE_5__fans_fans__["a" /* FansPage */].fansarr.length;
-        this.tel = __WEBPACK_IMPORTED_MODULE_10__register_register__["a" /* RegisterPage */].t;
-        // if(this.gonglue[0].username==undefined){
-        //   this.gonglue[0].username = "请点击登录"
-        // }
-        // if(this.gonglue.headerSrc==null){
-        //   this.gonglue.headerSrc = "assets/imgs/un_register.jpg"
-        // }
-    };
-    ContactPage.prototype.goMyself = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_9__myself_myself__["a" /* MyselfPage */], {
-            title: '个人信息'
-        });
-    };
-    ContactPage.prototype.goMessage = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__message_message__["a" /* MessagePage */], {
-            title: '我的消息'
-        });
-    };
-    ContactPage.prototype.goConcerning = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__concerning_concerning__["a" /* ConcerningPage */], {
-            title: '关于我们'
-        });
-    };
-    ContactPage.prototype.goOpinion = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__opinion_opinion__["a" /* OpinionPage */], {
-            title: '意见反馈'
-        });
-    };
-    ContactPage.prototype.goFans = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_5__fans_fans__["a" /* FansPage */], {
-            title: '全部粉丝'
-        });
-    };
-    ContactPage.prototype.goAttention = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_6__attention_attention__["a" /* AttentionPage */], {
-            title: '我的关注'
-        });
-    };
-    ContactPage.prototype.goStrategy = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_7__strategy_strategy__["a" /* StrategyPage */], {
-            title: '我的攻略'
-        });
-    };
-    ContactPage.prototype.goCollection = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_8__collection_collection__["a" /* CollectionPage */], {
-            title: '我的收藏'
-        });
-    };
-    ContactPage.prototype.goRegister = function () {
-        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_10__register_register__["a" /* RegisterPage */], {
-            title: '登录'
-        });
-    };
-    ContactPage.prototype.Clear = function () {
-        localStorage.clear();
-    };
-    ContactPage.prototype.goJudge = function () {
-        if (this.gonglue.username == "请点击登录") {
-            this.goRegister();
-        }
-        else {
-            this.goMyself();
-        }
-    };
-    ContactPage = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-contact',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\contact\contact.html"*/'<!-- 我的 -->\n\n<ion-header>\n\n  <div class="top" (click)="goJudge()">\n\n    <li *ngFor="let item of gonglue">\n\n        <div class="image">\n\n            <img src="../../assets/imgs/header_1.jpg" alt="头像" />\n\n        </div>\n\n        <div class="name">\n\n          <span text-center class="p1">\n\n         {{item.username}}\n\n          </span>\n\n        </div>\n\n        <div class="signature">\n\n          <span text-center class="p2">\n\n              {{item.signature}}\n\n          </span> \n\n        </div>\n\n        </li>\n\n  </div>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div class="con1">\n\n    <ul>\n\n      <li (click)="goFans()">\n\n        <p text-center class="p1">{{fans_volume}}</p>\n\n        <p text-center class="p2">粉丝</p>\n\n      </li>\n\n      <li (click)="goAttention()">\n\n        <p text-center class="p1">{{attention_volume}}</p>\n\n        <p text-center class="p2">关注</p>\n\n      </li>\n\n      <li (click)="goStrategy()">\n\n        <p text-center class="p1">32</p>\n\n        <p text-center class="p2">我的攻略</p>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n  <div class="con2">\n\n    <ul>\n\n      <li (click)="goCollection()">\n\n        <ion-icon ios="logo-codepen" md="logo-codepen" class="icon1"></ion-icon>\n\n        <span>我的收藏</span>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goMessage()">\n\n        <ion-icon ios="ios-text" md="md-text" class="icon1"></ion-icon>\n\n        <span>我的消息</span>\n\n        <ion-icon name="notifications-outline" class="bell"></ion-icon>\n\n        <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goConcerning()">\n\n          <ion-icon ios="ios-people" md="md-people" class="icon1"></ion-icon>\n\n          <span>关于我们</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goOpinion()">\n\n          <ion-icon ios="ios-create" md="md-create" class="icon1"></ion-icon>\n\n          <span>意见反馈</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n      <li (click)="goRegister();Clear()">\n\n          <ion-icon ios="ios-close-circle" md="md-close-circle" class="icon1"></ion-icon>\n\n          <span>退出登录</span>\n\n          <span float-right class="right">></span>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\contact\contact.html"*/
-        }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["a" /* HttpClient */]])
-    ], ContactPage);
-    return ContactPage;
-}());
-
-//# sourceMappingURL=contact.js.map
 
 /***/ }),
 
@@ -1030,6 +949,9 @@ var ConcerningPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OpinionPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__register_register__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__contact_contact__ = __webpack_require__(104);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1041,6 +963,9 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
+
+
 /**
  * Generated class for the OpinionPage page.
  *
@@ -1048,18 +973,93 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * Ionic pages and navigation.
  */
 var OpinionPage = /** @class */ (function () {
-    function OpinionPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
+    function OpinionPage(app, alertCtrl, http, navParams, navCtrl) {
+        this.app = app;
+        this.alertCtrl = alertCtrl;
+        this.http = http;
         this.navParams = navParams;
+        this.navCtrl = navCtrl;
+        this.headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' });
         this.titleTitle = this.navParams.get('title');
     }
+    OpinionPage.prototype.logForm = function () {
+        var _this = this;
+        console.log('tel', this.tel);
+        this.http.post('/api/say', {
+            "username": this.tel,
+            "say": this.say,
+            "phone": this.pho,
+        }, {
+            headers: this.headers,
+        }).subscribe(function (data) {
+            _this.tel = __WEBPACK_IMPORTED_MODULE_2__register_register__["a" /* RegisterPage */].t;
+            console.log('data', data);
+            // -1 数据不完整  0 成功
+            switch (data) {
+                case -1:
+                    _this.presentPrompt('请将内容添写完整');
+                    break;
+                case 0:
+                    _this.goHome();
+                    break;
+            }
+        });
+    };
+    OpinionPage.prototype.ionViewWillEnter = function () {
+        this.tel = __WEBPACK_IMPORTED_MODULE_2__register_register__["a" /* RegisterPage */].t;
+    };
+    OpinionPage.prototype.presentPrompt = function (str) {
+        console.log(str);
+        var alert = this.alertCtrl.create({
+            title: '添加失败',
+            subTitle: str,
+            buttons: [
+                {
+                    text: '确认',
+                    role: 'cancel',
+                    handler: function (data) {
+                        console.log('Confirm clicked');
+                    }
+                }
+            ]
+        });
+        alert.present();
+    };
+    OpinionPage.prototype.goHome = function () {
+        // this.app.getRootNavs()[0].setRoot(TabsPage,{username:this.tel});
+        // this.navCtrl.popToRoot();
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_4__contact_contact__["a" /* ContactPage */]);
+        // console.log('1',this.tel);
+    };
+    OpinionPage.prototype.showConfirm = function () {
+        var _this = this;
+        var confirm = this.alertCtrl.create({
+            title: '是否要保存草稿？',
+            buttons: [
+                {
+                    text: '否',
+                    handler: function () {
+                        _this.navCtrl.pop();
+                    }
+                },
+                {
+                    text: '是',
+                    handler: function () {
+                        _this.navCtrl.pop();
+                    }
+                }
+            ]
+        });
+        confirm.present();
+    };
     OpinionPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-opinion',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\opinion\opinion.html"*/'<!-- 意见反馈 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="content">\n\n    <div class="c1">\n\n      <div class="font">您的问题或建议：</div>\n\n      <div class="text">\n\n        <label>\n\n          <input type="text" placeholder="意见反馈:" class="text-input">\n\n        </label>\n\n      </div>\n\n    </div>\n\n  </div>\n\n  <div class="content">\n\n    <div class="c1">\n\n      <div class="font">您联系方式：</div>\n\n      <div class="text">\n\n        <label>\n\n          <input type="text" placeholder="请输入电话号码" class="text-input">\n\n        </label>\n\n      </div>\n\n    </div>\n\n  </div>\n\n  <div class="comfirm">\n\n    <button ion-button block>确认</button>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\opinion\opinion.html"*/,
+            selector: 'page-opinion',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\opinion\opinion.html"*/'<!-- 意见反馈 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <!-- <div class="content">\n\n    <div class="c1">\n\n      <div class="font">您的问题或建议：</div>\n\n      <div class="text">\n\n        <label>\n\n          <input type="text" placeholder="意见反馈:" class="text-input">\n\n        </label>\n\n      </div>\n\n    </div>\n\n  </div>\n\n  <div class="content">\n\n    <div class="c1">\n\n      <div class="font">您联系方式：</div>\n\n      <div class="text">\n\n        <label>\n\n          <input type="text" placeholder="请输入电话号码" class="text-input">\n\n        </label>\n\n      </div>\n\n    </div>\n\n  </div>\n\n  <div class="comfirm">\n\n    <button ion-button block>确认</button>\n\n  </div> -->\n\n  <form (ngSubmit)="logForm()">\n\n    <ion-item>\n\n      <ion-label>say</ion-label>\n\n      <ion-input type="text" [(ngModel)]="say" name="shuo"></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>phone</ion-label>\n\n      <ion-input  type="text" [(ngModel)]="phone" name="hua"></ion-input>\n\n    </ion-item>\n\n    <div class="comfirm">\n\n      <button ion-button type="submit" block id="button">发送</button>\n\n    </div>\n\n  </form> \n\n</ion-content>\n\n'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\opinion\opinion.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _e || Object])
     ], OpinionPage);
     return OpinionPage;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=opinion.js.map
@@ -1301,8 +1301,8 @@ var SubHeaderPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__jizhangben_jizhangben__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__triplan_triplan__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__jizhangben_jizhangben__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__triplan_triplan__ = __webpack_require__(108);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1346,9 +1346,9 @@ var HomePage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return NullpagePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__jizhangben_jizhangben__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__jizhangben_jizhangben__ = __webpack_require__(107);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1500,9 +1500,9 @@ var MingxiPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddplanPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__triplan_triplan__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__triplan_triplan__ = __webpack_require__(108);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common_http__ = __webpack_require__(17);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1664,7 +1664,7 @@ var ZongjiPage = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__pinglun_pinglun__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shouyeqq_shouyeqq__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__shouyeqq_shouyeqq__ = __webpack_require__(53);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1709,7 +1709,7 @@ var GongluePage = /** @class */ (function () {
     };
     GongluePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-gonglue',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\gonglue\gonglue.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="blu">\n\n    <ion-title (click)="goHomePage()"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="ioncontent">\n\n  <div class="fixed1">\n\n      <p class="title">{{userInfo.title}}</p>\n\n    <hr>\n\n    <!-- <img src="{{userInfo.src}}" alt="" class="touxiang"> -->\n\n    <img src="assets/imgs/1.jpg" alt="" style="border-radius:50%;width: 40px ;height: 40px;">\n\n    <span class="username" style="color:#808080;font-weight:bold;">&nbsp;&nbsp;&nbsp;{{userInfo.username}}</span>\n\n    <br>\n\n    <p class="content">{{userInfo.content}}</p>\n\n    <img src="{{userInfo.imgUrl}}" alt="" class="articleimg">\n\n  </div>\n\n    \n\n    \n\n</ion-content>\n\n<!-- <ion-footer>\n\n    <div  class="fixed"> -->\n\n        <!-- <p class="time">发布于{{userInfo.time}}--著作权归作者所有</p> -->\n\n        <!-- <img src="../assets/imgs/3.jpg" alt="" class="mytouxiang">\n\n        <input type="text" placeholder="添加评论..." class="pinglun"> -->\n\n        <!-- <div class="last"> -->\n\n         <!-- <button class="agree"> <ion-icon ios="ios-arrow-dropup" md="md-arrow-dropup"></ion-icon>赞同</button>\n\n         <button class="argue"> <ion-icon ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon></button> -->\n\n          <!-- <div class="divs">\n\n            <div class="div1">\n\n              <ion-icon ios="ios-heart" md="md-heart" class="icon"></ion-icon>\n\n              <p>感谢</p>\n\n            </div>\n\n            <div class="div2">\n\n              <ion-icon ios="ios-star" md="md-star" class="icon"></ion-icon>\n\n              <p>收藏</p>\n\n            </div>\n\n            <div class="div3" (click)="goPinglunPage()">\n\n              <ion-icon ios="ios-menu" md="md-menu" class="icon"></ion-icon>\n\n              <p>评论</p>\n\n            </div>\n\n          </div>\n\n        </div>\n\n      </div>\n\n</ion-footer> -->\n\n\n\n'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\gonglue\gonglue.html"*/,
+            selector: 'page-gonglue',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\gonglue\gonglue.html"*/'\n\n<ion-header>\n\n\n\n  <ion-navbar color="blu">\n\n    <ion-title (click)="goHomePage()"></ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding class="ioncontent">\n\n  <div class="fixed1">\n\n      <p class="title">{{userInfo.title}}</p>\n\n    <hr>\n\n    <!-- <img src="{{userInfo.src}}" alt="" class="touxiang"> -->\n\n    <img src="assets/imgs/1.jpg" alt="" style="border-radius:50%;width: 40px ;height: 40px;">\n\n    <span class="username" style="color:#808080;font-weight:bold;">&nbsp;&nbsp;&nbsp;{{userInfo.username}}</span>\n\n    <br>\n\n    <p class="content" style="white-space: pre-wrap;font-size: 15px;"    >{{userInfo.content}}</p>\n\n    <!-- <p v-model="userInfo.content" class="content">{{userInfo.content}}</p> -->\n\n    <img src="{{userInfo.imgUrl}}" alt="" class="articleimg">\n\n  </div>\n\n    \n\n    \n\n</ion-content>\n\n<!-- <ion-footer>\n\n    <div  class="fixed"> -->\n\n        <!-- <p class="time">发布于{{userInfo.time}}--著作权归作者所有</p> -->\n\n        <!-- <img src="../assets/imgs/3.jpg" alt="" class="mytouxiang">\n\n        <input type="text" placeholder="添加评论..." class="pinglun"> -->\n\n        <!-- <div class="last"> -->\n\n         <!-- <button class="agree"> <ion-icon ios="ios-arrow-dropup" md="md-arrow-dropup"></ion-icon>赞同</button>\n\n         <button class="argue"> <ion-icon ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon></button> -->\n\n          <!-- <div class="divs">\n\n            <div class="div1">\n\n              <ion-icon ios="ios-heart" md="md-heart" class="icon"></ion-icon>\n\n              <p>感谢</p>\n\n            </div>\n\n            <div class="div2">\n\n              <ion-icon ios="ios-star" md="md-star" class="icon"></ion-icon>\n\n              <p>收藏</p>\n\n            </div>\n\n            <div class="div3" (click)="goPinglunPage()">\n\n              <ion-icon ios="ios-menu" md="md-menu" class="icon"></ion-icon>\n\n              <p>评论</p>\n\n            </div>\n\n          </div>\n\n        </div>\n\n      </div>\n\n</ion-footer> -->\n\n\n\n'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\gonglue\gonglue.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
     ], GongluePage);
@@ -1787,8 +1787,9 @@ var PinglunPage = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddpagePage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__register_register__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_http__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tabs_tabs__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__register_register__ = __webpack_require__(16);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1798,6 +1799,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -1827,7 +1829,7 @@ var AddpagePage = /** @class */ (function () {
         }, {
             headers: this.headers,
         }).subscribe(function (data) {
-            _this.tel = __WEBPACK_IMPORTED_MODULE_3__register_register__["a" /* RegisterPage */].t;
+            _this.tel = __WEBPACK_IMPORTED_MODULE_4__register_register__["a" /* RegisterPage */].t;
             console.log('data', data);
             // -1 数据不完整  0 成功
             switch (data) {
@@ -1841,7 +1843,7 @@ var AddpagePage = /** @class */ (function () {
         });
     };
     AddpagePage.prototype.ionViewWillEnter = function () {
-        this.tel = __WEBPACK_IMPORTED_MODULE_3__register_register__["a" /* RegisterPage */].t;
+        this.tel = __WEBPACK_IMPORTED_MODULE_4__register_register__["a" /* RegisterPage */].t;
     };
     AddpagePage.prototype.presentPrompt = function (str) {
         console.log(str);
@@ -1863,8 +1865,8 @@ var AddpagePage = /** @class */ (function () {
     AddpagePage.prototype.goHome = function () {
         // this.app.getRootNavs()[0].setRoot(TabsPage,{username:this.tel});
         // this.navCtrl.popToRoot();
-        // this.navCtrl.push(ShouyeqqPage);
-        console.log(this.tel);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_3__tabs_tabs__["a" /* TabsPage */]);
+        // console.log('1',this.tel);
     };
     AddpagePage.prototype.showConfirm = function () {
         var _this = this;
@@ -1891,9 +1893,10 @@ var AddpagePage = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
             selector: 'page-addpage',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\addpage\addpage.html"*/'<ion-header >\n\n  <ion-navbar color="blu">\n\n    <ion-buttons style="position: absolute;left:2%">\n\n      <button ion-button icon-only (click)="showConfirm()">\n\n        取消       \n\n      </button>\n\n    </ion-buttons>  \n\n    <ion-title text-center>在路上</ion-title>\n\n    <ion-buttons style="position: absolute;right:2%;top:25%;">\n\n      <!-- <button ion-button icon-only>\n\n        发布\n\n      </button> -->\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content>\n\n  <!-- <ion-list>\n\n    <ion-item>\n\n      <ion-textarea placeholder="分享你的旅行攻略，你的心情。。。"></ion-textarea>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label>禁止转载</ion-label>\n\n      <ion-toggle [(ngModel)]="zhuanzai"></ion-toggle>\n\n    </ion-item>\n\n    \n\n    <ion-item>\n\n      <ion-label>匿名身份</ion-label>\n\n      <ion-toggle [(ngModel)]="niming"></ion-toggle>\n\n    </ion-item>\n\n\n\n    <ion-item>\n\n      <ion-label>公开</ion-label>\n\n      <ion-toggle [(ngModel)]="gongkai"></ion-toggle>\n\n    </ion-item>\n\n\n\n  </ion-list> -->\n\n  <!-- <form (ngSubmit)="logForm()">\n\n    <div class="username">\n\n      <ion-input class="text-input" type="text" placeholder="用户名" name="username" [(ngModel)]="tel"></ion-input>\n\n    </div>\n\n    <button ion-button block>注册</button>\n\n  </form> -->\n\n  <form (ngSubmit)="logForm()">\n\n    <ion-item>\n\n      <ion-label>Todo</ion-label>\n\n      <ion-input type="text" [(ngModel)]="tit" name="title"></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>description</ion-label>\n\n      <ion-input  type="text" [(ngModel)]="des" name="description"></ion-input>\n\n    </ion-item>\n\n    <ion-item>\n\n      <ion-label>Article</ion-label>\n\n      <ion-textarea [(ngModel)]="art" name="article" class="art"></ion-textarea>\n\n    </ion-item>\n\n    <button ion-button type="submit" block id="button"> <ion-icon name="md-add" class="ion"></ion-icon>&nbsp;&nbsp;发布</button>\n\n  </form>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\addpage\addpage.html"*/,
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */], __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]])
+        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["c" /* App */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _e || Object])
     ], AddpagePage);
     return AddpagePage;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=addpage.js.map
@@ -1926,31 +1929,31 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_http__ = __webpack_require__(298);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ionic_native_camera__ = __webpack_require__(213);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_about_about__ = __webpack_require__(299);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_contact_contact__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_contact_contact__ = __webpack_require__(104);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_home_home__ = __webpack_require__(214);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_jizhangben_jizhangben__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_tabs_tabs__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__ionic_native_status_bar__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__pages_jizhangben_jizhangben__ = __webpack_require__(107);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__pages_mingxi_mingxi__ = __webpack_require__(216);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__pages_addplan_addplan__ = __webpack_require__(217);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_triplan_triplan__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pages_triplan_triplan__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__pages_zongji_zongji__ = __webpack_require__(218);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__pages_nullpage_nullpage__ = __webpack_require__(215);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__pages_gonglue_gonglue__ = __webpack_require__(219);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__pages_pinglun_pinglun__ = __webpack_require__(220);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_shouyeqq_shouyeqq__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__pages_shouyeqq_shouyeqq__ = __webpack_require__(53);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__pages_collection_collection__ = __webpack_require__(210);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__pages_strategy_strategy__ = __webpack_require__(209);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_attention_attention__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_register_register__ = __webpack_require__(19);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_enroll_enroll__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__pages_attention_attention__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__pages_register_register__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__pages_enroll_enroll__ = __webpack_require__(205);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__pages_concerning_concerning__ = __webpack_require__(207);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__pages_message_message__ = __webpack_require__(206);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__pages_opinion_opinion__ = __webpack_require__(208);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_fans_fans__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__pages_fans_fans__ = __webpack_require__(105);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__pages_addpage_addpage__ = __webpack_require__(221);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__angular_common_http__ = __webpack_require__(20);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__angular_common_http__ = __webpack_require__(17);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__pages_myself_myself__ = __webpack_require__(211);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__pages_sub_header_sub_header__ = __webpack_require__(212);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__ionic_native_image_picker__ = __webpack_require__(300);
@@ -2093,9 +2096,9 @@ var AppModule = /** @class */ (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(201);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(203);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_register_register__ = __webpack_require__(19);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(202);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_register_register__ = __webpack_require__(16);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2162,6 +2165,100 @@ var AboutPage = /** @class */ (function () {
 }());
 
 //# sourceMappingURL=about.js.map
+
+/***/ }),
+
+/***/ 53:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ShouyeqqPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gonglue_gonglue__ = __webpack_require__(219);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_common_http__ = __webpack_require__(17);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__register_register__ = __webpack_require__(16);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__addpage_addpage__ = __webpack_require__(221);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+
+
+
+var ShouyeqqPage = /** @class */ (function () {
+    function ShouyeqqPage(http, navCtrl, params, modalCtrl) {
+        var _this = this;
+        this.http = http;
+        this.navCtrl = navCtrl;
+        this.params = params;
+        this.modalCtrl = modalCtrl;
+        this.isActive = 0;
+        this.arr = ["推荐", "关注"];
+        this.headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' });
+        this.tel = __WEBPACK_IMPORTED_MODULE_4__register_register__["a" /* RegisterPage */].t;
+        this.http.post('/api/home', { headers: this.headers }).subscribe(function (data) {
+            // this.id=data[idx].ID;
+            _this.write = data;
+            // console.log('1',this.tel);
+            console.log(data);
+        });
+        this.http.post('/api/home/a', { "username": this.tel }, { headers: this.headers }).subscribe(function (data) {
+            // this.id=data[idx].ID;
+            _this.a = data;
+            // console.log()
+            // console.log('1',this.tel);
+            console.log('a:', data);
+        });
+    }
+    ShouyeqqPage.prototype.isClick = function (i) {
+        this.isActive = i;
+    };
+    ;
+    ShouyeqqPage.prototype.ionViewWillEnter = function () {
+        this.tel = __WEBPACK_IMPORTED_MODULE_4__register_register__["a" /* RegisterPage */].t;
+    };
+    ShouyeqqPage.prototype.ionViewDidLoad = function () {
+        var _this = this;
+        document.querySelector('.ion-md-add').addEventListener('click', function () {
+            var profileModal = _this.modalCtrl.create(__WEBPACK_IMPORTED_MODULE_5__addpage_addpage__["a" /* AddpagePage */]);
+            profileModal.present();
+        }, false);
+    };
+    //  imgUrl:String;
+    //   listData: Object;// 接收数据用
+    //   res: Response;
+    //   constructor(public modalCtrl: ModalController,public navCtrl: NavController,private http: Http,public navParams:NavParams) {
+    //   }
+    ShouyeqqPage.prototype.goGongluePage = function (idx) {
+        console.log(idx);
+        this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__gonglue_gonglue__["a" /* GongluePage */], {
+            username: this.write[idx].username,
+            // touxiang:this.write[idx].src,
+            title: this.write[idx].title,
+            content: this.write[idx].article,
+        });
+    };
+    ShouyeqqPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
+            selector: 'page-shouyeqq',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\shouyeqq\shouyeqq.html"*/'<ion-header>\n\n  <ion-navbar color="blu">\n\n      <ion-searchbar class="search1">\n\n          [(ngModel)]="myInput"\n\n          [showCancelButton]="shouldShowCancel"\n\n          (ionInput)="onInput($event)"\n\n          (ionCancel)="onCancel($event)">\n\n      </ion-searchbar>\n\n      <ul class="navList">\n\n        <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx">{{arr[idx]}}</li>\n\n      </ul>\n\n      <ion-icon name="md-add" class="ion"></ion-icon>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n  <div [ngSwitch]="isActive">\n\n    <div *ngSwitchCase="0">\n\n      <!-- 轮播图 -->\n\n     <ion-slides pager="true" autoplay="1000" loop="true" class="sli" style="width:100%;height:240px;">\n\n            <!-- <ion-slide>\n\n              <img src="assets/imgs/北京攻略.jpg" alt="" calss="slide-image" style="width:100%;">\n\n            </ion-slide> -->\n\n            <ion-slide>\n\n              <img src="assets/imgs/5.jpg" alt="" calss="slide-image" style="width:100%;">\n\n            </ion-slide>\n\n            <ion-slide>\n\n              <img src="assets/imgs/6.jpg" alt="" calss="slide-image" style="width:100%;">\n\n            </ion-slide>\n\n     </ion-slides>\n\n\n\n     <div class="articles" style="width:90%;margin-left:5%;margin-top:5%;" *ngFor="let item of write;let idx=index">\n\n      <div calss="div1">\n\n        <img src="assets/imgs/1.jpg" alt="" style="border-radius:50%;width: 40px ;height: 40px;">\n\n        <span class="username">&nbsp;&nbsp;{{item.username}}</span>\n\n       <!-- <button calss="guanzhu" style="position:absolute;width:15%;margin-left:70%;margin-top:3%">+关注</button> -->\n\n      </div>\n\n      <div calss="div2">\n\n        <p class="title" style="position:relative;" (click)="goGongluePage(idx)">{{item.title}}</p>\n\n        <p class="content" style="width:60%;margin-top:5%;color:#808080 " (click)="goGongluePage(idx)">{{item.description}}</p>\n\n        <img src="assets/imgs/北京攻略.jpg" alt="" class="articleimg" style="position:absolute;margin-left:60%;margin-top:-25%;width:40%;height:45%;">\n\n        <!-- <img src="{{user.imgUrl}}" alt="" class="articleimg" style="position:absolute;margin-left:75%;margin-top:-20%;width:25%;height:40%;" (click)="goGongluePage(idx)"> -->\n\n      </div>\n\n      <hr style="margin-top:8%;margin-bottom:5%;">\n\n  \n\n     </div>\n\n    </div>\n\n    <!-- <div *ngSwitchCase="1">\n\n      <ion-slides pager="true" autoplay="1000" loop="true" class="sli" style="width:100%;height:10%;">\n\n        <ion-slide>\n\n          <img src="assets/imgs/1.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n        <ion-slide>\n\n          <img src="assets/imgs/5.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n        <ion-slide>\n\n          <img src="assets/imgs/6.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n      </ion-slides>\n\n      <div class="articles" style="width:90%;margin-left:5%;" *ngFor="let user of users2;let idx=index;">\n\n      <div calss="div1">\n\n       <img src="{{user.touxiang}}" class="touxiang">\n\n        <span class="username">{{user.name}}</span>\n\n       <button calss="guanzhu" style="position:absolute;width:15%;margin-left:70%;margin-top:3%">+关注</button>\n\n      </div>\n\n      <div calss="div2">\n\n        <p class="title" style="position:relative;" (click)="goGongluePage(idx)">{{user.title}}</p>\n\n        <p class="content" style="width:70%;margin-top:5%;" (click)="goGongluePage(idx)">{{user.content}}</p>\n\n       <img src="{{user.imgUrl}}" alt="" class="articleimg" style="position:absolute;margin-left:75%;margin-top:-20%;width:25%;height:40%;" (click)="goGongluePage(idx)">\n\n      </div>\n\n      <div calss="div3" style="margin-top:3%;">\n\n        <span>{{user.agree}}赞同</span>\n\n        <span style="position:relative;">{{user.pinglun}}评论</span>\n\n        <span class="time" style="position:absolute;margin-left:45%;">{{user.time}}</span>\n\n      </div>\n\n      <hr style="margin-top:3%;margin-bottom:3%;">\n\n     </div>\n\n    </div> -->\n\n  </div>\n\n</ion-content>\n\n\n\n\n\n\n\n'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\shouyeqq\shouyeqq.html"*/
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]])
+    ], ShouyeqqPage);
+    return ShouyeqqPage;
+}());
+
+//# sourceMappingURL=shouyeqq.js.map
 
 /***/ })
 
