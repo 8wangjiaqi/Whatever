@@ -11,7 +11,7 @@
 </ion-header>
 
 <ion-content padding>
-  <div class="content">
+  <!-- <div class="content">
     <div class="c1">
       <div class="font">您的问题或建议：</div>
       <div class="text">
@@ -33,5 +33,18 @@
   </div>
   <div class="comfirm">
     <button ion-button block>确认</button>
-  </div>
+  </div> -->
+  <form (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label>say</ion-label>
+      <ion-input type="text" [(ngModel)]="say" name="shuo"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>phone</ion-label>
+      <ion-input  type="text" [(ngModel)]="phone" name="hua"></ion-input>
+    </ion-item>
+    <div class="comfirm">
+      <button ion-button type="submit" block id="button">发送</button>
+    </div>
+  </form> 
 </ion-content>

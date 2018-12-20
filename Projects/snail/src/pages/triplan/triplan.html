@@ -15,14 +15,17 @@
   
   <div id="listdiv">
     <ul id="list" text-center>
-      <li  ngDefaultControl *ngFor="let item of arr;let i = index;" (click)="gomingxi2(i)" >
-        第{{item.days}}
-        <br/>
-        上午:{{item.shangwu}} <br/>
-        中午:{{item.zhongwu}}<br/>
-        下午:{{item.xiawu}}<br/>
-        晚上:{{item.wanshang}}
-      </li>  
+        <li  ngDefaultControl  (click)="gomingxi2(i)" *ngFor="let item of write;let i =index;" >
+          <h3>第{{item.days}}天</h3>
+          <!-- <br/> -->
+          <h5 >上午:{{item.morning}}</h5>
+          <h5 >下午:{{item.afternoon}}</h5>
+          <h5 >晚上:{{item.evening}}</h5>
+          <!-- <br/>
+          下午:{{item.afternoon}}<br/>
+          晚上:{{item.evening}}
+          <h5> -->
+        </li>  
       
     </ul>
   </div>

@@ -12,23 +12,26 @@
   <div class="fixed1">
       <p class="title">{{userInfo.title}}</p>
     <hr>
-    <img src="{{userInfo.touxiang}}" alt="" class="touxiang">
-    <span class="username">{{userInfo.name}}</span>
-    <p class="content">{{userInfo.content}}</p>
+    <!-- <img src="{{userInfo.src}}" alt="" class="touxiang"> -->
+    <img src="assets/imgs/1.jpg" alt="" style="border-radius:50%;width: 40px ;height: 40px;">
+    <span class="username" style="color:#808080;font-weight:bold;">&nbsp;&nbsp;&nbsp;{{userInfo.username}}</span>
+    <br>
+    <p class="content" style="white-space: pre-wrap;font-size: 15px;"    >{{userInfo.content}}</p>
+    <!-- <p v-model="userInfo.content" class="content">{{userInfo.content}}</p> -->
     <img src="{{userInfo.imgUrl}}" alt="" class="articleimg">
   </div>
     
     
 </ion-content>
-<ion-footer>
-    <div  class="fixed">
+<!-- <ion-footer>
+    <div  class="fixed"> -->
         <!-- <p class="time">发布于{{userInfo.time}}--著作权归作者所有</p> -->
         <!-- <img src="../assets/imgs/3.jpg" alt="" class="mytouxiang">
         <input type="text" placeholder="添加评论..." class="pinglun"> -->
-        <div class="last">
+        <!-- <div class="last"> -->
          <!-- <button class="agree"> <ion-icon ios="ios-arrow-dropup" md="md-arrow-dropup"></ion-icon>赞同</button>
          <button class="argue"> <ion-icon ios="ios-arrow-dropdown" md="md-arrow-dropdown"></ion-icon></button> -->
-          <div class="divs">
+          <!-- <div class="divs">
             <div class="div1">
               <ion-icon ios="ios-heart" md="md-heart" class="icon"></ion-icon>
               <p>感谢</p>
@@ -44,5 +47,5 @@
           </div>
         </div>
       </div>
-</ion-footer>
+</ion-footer> -->
 

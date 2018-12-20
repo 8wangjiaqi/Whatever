@@ -1,9 +1,22 @@
 page-addpage {
     ion-content{
 
-        textarea.text-input{
-            height: 300px;
-        }
+       .art{
+          height: 100px; 
+       }
+       #button{
+        background-color:  white!important;
+        border: 1px solid #207b94!important;
+        color:#207b94;
+        height: 40px;
+        width:20%;
+        margin-left: 40%;
+        margin-top:80%;
+
+        border-radius: 15px;
+    }
+
+
     }
     
 

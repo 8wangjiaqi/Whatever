@@ -10,30 +10,46 @@ page-jizhangben {
         button{
             background-color: #207b94!important;
         }
-        #listdiv{
-            #list{
-                position: relative;
-                li{
-                    list-style: none;
-                    background-color: white;
-                    line-height: 30px;
-                    width: 88%;
-                    border-radius: 20%;
-                    height: 30px;
-                    font-size: 15px;
-                    margin-top: 5px;
-                    text-align: center;
-                    
-                    .ion-md-backspace:before{
-                        position: absolute;
-                        display: block;
-                        float: right!important;
-                        margin-left: 20px;
-                        font-size: 25px;
-                        margin-top: -16px;
-                    }
-                }  
-            }
-        } 
+ 
+        li{
+            list-style: none;
+            background-color: white;
+            width: 88%;
+            border-radius:20%;
+            padding: 2%;
+            margin-left: 6%;
+            font-size: 14px;
+            margin-top: 7px;
+            text-align: center;
+            
+        }
     }
+    .front{
+        width: 60%;
+        font-size:16px;
+        color: grey;
+    }
+    .later{
+        width: 40%;
+        font-size:16px;
+        //color: grey;
+    }
+    .table{
+        margin-left: 5%;
+        background: rgb(240, 240, 240);
+        //color: grey;
+
+       
+    }
+    td{
+        border:0px;
+    }
+    div{
+        margin-top: 5px;
+        hr{
+            size:12px;
+        }
+
+    }
+
 }

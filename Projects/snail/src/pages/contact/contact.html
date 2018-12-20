@@ -1,10 +1,26 @@
 <!-- 我的 -->
 <ion-header>
   <div class="top" (click)="goJudge()">
-    <img src="{{gonglue.headerSrc}}" alt="头像" />
-    <p text-center class="p1">
-      {{gonglue.username}}
-    </p>
+    <li *ngFor="let item of gonglue">
+        <div class="image">
+            <!-- <img src=" http://192.168.62.144:3000/upload/{{item.src}}" alt="头像" /> -->
+            <ul >
+                <li *ngFor="let item of a">
+                  <img src="http://192.168.62.144:3000/upload/{{item.src}}" alt="头像">
+                </li>
+            </ul>
+        </div>
+        <div class="name">
+          <span text-center class="p1">
+         {{item.username}}
+          </span>
+        </div>
+        <div class="signature">
+          <span text-center class="p2">
+              {{item.signature}}
+          </span> 
+        </div>
+        </li>
   </div>
 </ion-header>
 
@@ -32,12 +48,12 @@
         <span>我的收藏</span>
         <span float-right class="right">></span>
       </li>
-      <li (click)="goMessage()">
+      <!-- <li (click)="goMessage()">
         <ion-icon ios="ios-text" md="md-text" class="icon1"></ion-icon>
         <span>我的消息</span>
         <ion-icon name="notifications-outline" class="bell"></ion-icon>
         <span float-right class="right">></span>
-      </li>
+      </li> -->
       <li (click)="goConcerning()">
           <ion-icon ios="ios-people" md="md-people" class="icon1"></ion-icon>
           <span>关于我们</span>

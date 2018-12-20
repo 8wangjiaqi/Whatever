@@ -8,35 +8,18 @@ import {NavController, NavParams } from 'ionic-angular';
 export class MingxiPage {
 
   i;
-  userInfo={
-    goodtype:'',
+  items={
     money:'',
     time:'',
-    typemoney:'',
-    more:'',
+    style:'',
+    other:''
   };
   constructor(public navCtrl: NavController, public params: NavParams) {
-   
+   this.items=params.data;
+   console.log(this.items);
   }
 
-  ionViewDidLoad() {  
-    this.i = this.params.data.index;
-    this.userInfo=JSON.parse(window.localStorage.getItem('list1'))[this.i];
-    console.log(window.localStorage.getItem('list1'));
-    //console.log(1)
-    console.log(this.userInfo);
-
-  }
   deletelist(){
 
-    this.navCtrl.pop();
-    console.log("删除的序列号:",this.i);
-    console.log(window.localStorage.getItem('list1'));
-    console.log(JSON.parse(window.localStorage.getItem('list1')));
-  
-    var arr=JSON.parse(window.localStorage.getItem('list1'))
-    arr.splice(this.i,1);
-
-   window.localStorage.setItem('list1',JSON.stringify(arr));
   }
 }

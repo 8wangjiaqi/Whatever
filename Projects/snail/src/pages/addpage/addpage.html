@@ -7,16 +7,16 @@
     </ion-buttons>  
     <ion-title text-center>在路上</ion-title>
     <ion-buttons style="position: absolute;right:2%;top:25%;">
-      <button ion-button icon-only>
+      <!-- <button ion-button icon-only>
         发布
-      </button>
+      </button> -->
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content>
-  <ion-list>
+  <!-- <ion-list>
     <ion-item>
       <ion-textarea placeholder="分享你的旅行攻略，你的心情。。。"></ion-textarea>
     </ion-item>
@@ -36,5 +36,26 @@
       <ion-toggle [(ngModel)]="gongkai"></ion-toggle>
     </ion-item>
 
-  </ion-list>
+  </ion-list> -->
+  <!-- <form (ngSubmit)="logForm()">
+    <div class="username">
+      <ion-input class="text-input" type="text" placeholder="用户名" name="username" [(ngModel)]="tel"></ion-input>
+    </div>
+    <button ion-button block>注册</button>
+  </form> -->
+  <form (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-label>Todo</ion-label>
+      <ion-input type="text" [(ngModel)]="tit" name="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>description</ion-label>
+      <ion-input  type="text" [(ngModel)]="des" name="description"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Article</ion-label>
+      <ion-textarea [(ngModel)]="art" name="article" class="art"></ion-textarea>
+    </ion-item>
+    <button ion-button type="submit" block id="button"> <ion-icon name="md-add" class="ion"></ion-icon>&nbsp;&nbsp;发布</button>
+  </form>
 </ion-content>

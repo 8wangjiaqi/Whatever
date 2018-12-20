@@ -18,10 +18,5 @@ export class TabsPage {
   constructor(public modalCtrl: ModalController) {
 
   }
-  ionViewDidLoad(){
-    document.querySelector('.ion-md-add-circle').addEventListener('click',()=>{
-      let profileModal = this.modalCtrl.create(AddpagePage);
-      profileModal.present();
-    },false);
-  }
+  
 }
