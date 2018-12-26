@@ -10,17 +10,17 @@ import { JizhangbenPage } from '../jizhangben/jizhangben';
   templateUrl: 'nullpage.html',
 })
 export class NullpagePage {
-  arr=[];
-  obj=
-    {money:'',
-      time:'',
-      style:'',
-      other:''  
-  };
+  // arr=[];
+  // obj=
+  //   {money:'',
+  //     shijian:'',
+  //     style:'',
+  //     other:''  
+  // };
   private headers=new HttpHeaders({'Content-Type':'application/json'} )
   tel;
   money;
-  time;
+  shijian;
   style;
   other;
 
@@ -30,14 +30,15 @@ export class NullpagePage {
     this.http.post('/api/write',{
       "username":this.tel,
       "money":this.money,
-      "time":this.time,
+      "shijian":this.shijian,
       "style":this.style,
       "other":this.other,
     },{
       headers:this.headers,
     }).subscribe((data)=>{
-      console.log('data:',data);
+      // console.log('data:',data);
       this.tel=RegisterPage.t;
+     
       // -1 花销为空 -2 付款方式为空  0 成功 
       switch(data){
         

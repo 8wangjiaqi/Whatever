@@ -13,16 +13,16 @@
 <ion-content padding>
   <div class="fans">
     <ul>
-        <li *ngFor="let item of attention;let i = index">
+        <li *ngFor="let item of write;let i = index" >
         <div class="header">
-          <img src="{{item.headerSrc}}" alt="头像">
+          <img src="http://192.168.62.144:3000/upload/{{item.guansrc}}" alt="头像">
         </div>
         <div class="center">
           <div class="name">
-              {{item.name}}
+              {{item.guanusername}}
           </div>
           <div class="signature">
-              粉丝&nbsp;&nbsp;{{item.signature}}
+              <li *ngFor="let item of src;let i = index" style="border:0px">{{item.signature}}</li>
           </div>
         </div>
         <div class="right">
@@ -31,4 +31,5 @@
       </li>
     </ul>
   </div>
+
 </ion-content>

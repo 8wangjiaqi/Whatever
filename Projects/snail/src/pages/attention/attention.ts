@@ -3,6 +3,8 @@ import { NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { Events } from 'ionic-angular';
 import { FansPage } from '../fans/fans';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { RegisterPage } from '../register/register';
 /**
  * Generated class for the AttentionPage page.
  *
@@ -19,6 +21,10 @@ export class AttentionPage {
   index;
   myEvent;
   titleTitle: any;
+  tel;
+  write;
+  src;
+  ID;
   public static attentionarr=[
     {
       status:1,
@@ -57,9 +63,30 @@ export class AttentionPage {
     },
   ];
   attention;
-  constructor(public events: Events,public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController) {
+  // guanusername;
+  private headers=new HttpHeaders({'Content-Type':'application/json'} );
+  constructor(public http:HttpClient,public events: Events,public navCtrl: NavController, public navParams: NavParams,public alertCtrl: AlertController) {
     this.titleTitle =this.navParams.get('title');
     this.attention = AttentionPage.attentionarr;
+    this.tel=RegisterPage.t;
+    this.http.post('/api/guanzhu',{
+      "username":this.tel,
+    },{
+      headers:this.headers,
+    }).subscribe((data)=>{
+      this.write=data;
+      // console.log(this.write);
+    });
+
+    this.http.post('/api/guanzhu/a',{
+      "username":this.tel,
+    },{
+      headers:this.headers,
+    }).subscribe((data)=>{
+      
+      this.src=data;
+    });
+
   }
 
   showConfirm() {
@@ -74,17 +101,32 @@ export class AttentionPage {
         {
           text: '确定',
           handler: () => {
-            for(this.i = 0;this.i < FansPage.fansarr.length;this.i++){
-              if((AttentionPage.attentionarr[this.index].headerSrc == FansPage.fansarr[this.i].headerSrc)
-              &&(AttentionPage.attentionarr[this.index].signature == FansPage.fansarr[this.i].signature)
-              &&(AttentionPage.attentionarr[this.index].name == FansPage.fansarr[this.i].name)){
-                FansPage.fansarr[this.index].status = 0;
-                FansPage.fansarr[this.index].buttonValue = "+ 关注";
-              }
-            }
-            AttentionPage.attentionarr.splice(this.index, 1);
+            this.http.post('/api/guanzhu/b',{
+              "ID":this.ID,
+            },{
+              headers:this.headers,
+            }).subscribe((data)=>{
+             console.log(this.ID);
+            });
+            this.http.post('/api/guanzhu',{
+              "username":this.tel,
+            },{
+              headers:this.headers,
+            }).subscribe((data)=>{
+              this.write=data;
+              // console.log(this.write);
+            });
+          //   for(this.i = 0;this.i < FansPage.fansarr.length;this.i++){
+          //     if((AttentionPage.attentionarr[this.index].headerSrc == FansPage.fansarr[this.i].headerSrc)
+          //     &&(AttentionPage.attentionarr[this.index].signature == FansPage.fansarr[this.i].signature)
+          //     &&(AttentionPage.attentionarr[this.index].name == FansPage.fansarr[this.i].name)){
+          //       FansPage.fansarr[this.index].status = 0;
+          //       FansPage.fansarr[this.index].buttonValue = "+ 关注";
+          //     }
+          //   }
+          //   AttentionPage.attentionarr.splice(this.index, 1);
           }
-        }
+        },
       ]
     });
     confirm.present();
@@ -92,5 +134,10 @@ export class AttentionPage {
 
   show(i) {
     this.index = i;
+    // console.log('1',this.index);
+    this.ID=this.write[i].ID;
   }
+  ionViewWillEnter() { //page初始化时
+    this.tel=RegisterPage.t;
+  } 
 }

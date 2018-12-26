@@ -15,6 +15,13 @@
     <!-- <img src="{{userInfo.src}}" alt="" class="touxiang"> -->
     <img src="assets/imgs/1.jpg" alt="" style="border-radius:50%;width: 40px ;height: 40px;">
     <span class="username" style="color:#808080;font-weight:bold;">&nbsp;&nbsp;&nbsp;{{userInfo.username}}</span>
+    <div class="right" >
+      <!-- <li *ngFor="let item of guanzhu"> -->
+        <button (click)="showConfirm()" [ngClass]="{'hidden': this.a== 2,'only': this.a == 1,'each': this.a==0}"> 
+          {{this.buttonValue}}
+        </button>
+      <!-- </li> -->
+    </div>
     <br>
     <p class="content" style="white-space: pre-wrap;font-size: 15px;"    >{{userInfo.content}}</p>
     <!-- <p v-model="userInfo.content" class="content">{{userInfo.content}}</p> -->

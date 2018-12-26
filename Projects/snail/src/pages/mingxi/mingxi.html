@@ -13,9 +13,11 @@
 
 
 <ion-content color="lgrey">
-  <ion-item id="money">
-    <ion-label style="color:black;font-size:20px;">花费:&nbsp;&nbsp;{{items.money}}</ion-label>
-  </ion-item>
+  <form  (ngSubmit)="logForm()">
+    <ion-item id="money">
+        <ion-label>花费:</ion-label>
+      <ion-input name='huafei' [(ngModel)]="money1" style="color:black;font-size:20px;"  placeholder="{{items.money}}" (ionFocus)="onFocus()">{{items.money}}</ion-input>
+    </ion-item>
 
   <!-- <ion-item id="money">
     <ion-label color="blu">类别:&nbsp;&nbsp;{{userInfo.goodtype}}</ion-label>
@@ -23,18 +25,24 @@
 
 
   <ion-item id="money">
-    <ion-label style="color:black;font-size:20px;">时间:&nbsp;&nbsp;{{items.time}}</ion-label>
+    <ion-label>时间:</ion-label>
+    <ion-input name='shijian' [(ngModel)]="time1" style="color:black;font-size:20px;"  placeholder="{{items.shijian}}" (ionFocus)="onFocus()"></ion-input>
   </ion-item>
 
   <ion-item id="money">
-    <ion-label style="color:black;font-size:20px;">付款方式:&nbsp;&nbsp;{{items.style}}</ion-label>
+    <ion-label>付款方式:</ion-label>
+    <ion-input name='fangshi' [(ngModel)]="style1" style="color:black;font-size:20px;" placeholder="{{items.style}}" (ionFocus)="onFocus()"></ion-input>
   </ion-item>
 
 
   <ion-item id="money">
-    <ion-label style="color:black;font-size:20px;">备注:&nbsp;&nbsp;{{items.other}}</ion-label>
+      <ion-label>备注:</ion-label>
+    <ion-input  name='beizhu' [(ngModel)]="other1" style="color:black;font-size:20px" placeholder="{{items.other}}" (ionFocus)="onFocus()"></ion-input>
   </ion-item>
 
   <br/><br/><br/>
-  <button ion-button round (click)="deletelist()">删除</button>
+  <button ion-button round (click)="add()">保存</button>
+  <button ion-button round (click)="del()">删除</button>
+  </form>
+ 
 </ion-content>

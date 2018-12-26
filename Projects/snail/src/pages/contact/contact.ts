@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, App } from 'ionic-angular';
 import { MessagePage } from '../message/message';
 import { ConcerningPage } from '../concerning/concerning';
 import { OpinionPage } from '../opinion/opinion';
@@ -19,27 +19,24 @@ export class ContactPage {
   attention_volume;
   fans_volume;
   a;
-  // public static user = {
-  //   headerSrc: "assets/imgs/header_1.jpg",
-  //   username: "杏仁",
-  //   autograph: "跟我一起旅游吧"
-  // };
+  b;
+  nu;
   user_display;
   private headers=new HttpHeaders({'Content-Type':'application/json'});
   gonglue;
   tel;
-  constructor(public navCtrl: NavController,public http:HttpClient,) {
+  num;
+  b1;
+  nu1;
+  constructor(public app:App,public navCtrl: NavController,public http:HttpClient,) {
     // this.user_display = ContactPage.user;
     this.tel=RegisterPage.t;
     this.http.post('/api/contact',{'username':this.tel},
       {  headers:this.headers}).subscribe((data)=>{
       this.gonglue=data;
-      // console.log('1',this.tel);
-      console.log('my:',data);
-      //console.log(this.gonglue);
-      // console.log(this.gonglue[0].username);
-
+      this.num=StrategyPage.n;
     });
+    
     this.http.post('/api/home/a',{"username":this.tel},
     {  headers:this.headers}).subscribe((data)=>{
     // this.id=data[idx].ID;
@@ -48,6 +45,23 @@ export class ContactPage {
     // console.log('1',this.tel);
     console.log('a:',data);
   });
+  this.http.post('/api/mygl',
+  {"username":this.tel},
+  {  headers:this.headers}).subscribe((data)=>{
+    // this.id=data[idx].ID;
+    // this.write=data;
+    this.b=data;
+    this.nu=this.b.length;
+  });
+  // this.http.post('/api/guanzhu',{
+  //   "username":this.tel,
+  // },{
+  //   headers:this.headers,
+  // }).subscribe((data)=>{
+  //   this.b1=data;
+    
+  //   this.nu1=this.b1.length;
+  // });
     // if(this.gonglue.username==undefined){
     //   this.gonglue.username = "请点击登录"
     // }
@@ -57,7 +71,7 @@ export class ContactPage {
   }
   ionViewWillEnter() { //page初始化时
     this.attention_volume = AttentionPage.attentionarr.length;
-    this.fans_volume = FansPage.fansarr.length;
+    // this.fans_volume = FansPage.fansarr.length;
     this.tel=RegisterPage.t;
     // if(this.gonglue[0].username==undefined){
     //   this.gonglue[0].username = "请点击登录"
@@ -65,8 +79,28 @@ export class ContactPage {
     // if(this.gonglue.headerSrc==null){
     //   this.gonglue.headerSrc = "assets/imgs/un_register.jpg"
     // }
+    this.http.post('/api/guanzhu',{
+      "username":this.tel,
+    },{
+      headers:this.headers,
+    }).subscribe((data)=>{
+      this.b1=data;
+      
+      this.nu1=this.b1.length;
+    });
+
+    this.http.post('/api/guanzhu/h',{
+      "username":this.tel,
+    },{
+      headers:this.headers,
+    }).subscribe((data)=>{
+      this.b2=data;
+      
+      this.nu2=this.b2.length;
+    });
   }
-  
+  nu2;
+  b2;
   goMyself(){
     this.navCtrl.push(MyselfPage,{
       title : '个人信息'
@@ -108,9 +142,13 @@ export class ContactPage {
     });
   }
   goRegister(){
-    this.navCtrl.push(RegisterPage,{
-      title : '登录'
-    });
+    // this.navCtrl.push(RegisterPage,{
+    //   title : '登录'
+    // });
+    this.app.getRootNav().setRoot(RegisterPage);
+
+    // this.navCtrl.popToRoot();
+
   }
   Clear(){
     localStorage.clear();
