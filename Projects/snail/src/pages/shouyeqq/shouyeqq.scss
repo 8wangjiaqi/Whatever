@@ -54,11 +54,14 @@ page-shouyeqq {
                 .header{
                     float: left;
                     width: 40px;
-                    height: 40px;
-                    img{
-                        border-radius: 40px;
-                        width: 40px;
-                        height: 40px;
+                    height: 60px;
+                    li{
+                        height: 190px;
+                        img{
+                            border-radius: 40px;
+                            width: 40px;
+                            height: 40px;
+                        }
                     }
                 }
                 .username{
@@ -70,97 +73,106 @@ page-shouyeqq {
                     margin-left: 10px;
                     line-height: 40px;
                     font-size: 14px;
+                    li{
+                        height: 190px;
+                    }
                 }
                 .right{
                     float: right;
-                    .only{
-                        margin-top: 5px;
-                        border-radius: 10px;
-                        height: 25px;
-                        width: 60px;
-                        color: #207b94;
-                        background-color: transparent;
-                        border: 1px solid #207b94;
+                    .like{
+                        font-size: 30px;
+                        color: rgb(182, 173, 173);
                     }
-                    .hidden{
-                        display: none;
-                    }
-                    .each{
-                        margin-top: 5px;
-                        border-radius: 10px;
-                        height: 25px;
-                        width: 60px;
-                        color: #9fa1a1;
-                        background-color: transparent;
-                        border: 1px solid #9fa1a1;
+                    .like2{
+                        font-size: 30px;
+                        color: #e4a154;
                     }
                 }
+
             }
             .mid{
+                margin-top: 10px;
                 float: left;
                 width: 100%;
-                height: 100px;
+                height: 25px;
                 .title{
-                    margin-top: 10px;
                     width: 100%;
-                    height: 26px;
-                    line-height: 26px;
-                    p{
-                        font-size: 18px;
+                    height: 25px;
+                    line-height: 25px;
+                    li{
+                        p{
+                            font-size: 18px;
+                        }
                     }
                 }
-                .mid_content{
-                    margin-top: 5px;
-                    .content{
-                        white-space:initial;
-                        overflow : hidden;
-                        text-overflow: ellipsis;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 4;
-                        -webkit-box-orient: vertical;
+                .li_content{
+                    margin: 0;
+                    padding: 0;
+                    width: 100%;
+                    height: 90px;
+                    .mid_content{
+                        float: left;
+                        margin-top: 5px;
                         width: 100%;
-                        height: 74px;
-                        p{
-                            line-height: 18px;
-                            letter-spacing: 1px;
-                            font-size: 14px;
-                            color: rgb(140, 141, 141);
+                        height: 90px;
+                        .content{
+                            float: left;
+                            white-space:initial;
+                            overflow : hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 4;
+                            -webkit-box-orient: vertical;
+                            width: 100%;
+                            height: 74px;
+                            li{
+                                height: 100px!important;
+                                p{
+                                    line-height: 18px;
+                                    letter-spacing: 1px;
+                                    font-size: 14px;
+                                    color: rgb(140, 141, 141);
+                                }
+                            }
+                          
+                        }
+                        .picture{
+                            display: none;
                         }
                     }
-                    .picture{
-                        display: none;
-                    }
-                }
-                .mid_content_pic{
-                    margin-top: 5px;
-                    .content{
-                        white-space:initial;
-                        overflow : hidden;
-                        text-overflow: ellipsis;
-                        display: -webkit-box;
-                        -webkit-line-clamp: 4;
-                        -webkit-box-orient: vertical;
+                    .mid_content_pic{
                         float: left;
-                        width: 57%;
-                        height: 74px;
-                        p{
-                            letter-spacing: 1px;
-                            font-size: 14px;
-                            color: rgb(140, 141, 141);
+                        margin-top: 5px;
+                        .content{
+                            float: left;
+                            white-space:initial;
+                            overflow : hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 4;
+                            -webkit-box-orient: vertical;
+                            float: left;
+                            width: 57%;
+                            height: 74px;
+                            p{
+                                letter-spacing: 1px;
+                                font-size: 14px;
+                                color: rgb(140, 141, 141);
+                            }
                         }
-                    }
-                    .picture{
-                        margin-left: 5px;
-                        float: left;
-                        width: 41%;
-                        height: 74px;
-                        line-height: 74px;
-                        text-align: center;
-                        img{
-                            max-width: 100%;
-                            max-height: 74px;
+                        .picture{
+                            margin-left: 5px;
+                            float: left;
+                            width: 41%;
+                            height: 74px;
                             line-height: 74px;
-
+                            text-align: center;
+                            img{
+                                max-width: 100%;
+                                max-height: 74px;
+                                line-height: 74px;
+    
+                            }
                         }
                     }
                 }

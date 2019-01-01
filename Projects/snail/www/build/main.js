@@ -193,9 +193,19 @@ var ShouyeqqPage = /** @class */ (function () {
         this.http.post('/api/home/a', { "username": this.tel }, { headers: this.headers }).subscribe(function (data1) {
             _this.a = data1;
         });
+        this.http.post('/api/guanzhu/i', { "username": this.tel }, { headers: this.headers }).subscribe(function (data1) {
+            _this.i = data1;
+            console.log('data1', data1);
+        });
+        this.http.post('/api/home/src', { "username": this.tel }, { headers: this.headers }).subscribe(function (data2) {
+            _this.src1 = data2;
+            console.log('data2', data2);
+            console.log(_this.idx);
+        });
     }
     ShouyeqqPage.prototype.isClick = function (i) {
         this.isActive = i;
+        console.log(this.isActive);
     };
     ;
     ShouyeqqPage.prototype.getItems = function (ev) {
@@ -237,18 +247,37 @@ var ShouyeqqPage = /** @class */ (function () {
     //   res: Response;
     //   constructor(public modalCtrl: ModalController,public navCtrl: NavController,private http: Http,public navParams:NavParams) {
     //   }
+    ShouyeqqPage.prototype.great = function (e) {
+        console.log(e.target.outerHTML);
+        if (e.target.outerHTML == '<p class="like">❤</p>') {
+            console.log('变蓝色');
+            e.target.className = 'like2';
+        }
+        else {
+            console.log('变灰色');
+            e.target.className = 'like';
+        }
+    };
     ShouyeqqPage.prototype.goGongluePage = function (idx) {
         // console.log(idx);
+        // if(this.isActive==0){
         this.navCtrl.push(__WEBPACK_IMPORTED_MODULE_2__gonglue_gonglue__["a" /* GongluePage */], {
             username: this.search_items[idx].username,
             // touxiang:this.write[idx].src,
             title: this.search_items[idx].title,
             content: this.search_items[idx].article,
         });
+        //   }else{
+        //     this.navCtrl.push(GongluePage, {
+        //       username: this.i[idx].username,
+        //       title: this.i[idx].title,
+        //       content: this.i[idx].article,
+        //   });
+        // }
     };
     ShouyeqqPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-shouyeqq',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\shouyeqq\shouyeqq.html"*/'<ion-header>\n\n  <ion-navbar color="blu">\n\n    <div class="search_add">\n\n      <div class="search">\n\n        <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n      </div>\n\n      <div class="ion">\n\n        <ion-icon name="md-add"></ion-icon>\n\n      </div>\n\n    </div>\n\n    <ul class="navList">\n\n      <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx">{{arr[idx]}}</li>\n\n    </ul>\n\n  </ion-navbar>\n\n</ion-header>\n\n<ion-content>\n\n  <div [ngSwitch]="isActive">\n\n    <div *ngSwitchCase="0">\n\n      <!-- 轮播图 -->\n\n      <ion-slides pager="true" autoplay="1000" loop="true" class="sli" style="width:100%;height:240px;">\n\n        <!-- <ion-slide>\n\n                    <img src="assets/imgs/北京攻略.jpg" alt="" calss="slide-image" style="width:100%;">\n\n                  </ion-slide> -->\n\n        <ion-slide>\n\n          <img src="assets/imgs/5.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n        <ion-slide>\n\n          <img src="assets/imgs/6.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n      </ion-slides>\n\n \n\n      <!-- 显示攻略 -->\n\n      <li *ngFor="let item of search_items;let idx=index">\n\n        <div class="article">\n\n          <div class="top">\n\n            <div class="header">\n\n              <!-- <img src="{{item.src}}" alt="头像"> -->\n\n              <!-- 写死的 -->\n\n              <img src="assets/imgs/header_1.jpg" alt="头像">\n\n            </div>\n\n            <div class="username">\n\n              {{item.username}} \n\n            </div>\n\n            <div class="right" >\n\n              <!-- <li *ngFor="let item of guanzhu"> -->\n\n                <button (click)="showConfirm(idx)" class="only"> \n\n                收藏\n\n                </button>\n\n              <!-- </li> -->\n\n            </div>\n\n          </div>\n\n          <div class="mid" (click)="goGongluePage(idx)">\n\n            <div class="title">\n\n              <p>{{item.title}}</p>\n\n            </div>\n\n            <div [ngClass]="item.picture == \'\' ? \'mid_content\' : \'mid_content_pic\'">\n\n              <div class="content">\n\n                <p>\n\n                  {{item.article}}\n\n                </p>\n\n              </div>\n\n              <div class="picture">\n\n                <!-- <img src="{{item.picture}}" alt="攻略图"> -->\n\n                <!-- 写死的 -->\n\n                <img src="assets/imgs/北京攻略.jpg" alt="攻略图">\n\n              </div>\n\n            </div>\n\n          </div>\n\n        </div>\n\n      </li>\n\n    </div>\n\n    <!-- <div *ngSwitchCase="1">\n\n      <ion-slides pager="true" autoplay="1000" loop="true" class="sli" style="width:100%;height:10%;">\n\n        <ion-slide>\n\n          <img src="assets/imgs/1.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n        <ion-slide>\n\n          <img src="assets/imgs/5.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n        <ion-slide>\n\n          <img src="assets/imgs/6.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n      </ion-slides>\n\n      <div class="articles" style="width:90%;margin-left:5%;" *ngFor="let user of users2;let idx=index;">\n\n      <div calss="div1">\n\n       <img src="{{user.touxiang}}" class="touxiang">\n\n        <span class="username">{{user.name}}</span>\n\n       <button calss="guanzhu" style="position:absolute;width:15%;margin-left:70%;margin-top:3%">+关注</button>\n\n      </div>\n\n      <div calss="div2">\n\n        <p class="title" style="position:relative;" (click)="goGongluePage(idx)">{{user.title}}</p>\n\n        <p class="content" style="width:70%;margin-top:5%;" (click)="goGongluePage(idx)">{{user.content}}</p>\n\n       <img src="{{user.imgUrl}}" alt="" class="articleimg" style="position:absolute;margin-left:75%;margin-top:-20%;width:25%;height:40%;" (click)="goGongluePage(idx)">\n\n      </div>\n\n      <div calss="div3" style="margin-top:3%;">\n\n        <span>{{user.agree}}赞同</span>\n\n        <span style="position:relative;">{{user.pinglun}}评论</span>\n\n        <span class="time" style="position:absolute;margin-left:45%;">{{user.time}}</span>\n\n      </div>\n\n      <hr style="margin-top:3%;margin-bottom:3%;">\n\n     </div>\n\n    </div> -->\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\shouyeqq\shouyeqq.html"*/
+            selector: 'page-shouyeqq',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\shouyeqq\shouyeqq.html"*/'<ion-header>\n\n  <ion-navbar color="blu">\n\n    <div class="search_add">\n\n      <div class="search">\n\n        <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>\n\n      </div>\n\n      <div class="ion">\n\n        <ion-icon name="md-add"></ion-icon>\n\n      </div>\n\n    </div>\n\n    <ul class="navList">\n\n      <li *ngFor="let item of arr;let idx=index;" (click)="isClick(idx)" [class.first]="isActive==idx">{{arr[idx]}}</li>\n\n    </ul>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <div [ngSwitch]="isActive">\n\n    <div *ngSwitchCase="0">\n\n      <!-- 轮播图 -->\n\n      <ion-slides pager="true" autoplay="1000" loop="true" class="sli" style="width:100%;height:240px;">\n\n        <!-- <ion-slide>\n\n                        <img src="assets/imgs/北京攻略.jpg" alt="" calss="slide-image" style="width:100%;">\n\n                      </ion-slide> -->\n\n        <ion-slide>\n\n          <img src="assets/imgs/5.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n        <ion-slide>\n\n          <img src="assets/imgs/6.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n      </ion-slides>\n\n    \n\n      <!-- 显示攻略 -->\n\n      <div class="article">\n\n        <div class="top">\n\n          <div class="header">\n\n            <li *ngFor="let item1 of src1;let idx=index;" style="border:0px;">\n\n              <img src="http://192.168.62.144:3000/upload/{{item1[0].src}}" alt="头像">\n\n            </li>\n\n          </div>\n\n          <div class="username">\n\n            <li *ngFor="let item of search_items;let idx=index;" style="border:0px;">\n\n              {{item.username}}\n\n            </li>\n\n          </div>\n\n          <div class="right">\n\n            <p class="like" (click)="great($event)">&#10084;</p>\n\n          </div>\n\n        </div>\n\n      \n\n        <div class="mid" (click)="goGongluePage(idx)">\n\n          <div class="title">\n\n            <li *ngFor="let item of search_items;let idx=index;" style="border:0px;">\n\n              <p>{{item.title}}</p>\n\n            </li>\n\n          </div>\n\n          <li class="li_content" *ngFor="let item of search_items;let idx=index;" style="border:0px;">\n\n            <div [ngClass]="item.picture == \'\' ? \'mid_content\' : \'mid_content_pic\'">\n\n              <div class="content">\n\n                <li>\n\n                  <p>{{item.article}}</p>\n\n                </li>\n\n              </div>\n\n              <div class="picture">\n\n                <img src="assets/imgs/北京攻略.jpg" alt="攻略图">\n\n              </div>\n\n            </div>\n\n          </li>\n\n        </div>\n\n      </div>\n\n    </div>\n\n    \n\n\n\n    <div *ngSwitchCase="1">\n\n      <ion-slides pager="true" autoplay="1000" loop="true" class="sli" style="width:100%;height:10%;">\n\n        <!-- <ion-slide>\n\n            <img src="assets/imgs/1.jpg" alt="" calss="slide-image" style="width:100%;">\n\n          </ion-slide> -->\n\n        <ion-slide>\n\n          <img src="assets/imgs/5.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n        <ion-slide>\n\n          <img src="assets/imgs/6.jpg" alt="" calss="slide-image" style="width:100%;">\n\n        </ion-slide>\n\n      </ion-slides>\n\n\n\n      <!-- 显示攻略 -->\n\n      <li *ngFor="let item of i;let idx=index">\n\n        <div class="article">\n\n          <div class="top">\n\n            <div class="header">\n\n              <li>\n\n                <img src="assets/imgs/header_1.jpg" alt="头像">\n\n              </li>\n\n            </div>\n\n            <div class="username">\n\n              {{item[0].username}}\n\n            </div>\n\n            <div class="right">\n\n              <p class="like" (click)="great($event)">&#10084;</p>\n\n            </div>\n\n          </div>\n\n          <div class="mid" (click)="goGongluePage(idx)">\n\n            <div class="title">\n\n              <p>{{item[0].title}}</p>\n\n            </div>\n\n            <div [ngClass]="item.picture == \'\' ? \'mid_content\' : \'mid_content_pic\'">\n\n              <div class="content">\n\n                <p>\n\n                  {{item[0].article}}\n\n                </p>\n\n              </div>\n\n              <div class="picture">\n\n                <img src="assets/imgs/北京攻略.jpg" alt="攻略图">\n\n              </div>\n\n            </div>\n\n          </div>\n\n        </div>\n\n      </li>\n\n    </div>\n\n  </div>\n\n</ion-content>'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\shouyeqq\shouyeqq.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* ModalController */]])
     ], ShouyeqqPage);
@@ -854,39 +883,64 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  */
 var FansPage = /** @class */ (function () {
     function FansPage(http, events, navCtrl, navParams, alertCtrl) {
-        var _this = this;
         this.http = http;
         this.events = events;
         this.navCtrl = navCtrl;
         this.navParams = navParams;
         this.alertCtrl = alertCtrl;
         this.headers = new __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["c" /* HttpHeaders */]({ 'Content-Type': 'application/json' });
+        // showConfirm($event) {
+        //   if ($event.target.innerHTML == "互相关注") {
+        //     const confirm = this.alertCtrl.create({
+        //       message: '确定不再关注此人？',
+        //       buttons: [
+        //         {
+        //           text: '取消',
+        //           handler: () => {
+        //           }
+        //         },
+        //         {
+        //           text: '确定',
+        //           handler: () => {
+        //             for(this.i = 0;this.i < AttentionPage.attentionarr.length;this.i++){
+        //               if((FansPage.fansarr[this.index].headerSrc == AttentionPage.attentionarr[this.i].headerSrc)
+        //               &&(FansPage.fansarr[this.index].signature == AttentionPage.attentionarr[this.i].signature)
+        //               &&(FansPage.fansarr[this.index].name == AttentionPage.attentionarr[this.i].name)){
+        //                 AttentionPage.attentionarr.splice(this.i, 1);
+        //               }
+        //             }
+        //             FansPage.fansarr[this.index].status = 0;
+        //             FansPage.fansarr[this.index].buttonValue = "+ 关注";
+        //           }
+        //         }
+        //       ]
+        //     });
+        //     confirm.present();
+        //   } else {
+        //     FansPage.fansarr[this.index].buttonValue = "互相关注";
+        //     FansPage.fansarr[this.index].status = 1;
+        //     AttentionPage.attentionarr.push(FansPage.fansarr[this.index]);
+        //   }
+        // }
+        this.buttonValue = "+关注";
         this.titleTitle = this.navParams.get('title');
         // this.fans = FansPage.fansarr;
         this.tel = __WEBPACK_IMPORTED_MODULE_2__register_register__["a" /* RegisterPage */].t;
-        // this.http.post('/api/guanzhu/h',{
+        // this.http.post('/api/guanzhu/a',{
         //   "username":this.tel,
         // },{
         //   headers:this.headers,
         // }).subscribe((data)=>{
-        //   this.write=data;
-        //   console.log('粉丝',this.write);
+        //   this.src=data;
         // });
-        this.http.post('/api/guanzhu/a', {
-            "username": this.tel,
-        }, {
-            headers: this.headers,
-        }).subscribe(function (data) {
-            _this.src = data;
-        });
-        this.http.post('/api/guanzhu/aa', {
-            "username": this.tel,
-        }, {
-            headers: this.headers,
-        }).subscribe(function (data) {
-            _this.srcc = data;
-            // console.log('src',data);
-        });
+        // this.http.post('/api/guanzhu/aa',{
+        //   "username":this.tel,
+        // },{
+        //   headers:this.headers,
+        // }).subscribe((data)=>{
+        //   this.srcc=data;
+        //   // console.log('src',data);
+        // });
     }
     FansPage.prototype.ionViewWillEnter = function () {
         var _this = this;
@@ -899,83 +953,65 @@ var FansPage = /** @class */ (function () {
             _this.src1 = data1;
             console.log('srcqqqqq', data1);
         });
-        this.http.post('/api/guanzhu/h', {
-            "username": this.tel,
-        }, {
-            headers: this.headers,
-        }).subscribe(function (data) {
-            _this.write = data;
-            console.log('粉丝', _this.write);
-            // for(var i=0;i<this.write.length;i++){
-            //   this.username=this.write[i].username;
-            //   console.log('username',this.username);
-            //   this.http.post('/api/guanzhu/aa',
-            //   {
-            //     "username":this.username,
-            //   },
-            //   {  headers:this.headers}).subscribe((data)=>{
-            //       // console.log('this.srcc1',this.srcc1);
-            //?把好几个对象变成一个
-            //       this.srcc1=data;
-            //       console.log(data[0]);
-            //       this.srcc3=data[0].src;
-            //       console.log('this.srcc1',this.srcc1);
-            //       // var arr = []
-            //       // for (let i in data[0]) {
-            //       // arr.push(data[0][i]); //属性
-            //       // }
-            //       // console.log(arr);
-            //       // let newObj = {};
-            //       // console.log(Object.assign(newObj,data[0],data[0]));
-            // });  
-            // }
-        });
-        // console.log('粉丝1',this.write);
+        // this.http.post('/api/guanzhu/h',{
+        //   "username":this.tel,
+        // },{
+        //   headers:this.headers,
+        // }).subscribe((data)=>{
+        //   this.h=data;
+        //   for (var i=0;i<this.h.length;i++){
+        //     console.log('h',this.h[i]);
+        //     this.http.post('/api/guanzhu/hhh',{
+        //       "username":this.tel,
+        //       "guanusername":this.h[i]
+        //     },{
+        //       headers:this.headers,
+        //     }).subscribe((data1)=>{
+        //       console.log('h[i]',this.h[i]);
+        //       this.hhh=data1;
+        //       console.log('data1',data1);
+        //     });
+        //   }
+        // });
     };
-    // showConfirm($event) {
-    //   if ($event.target.innerHTML == "互相关注") {
-    //     const confirm = this.alertCtrl.create({
-    //       message: '确定不再关注此人？',
-    //       buttons: [
-    //         {
-    //           text: '取消',
-    //           handler: () => {
-    //           }
-    //         },
-    //         {
-    //           text: '确定',
-    //           handler: () => {
-    //             for(this.i = 0;this.i < AttentionPage.attentionarr.length;this.i++){
-    //               if((FansPage.fansarr[this.index].headerSrc == AttentionPage.attentionarr[this.i].headerSrc)
-    //               &&(FansPage.fansarr[this.index].signature == AttentionPage.attentionarr[this.i].signature)
-    //               &&(FansPage.fansarr[this.index].name == AttentionPage.attentionarr[this.i].name)){
-    //                 AttentionPage.attentionarr.splice(this.i, 1);
-    //               }
-    //             }
-    //             FansPage.fansarr[this.index].status = 0;
-    //             FansPage.fansarr[this.index].buttonValue = "+ 关注";
-    //           }
-    //         }
-    //       ]
-    //     });
-    //     confirm.present();
-    //   } else {
-    //     FansPage.fansarr[this.index].buttonValue = "互相关注";
-    //     FansPage.fansarr[this.index].status = 1;
-    //     AttentionPage.attentionarr.push(FansPage.fansarr[this.index]);
-    //   }
-    // }
+    FansPage.prototype.showConfirm = function (i) {
+        // const confirm = this.alertCtrl.create({
+        //   message: '确定不再关注此人？',
+        //   buttons: [
+        //     {
+        //       text: '取消',
+        //       handler: () => {
+        //       }
+        //     },
+        //     {
+        //       text: '确定',
+        //       handler: () => {
+        // for(this.i = 0;this.i < AttentionPage.attentionarr.length;this.i++){
+        //   if((FansPage.fansarr[this.index].headerSrc == AttentionPage.attentionarr[this.i].headerSrc)
+        //   &&(FansPage.fansarr[this.index].signature == AttentionPage.attentionarr[this.i].signature)
+        //   &&(FansPage.fansarr[this.index].name == AttentionPage.attentionarr[this.i].name)){
+        //     AttentionPage.attentionarr.splice(this.i, 1);
+        //   }
+        // }
+        // FansPage.fansarr[this.index].status = 0;
+        // FansPage.fansarr[this.index].buttonValue = "+ 关注";
+        this.buttonValue = "已关注";
+        // }
+    };
+    // ]
+    // });
+    // confirm.present();
+    // } 
     FansPage.prototype.show = function (i) {
         this.index = i;
     };
     FansPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-fans',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\fans\fans.html"*/'<!-- 粉丝 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="fans">\n\n    <ul>\n\n      <li *ngFor="let item of write;let i = index">\n\n        <div class="header">\n\n          <li *ngFor="let item of src1;let i = index" style="border:0px"><img src="http://192.168.62.144:3000/upload/{{item.src}}" alt="头像"></li>\n\n        </div>\n\n        <div class="center">\n\n          <div class="name">\n\n            {{item.username}}\n\n          </div>\n\n          <div class="signature">\n\n            <li *ngFor="let item of src;let i = index" style="border:0px">{{item.signature}}</li>\n\n          </div>\n\n        </div>\n\n        <div class="right">\n\n          <button [ngClass]="{\'only\':item.status == 0,\'each\':item.status == 1}" (click)="show(i);showConfirm($event);">{{item.buttonValue}}</button>\n\n        </div>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\fans\fans.html"*/,
+            selector: 'page-fans',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\fans\fans.html"*/'<!-- 粉丝 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content padding>\n\n  <div class="fans">\n\n    <ul>\n\n      <li *ngFor="let item1 of src1;let i = index">\n\n        <div class="header">\n\n          <img src="http://192.168.62.144:3000/upload/{{item1[0].src}}" alt="头像"> \n\n        </div>\n\n        <div class="center">\n\n            <div class="name">\n\n                {{item1[0].username}}\n\n            </div>\n\n            <div class="signature">\n\n                {{item1[0].signature}}\n\n            </div>\n\n        </div>\n\n        <div class="right">\n\n          <!-- <button [ngClass]="{\'only\':item.status == 0,\'each\':item.status == 1}" (click)="show(i);showConfirm($event);">{{item.buttonValue}}</button> -->\n\n          <button class="only" (click)="show(i); showConfirm(i);">{{this.buttonValue}}</button>\n\n        </div>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n</ion-content>\n\n'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\fans\fans.html"*/,
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]) === "function" && _e || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
     ], FansPage);
     return FansPage;
-    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=fans.js.map
@@ -1040,6 +1076,14 @@ var AttentionPage = /** @class */ (function () {
         }).subscribe(function (data) {
             _this.src = data;
         });
+        this.http.post('/api/guanzhu/ff', {
+            "username": this.tel,
+        }, {
+            headers: this.headers,
+        }).subscribe(function (data1) {
+            // console.log('src',data1);
+            _this.src1 = data1;
+        });
     }
     AttentionPage_1 = AttentionPage;
     AttentionPage.prototype.showConfirm = function () {
@@ -1062,14 +1106,22 @@ var AttentionPage = /** @class */ (function () {
                         }).subscribe(function (data) {
                             console.log(_this.ID);
                         });
-                        _this.http.post('/api/guanzhu', {
+                        _this.http.post('/api/guanzhu/ff', {
                             "username": _this.tel,
                         }, {
                             headers: _this.headers,
-                        }).subscribe(function (data) {
-                            _this.write = data;
-                            // console.log(this.write);
+                        }).subscribe(function (data1) {
+                            console.log('src', data1);
+                            _this.src1 = data1;
                         });
+                        // this.http.post('/api/guanzhu',{
+                        //   "username":this.tel,
+                        // },{
+                        //   headers:this.headers,
+                        // }).subscribe((data)=>{
+                        //   this.write=data;
+                        //   // console.log(this.write);
+                        // });
                         //   for(this.i = 0;this.i < FansPage.fansarr.length;this.i++){
                         //     if((AttentionPage.attentionarr[this.index].headerSrc == FansPage.fansarr[this.i].headerSrc)
                         //     &&(AttentionPage.attentionarr[this.index].signature == FansPage.fansarr[this.i].signature)
@@ -1132,7 +1184,7 @@ var AttentionPage = /** @class */ (function () {
     ];
     AttentionPage = AttentionPage_1 = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-attention',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\attention\attention.html"*/'<!-- 关注 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n  \n\n<ion-content padding>\n\n  <div class="fans">\n\n    <ul>\n\n        <li *ngFor="let item of write;let i = index" >\n\n        <div class="header">\n\n          <img src="http://192.168.62.144:3000/upload/{{item.guansrc}}" alt="头像">\n\n        </div>\n\n        <div class="center">\n\n          <div class="name">\n\n              {{item.guanusername}}\n\n          </div>\n\n          <div class="signature">\n\n              <li *ngFor="let item of src;let i = index" style="border:0px">{{item.signature}}</li>\n\n          </div>\n\n        </div>\n\n        <div class="right">\n\n          <button [ngClass]="{\'only\':item.status == 0,\'each\':item.status == 1}" (click)="show(i);showConfirm()">{{item.buttonValue}}</button>\n\n        </div>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n\n\n</ion-content>'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\attention\attention.html"*/,
+            selector: 'page-attention',template:/*ion-inline-start:"F:\bbb\Whatever\Projects\snail\src\pages\attention\attention.html"*/'<!-- 关注 -->\n\n<ion-header text-center no-border>\n\n  <ion-navbar color="major">\n\n    <ion-title>{{titleTitle}}</ion-title>\n\n    <ion-buttons end>\n\n      <button ion-button>\n\n        <ion-icon></ion-icon>\n\n      </button>\n\n    </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n  \n\n<ion-content padding>\n\n  <div class="fans">\n\n    <ul>\n\n        <li *ngFor="let item of src1;let i = index" >\n\n        <div class="header">\n\n          <img src="http://192.168.62.144:3000/upload/{{item[0].src}}" alt="头像">\n\n        </div>\n\n        <div class="center">\n\n          <div class="name">\n\n              {{item[0].username}}\n\n          </div>\n\n          <div class="signature">\n\n              {{item[0].signature}}\n\n          </div>\n\n        </div>\n\n        <div class="right">\n\n          <!-- <li *ngFor="let item1 of write;let i = index" style="border:0px"><button [ngClass]="{\'only\':item1.status == 0,\'each\':item1.status == 1}" (click)="show(i);showConfirm()">{{item1.buttonValue}}</button></li> -->\n\n          <button class="only" (click)="show(i);showConfirm()">已关注</button>\n\n        </div>\n\n      </li>\n\n    </ul>\n\n  </div>\n\n\n\n</ion-content>'/*ion-inline-end:"F:\bbb\Whatever\Projects\snail\src\pages\attention\attention.html"*/,
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_common_http__["a" /* HttpClient */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Events */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["j" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["b" /* AlertController */]])
     ], AttentionPage);

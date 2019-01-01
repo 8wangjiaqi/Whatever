@@ -24,6 +24,7 @@ export class AttentionPage {
   tel;
   write;
   src;
+  src1;
   ID;
   public static attentionarr=[
     {
@@ -87,6 +88,15 @@ export class AttentionPage {
       this.src=data;
     });
 
+    this.http.post('/api/guanzhu/ff',{
+      "username":this.tel,
+    },{
+      headers:this.headers,
+    }).subscribe((data1)=>{
+      // console.log('src',data1);
+      this.src1=data1;
+    });
+
   }
 
   showConfirm() {
@@ -101,6 +111,7 @@ export class AttentionPage {
         {
           text: '确定',
           handler: () => {
+
             this.http.post('/api/guanzhu/b',{
               "ID":this.ID,
             },{
@@ -108,14 +119,23 @@ export class AttentionPage {
             }).subscribe((data)=>{
              console.log(this.ID);
             });
-            this.http.post('/api/guanzhu',{
+                        
+            this.http.post('/api/guanzhu/ff',{
               "username":this.tel,
             },{
               headers:this.headers,
-            }).subscribe((data)=>{
-              this.write=data;
-              // console.log(this.write);
+            }).subscribe((data1)=>{
+              console.log('src',data1);
+              this.src1=data1;
             });
+            // this.http.post('/api/guanzhu',{
+            //   "username":this.tel,
+            // },{
+            //   headers:this.headers,
+            // }).subscribe((data)=>{
+            //   this.write=data;
+            //   // console.log(this.write);
+            // });
           //   for(this.i = 0;this.i < FansPage.fansarr.length;this.i++){
           //     if((AttentionPage.attentionarr[this.index].headerSrc == FansPage.fansarr[this.i].headerSrc)
           //     &&(AttentionPage.attentionarr[this.index].signature == FansPage.fansarr[this.i].signature)

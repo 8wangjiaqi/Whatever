@@ -13,20 +13,21 @@
 <ion-content padding>
   <div class="fans">
     <ul>
-        <li *ngFor="let item of write;let i = index" >
+        <li *ngFor="let item of src1;let i = index" >
         <div class="header">
-          <img src="http://192.168.62.144:3000/upload/{{item.guansrc}}" alt="头像">
+          <img src="http://192.168.62.144:3000/upload/{{item[0].src}}" alt="头像">
         </div>
         <div class="center">
           <div class="name">
-              {{item.guanusername}}
+              {{item[0].username}}
           </div>
           <div class="signature">
-              <li *ngFor="let item of src;let i = index" style="border:0px">{{item.signature}}</li>
+              {{item[0].signature}}
           </div>
         </div>
         <div class="right">
-          <button [ngClass]="{'only':item.status == 0,'each':item.status == 1}" (click)="show(i);showConfirm()">{{item.buttonValue}}</button>
+          <!-- <li *ngFor="let item1 of write;let i = index" style="border:0px"><button [ngClass]="{'only':item1.status == 0,'each':item1.status == 1}" (click)="show(i);showConfirm()">{{item1.buttonValue}}</button></li> -->
+          <button class="only" (click)="show(i);showConfirm()">已关注</button>
         </div>
       </li>
     </ul>

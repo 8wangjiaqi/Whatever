@@ -14,6 +14,7 @@ export class ShouyeqqPage {
   isActive=0;
   isClick(i){
     this.isActive=i;
+    console.log(this.isActive);
   };
   arr=["推荐","关注"];
   private headers=new HttpHeaders({'Content-Type':'application/json'});
@@ -23,8 +24,12 @@ export class ShouyeqqPage {
   guanzhu;
   search_items;
   num;
+  i;
   index;
+  src1;
   gong_username;
+  bb;
+  idx;
   constructor(public http:HttpClient,public navCtrl: NavController, public params: NavParams,public modalCtrl: ModalController) {
     this.tel=RegisterPage.t;
     
@@ -40,6 +45,20 @@ export class ShouyeqqPage {
       this.a=data1;
     });
 
+    this.http.post('/api/guanzhu/i',{"username":this.tel},
+    {  headers:this.headers}).subscribe((data1)=>{
+      this.i=data1;
+      console.log('data1',data1)
+    });
+
+    this.http.post('/api/home/src',{"username":this.tel},
+    {  headers:this.headers}).subscribe((data2)=>{
+      this.src1=data2;
+      console.log('data2',data2);
+      console.log(this.idx);
+    });
+
+   
      
   }
 
@@ -90,16 +109,36 @@ export class ShouyeqqPage {
 //   constructor(public modalCtrl: ModalController,public navCtrl: NavController,private http: Http,public navParams:NavParams) {
     
 //   }
+great(e) {
+  console.log(e.target.outerHTML);
+  if (e.target.outerHTML == '<p class="like">❤</p>') {
+    console.log('变蓝色');
+    e.target.className = 'like2';
+  }
+  else {
+    console.log('变灰色');
+    e.target.className = 'like';
+  }
+}
+
   goGongluePage(idx) {
     // console.log(idx);
+    // if(this.isActive==0){
+      this.navCtrl.push(GongluePage, {
+        username: this.search_items[idx].username,
+        // touxiang:this.write[idx].src,
+        title: this.search_items[idx].title,
+        content: this.search_items[idx].article,
+      });
+  //   }else{
+  //     this.navCtrl.push(GongluePage, {
+  //       username: this.i[idx].username,
+  //       title: this.i[idx].title,
+  //       content: this.i[idx].article,
+  //   });
+  // }
+}
 
-    this.navCtrl.push(GongluePage, {
-      username: this.search_items[idx].username,
-      // touxiang:this.write[idx].src,
-      title: this.search_items[idx].title,
-      content: this.search_items[idx].article,
-    });
-  }
 //      }else{
 //       this.navCtrl.push(GongluePage,{
 //         name:this.users2[idx].name,

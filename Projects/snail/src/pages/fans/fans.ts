@@ -60,38 +60,31 @@ export class FansPage {
     this.titleTitle =this.navParams.get('title');
     // this.fans = FansPage.fansarr;
     this.tel=RegisterPage.t;
-    // this.http.post('/api/guanzhu/h',{
+   
+    // this.http.post('/api/guanzhu/a',{
     //   "username":this.tel,
     // },{
     //   headers:this.headers,
     // }).subscribe((data)=>{
-    //   this.write=data;
-    //   console.log('粉丝',this.write);
+      
+    //   this.src=data;
     // });
-    this.http.post('/api/guanzhu/a',{
-      "username":this.tel,
-    },{
-      headers:this.headers,
-    }).subscribe((data)=>{
+    // this.http.post('/api/guanzhu/aa',{
+    //   "username":this.tel,
+    // },{
+    //   headers:this.headers,
+    // }).subscribe((data)=>{
       
-      this.src=data;
-    });
-    this.http.post('/api/guanzhu/aa',{
-      "username":this.tel,
-    },{
-      headers:this.headers,
-    }).subscribe((data)=>{
-      
-      this.srcc=data;
-      // console.log('src',data);
-    });
+    //   this.srcc=data;
+    //   // console.log('src',data);
+    // });
 
     
   }
   src1;
-  srcc2;
-  srcc3;
   username;
+  h;
+  hhh;
   ionViewWillEnter() { //page初始化时
     this.tel=RegisterPage.t;
     
@@ -104,47 +97,30 @@ export class FansPage {
       console.log('srcqqqqq',data1);
     });
 
-    this.http.post('/api/guanzhu/h',{
-      "username":this.tel,
-    },{
-      headers:this.headers,
-    }).subscribe((data)=>{
-      this.write=data;
-      console.log('粉丝',this.write);
-      // for(var i=0;i<this.write.length;i++){
-      //   this.username=this.write[i].username;
-      //   console.log('username',this.username);
-      //   this.http.post('/api/guanzhu/aa',
-      //   {
-      //     "username":this.username,
-      //   },
-    
-      //   {  headers:this.headers}).subscribe((data)=>{
-      //       // console.log('this.srcc1',this.srcc1);
+
+    // this.http.post('/api/guanzhu/h',{
+    //   "username":this.tel,
+    // },{
+    //   headers:this.headers,
+    // }).subscribe((data)=>{
+    //   this.h=data;
+    //   for (var i=0;i<this.h.length;i++){
+    //     console.log('h',this.h[i]);
+    //     this.http.post('/api/guanzhu/hhh',{
+    //       "username":this.tel,
+    //       "guanusername":this.h[i]
+    //     },{
+    //       headers:this.headers,
+    //     }).subscribe((data1)=>{
+    //       console.log('h[i]',this.h[i]);
+    //       this.hhh=data1;
+    //       console.log('data1',data1);
+    //     });
+    //   }
       
-//?把好几个对象变成一个
-
-      //       this.srcc1=data;
-      //       console.log(data[0]);
-      //       this.srcc3=data[0].src;
-      //       console.log('this.srcc1',this.srcc1);
-
-
-
-      //       // var arr = []
-      //       // for (let i in data[0]) {
-      //       // arr.push(data[0][i]); //属性
-      //       // }
-      //       // console.log(arr);
-      //       // let newObj = {};
+     
+    // });
  
-      //       // console.log(Object.assign(newObj,data[0],data[0]));
-      // });  
-       
-  // }
-    });
-    // console.log('粉丝1',this.write);
-  
 
  
   } 
@@ -182,6 +158,39 @@ export class FansPage {
   //     AttentionPage.attentionarr.push(FansPage.fansarr[this.index]);
   //   }
   // }
+ buttonValue = "+关注";
+   showConfirm(i) {
+      // const confirm = this.alertCtrl.create({
+      //   message: '确定不再关注此人？',
+      //   buttons: [
+      //     {
+      //       text: '取消',
+      //       handler: () => {
+      //       }
+      //     },
+      //     {
+      //       text: '确定',
+      //       handler: () => {
+              // for(this.i = 0;this.i < AttentionPage.attentionarr.length;this.i++){
+              //   if((FansPage.fansarr[this.index].headerSrc == AttentionPage.attentionarr[this.i].headerSrc)
+              //   &&(FansPage.fansarr[this.index].signature == AttentionPage.attentionarr[this.i].signature)
+              //   &&(FansPage.fansarr[this.index].name == AttentionPage.attentionarr[this.i].name)){
+              //     AttentionPage.attentionarr.splice(this.i, 1);
+              //   }
+              // }
+              // FansPage.fansarr[this.index].status = 0;
+              // FansPage.fansarr[this.index].buttonValue = "+ 关注";
+              this.buttonValue = "已关注";
+
+            // }
+          }
+        // ]
+      // });
+      // confirm.present();
+    // } 
+     
+
+
   show(i){
     this.index = i;
   }

@@ -39918,13 +39918,6 @@ page-attention ion-content .fans ul li .center .name {
 }
 
 page-attention ion-content .fans ul li .center .signature {
-  line-height: 30px;
-  color: #797575;
-  width: 100%;
-  height: 30px;
-}
-
-page-attention ion-content .fans ul li .center .signature li {
   width: 90%;
   text-decoration: none;
   margin: 0;
@@ -39932,6 +39925,10 @@ page-attention ion-content .fans ul li .center .signature li {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  line-height: 30px;
+  color: #797575;
+  width: 100%;
+  height: 30px;
 }
 
 page-attention ion-content .fans ul li .right {
@@ -40457,13 +40454,6 @@ page-fans ion-content .fans ul li .center .name {
 }
 
 page-fans ion-content .fans ul li .center .signature {
-  line-height: 30px;
-  color: #797575;
-  width: 100%;
-  height: 30px;
-}
-
-page-fans ion-content .fans ul li .center .signature li {
   width: 90%;
   text-decoration: none;
   margin: 0;
@@ -40471,6 +40461,10 @@ page-fans ion-content .fans ul li .center .signature li {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  line-height: 30px;
+  color: #797575;
+  width: 100%;
+  height: 30px;
 }
 
 page-fans ion-content .fans ul li .right {
@@ -41157,10 +41151,14 @@ page-shouyeqq ion-content .article .top {
 page-shouyeqq ion-content .article .top .header {
   float: left;
   width: 40px;
-  height: 40px;
+  height: 60px;
 }
 
-page-shouyeqq ion-content .article .top .header img {
+page-shouyeqq ion-content .article .top .header li {
+  height: 190px;
+}
+
+page-shouyeqq ion-content .article .top .header li img {
   border-radius: 40px;
   width: 40px;
   height: 40px;
@@ -41177,56 +41175,57 @@ page-shouyeqq ion-content .article .top .username {
   font-size: 14px;
 }
 
+page-shouyeqq ion-content .article .top .username li {
+  height: 190px;
+}
+
 page-shouyeqq ion-content .article .top .right {
   float: right;
 }
 
-page-shouyeqq ion-content .article .top .right .only {
-  margin-top: 5px;
-  border-radius: 10px;
-  height: 25px;
-  width: 60px;
-  color: #207b94;
-  background-color: transparent;
-  border: 1px solid #207b94;
+page-shouyeqq ion-content .article .top .right .like {
+  font-size: 30px;
+  color: #b6adad;
 }
 
-page-shouyeqq ion-content .article .top .right .hidden {
-  display: none;
-}
-
-page-shouyeqq ion-content .article .top .right .each {
-  margin-top: 5px;
-  border-radius: 10px;
-  height: 25px;
-  width: 60px;
-  color: #9fa1a1;
-  background-color: transparent;
-  border: 1px solid #9fa1a1;
+page-shouyeqq ion-content .article .top .right .like2 {
+  font-size: 30px;
+  color: #e4a154;
 }
 
 page-shouyeqq ion-content .article .mid {
+  margin-top: 10px;
   float: left;
   width: 100%;
-  height: 100px;
+  height: 25px;
 }
 
 page-shouyeqq ion-content .article .mid .title {
-  margin-top: 10px;
   width: 100%;
-  height: 26px;
-  line-height: 26px;
+  height: 25px;
+  line-height: 25px;
 }
 
-page-shouyeqq ion-content .article .mid .title p {
+page-shouyeqq ion-content .article .mid .title li p {
   font-size: 18px;
 }
 
-page-shouyeqq ion-content .article .mid .mid_content {
-  margin-top: 5px;
+page-shouyeqq ion-content .article .mid .li_content {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 90px;
 }
 
-page-shouyeqq ion-content .article .mid .mid_content .content {
+page-shouyeqq ion-content .article .mid .li_content .mid_content {
+  float: left;
+  margin-top: 5px;
+  width: 100%;
+  height: 90px;
+}
+
+page-shouyeqq ion-content .article .mid .li_content .mid_content .content {
+  float: left;
   white-space: initial;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -41237,22 +41236,28 @@ page-shouyeqq ion-content .article .mid .mid_content .content {
   height: 74px;
 }
 
-page-shouyeqq ion-content .article .mid .mid_content .content p {
+page-shouyeqq ion-content .article .mid .li_content .mid_content .content li {
+  height: 100px !important;
+}
+
+page-shouyeqq ion-content .article .mid .li_content .mid_content .content li p {
   line-height: 18px;
   letter-spacing: 1px;
   font-size: 14px;
   color: #8c8d8d;
 }
 
-page-shouyeqq ion-content .article .mid .mid_content .picture {
+page-shouyeqq ion-content .article .mid .li_content .mid_content .picture {
   display: none;
 }
 
-page-shouyeqq ion-content .article .mid .mid_content_pic {
+page-shouyeqq ion-content .article .mid .li_content .mid_content_pic {
+  float: left;
   margin-top: 5px;
 }
 
-page-shouyeqq ion-content .article .mid .mid_content_pic .content {
+page-shouyeqq ion-content .article .mid .li_content .mid_content_pic .content {
+  float: left;
   white-space: initial;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -41264,13 +41269,13 @@ page-shouyeqq ion-content .article .mid .mid_content_pic .content {
   height: 74px;
 }
 
-page-shouyeqq ion-content .article .mid .mid_content_pic .content p {
+page-shouyeqq ion-content .article .mid .li_content .mid_content_pic .content p {
   letter-spacing: 1px;
   font-size: 14px;
   color: #8c8d8d;
 }
 
-page-shouyeqq ion-content .article .mid .mid_content_pic .picture {
+page-shouyeqq ion-content .article .mid .li_content .mid_content_pic .picture {
   margin-left: 5px;
   float: left;
   width: 41%;
@@ -41279,7 +41284,7 @@ page-shouyeqq ion-content .article .mid .mid_content_pic .picture {
   text-align: center;
 }
 
-page-shouyeqq ion-content .article .mid .mid_content_pic .picture img {
+page-shouyeqq ion-content .article .mid .li_content .mid_content_pic .picture img {
   max-width: 100%;
   max-height: 74px;
   line-height: 74px;
