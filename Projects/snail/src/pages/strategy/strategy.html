@@ -11,14 +11,34 @@
 </ion-header>
 
 <ion-content>
-  <div class="articles" style="width:90%;margin-left:5%;margin-top:5%;" *ngFor="let item of write;let idx=index">
+    <div class="article" *ngFor="let item of write;let idx=index">
+      <div class="mid" (click)="goGongluePage(idx)">
+        <div class="title">
+          <p>{{item.title}}</p>
+        </div>
+        <div [ngClass]="item.picture == null ? 'mid_content' : 'mid_content_pic'">
+          <div class="content">
+            <p>{{item.article}}</p>
+          </div>
+          <div class="picture">
+            <img src="http://192.168.62.144:3000/upload/{{item.picture}}" alt="头像">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- <div class="articles" style="width:90%;margin-left:5%;margin-top:5%;" *ngFor="let item of write;let idx=index">
     <div calss="div2">
       <p class="title" style="position:relative;" (click)="goGongluePage(idx)">{{item.title}}</p>
-      <p class="content" style="width:60%;margin-top:5%;color:#808080 " (click)="goGongluePage(idx)">{{item.description}}</p>
-      <img src="assets/imgs/北京攻略.jpg" alt="" class="articleimg" style="position:absolute;margin-left:60%;margin-top:-25%;width:40%;height:60%;">
-      <!-- <img src="{{user.imgUrl}}" alt="" class="articleimg" style="position:absolute;margin-left:75%;margin-top:-20%;width:25%;height:40%;" (click)="goGongluePage(idx)"> -->
-    </div>
+      <p class="content" style="width:60%;margin-top:5%;color:#808080 " (click)="goGongluePage(idx)">{{item.description}}</p> -->
+      <!-- <img src="assets/imgs/北京攻略.jpg" alt="" class="articleimg" style="position:absolute;margin-left:60%;margin-top:-25%;width:40%;height:60%;"> -->
+      
+      <!-- <img src="http://192.168.62.144:3000/upload/{{item.picture}}" alt="" class="articleimg" style="position:absolute;margin-left:75%;margin-top:-20%;width:25%;height:40%;" (click)="goGongluePage(idx)">  -->
+      <!-- <li class="articleimg" style="position:absolute;margin-left:60%;margin-top:-25%;width:40%;height:60%;">
+        <img src="assets/imgs/北京攻略.jpg" alt="" >
+      </li> -->
+    <!-- </div>
     <hr style="margin-top:8%;margin-bottom:5%;">
 
-   </div>
+   </div> -->
 </ion-content>

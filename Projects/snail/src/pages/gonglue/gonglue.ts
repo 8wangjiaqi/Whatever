@@ -54,6 +54,7 @@ buttonValue;
     }
     });
     this.userInfo=params.data;
+    console.log('params.data',params.data);
     // this.userInfo=this.params.get('comment');
   }
 

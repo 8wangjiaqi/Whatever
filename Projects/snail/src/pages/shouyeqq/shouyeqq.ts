@@ -37,6 +37,7 @@ export class ShouyeqqPage {
       {  headers:this.headers}).subscribe((data)=>{
       
       this.search_items=data;
+      console.log(this.search_items);
       console.log('gong',data);
       });
 
@@ -124,11 +125,15 @@ great(e) {
   goGongluePage(idx) {
     // console.log(idx);
     // if(this.isActive==0){
+      console.log(idx);
       this.navCtrl.push(GongluePage, {
         username: this.search_items[idx].username,
         // touxiang:this.write[idx].src,
         title: this.search_items[idx].title,
         content: this.search_items[idx].article,
+        picture:this.search_items[idx].picture,
+        src:this.search_items[idx].src
+
       });
   //   }else{
   //     this.navCtrl.push(GongluePage, {

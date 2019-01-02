@@ -42,7 +42,7 @@ page-shouyeqq {
     ion-content{
         .article{
             float: left;
-            padding: 10px 15px 10px 15px;
+            padding: 10px 15px 0px 15px;
             width: 100%;
             height: 195px;
             border-bottom: 0.5px solid gainsboro;
@@ -55,14 +55,11 @@ page-shouyeqq {
                     float: left;
                     width: 40px;
                     height: 60px;
-                    li{
-                        height: 190px;
                         img{
                             border-radius: 40px;
                             width: 40px;
                             height: 40px;
                         }
-                    }
                 }
                 .username{
                     margin: 0;
@@ -73,9 +70,6 @@ page-shouyeqq {
                     margin-left: 10px;
                     line-height: 40px;
                     font-size: 14px;
-                    li{
-                        height: 190px;
-                    }
                 }
                 .right{
                     float: right;
@@ -99,18 +93,11 @@ page-shouyeqq {
                     width: 100%;
                     height: 25px;
                     line-height: 25px;
-                    li{
                         p{
                             font-size: 18px;
                         }
-                    }
                 }
-                .li_content{
-                    margin: 0;
-                    padding: 0;
-                    width: 100%;
-                    height: 90px;
-                    .mid_content{
+                .mid_content{
                         float: left;
                         margin-top: 5px;
                         width: 100%;
@@ -124,16 +111,13 @@ page-shouyeqq {
                             -webkit-line-clamp: 4;
                             -webkit-box-orient: vertical;
                             width: 100%;
-                            height: 74px;
-                            li{
-                                height: 100px!important;
+                            height: 72px;
                                 p{
                                     line-height: 18px;
                                     letter-spacing: 1px;
                                     font-size: 14px;
                                     color: rgb(140, 141, 141);
                                 }
-                            }
                           
                         }
                         .picture{
@@ -154,11 +138,11 @@ page-shouyeqq {
                             float: left;
                             width: 57%;
                             height: 74px;
-                            p{
-                                letter-spacing: 1px;
-                                font-size: 14px;
-                                color: rgb(140, 141, 141);
-                            }
+                                p{
+                                    letter-spacing: 1px;
+                                    font-size: 14px;
+                                    color: rgb(140, 141, 141);
+                                }
                         }
                         .picture{
                             margin-left: 5px;
@@ -173,8 +157,8 @@ page-shouyeqq {
                                 line-height: 74px;
     
                             }
+                        
                         }
-                    }
                 }
             }
         }

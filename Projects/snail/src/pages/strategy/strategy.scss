@@ -3,9 +3,90 @@ page-strategy {
         margin:0px;
         padding:0px;
     }
-   .articles{
-       position:relative;
-   }
+    .article{
+        float: left;
+        padding: 10px 15px 0px 15px;
+        width: 100%;
+        height: 150px;
+        border-bottom: 0.5px solid gainsboro;
+        .mid{
+            margin-top: 10px;
+            float: left;
+            width: 100%;
+            height: 25px;
+            .title{
+                width: 100%;
+                height: 25px;
+                line-height: 25px;
+                    p{
+                        font-size: 18px;
+                    }
+            }
+            .mid_content{
+                    float: left;
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 90px;
+                    .content{
+                        float: left;
+                        white-space:initial;
+                        overflow : hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        width: 100%;
+                        height: 72px;
+                            p{
+                                line-height: 18px;
+                                letter-spacing: 1px;
+                                font-size: 14px;
+                                color: rgb(140, 141, 141);
+                            }
+                      
+                    }
+                    .picture{
+                        display: none;
+                    }
+                }
+                .mid_content_pic{
+                    float: left;
+                    margin-top: 10px;
+                    .content{
+                        float: left;
+                        white-space:initial;
+                        overflow : hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        float: left;
+                        width: 57%;
+                        height: 74px;
+                            p{
+                                letter-spacing: 1px;
+                                font-size: 14px;
+                                color: rgb(140, 141, 141);
+                            }
+                    }
+                    .picture{
+                        margin-left: 5px;
+                        float: left;
+                        width: 41%;
+                        height: 74px;
+                        line-height: 74px;
+                        text-align: center;
+                        img{
+                            max-width: 100%;
+                            max-height: 74px;
+                            line-height: 74px;
+
+                        }
+                    
+                    }
+            }
+        }
+    }
    .div2{
         margin-top:30px;
        height: 150px;

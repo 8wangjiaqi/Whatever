@@ -31,17 +31,19 @@
       </ion-slides>
     
       <!-- 显示攻略 -->
+    <li *ngFor="let item of search_items;let idx=index">
       <div class="article">
         <div class="top">
           <div class="header">
-            <li *ngFor="let item1 of src1;let idx=index;" style="border:0px;">
-              <img src="http://192.168.62.144:3000/upload/{{item1[0].src}}" alt="头像">
-            </li>
+            <!-- <li *ngFor="let item1 of src1;let idx=index;" style="border:0px;"> -->
+              <!-- <img src="assets/imgs/header_1.jpg" alt="头像"> -->
+              <img src="http://192.168.62.144:3000/upload/{{item.src}}" alt="头像">
+            <!-- </li> -->
           </div>
           <div class="username">
-            <li *ngFor="let item of search_items;let idx=index;" style="border:0px;">
+            <!-- <li *ngFor="let item of search_items;let idx=index;" style="border:0px;"> -->
               {{item.username}}
-            </li>
+            <!-- </li> -->
           </div>
           <div class="right">
             <p class="like" (click)="great($event)">&#10084;</p>
@@ -50,24 +52,26 @@
       
         <div class="mid" (click)="goGongluePage(idx)">
           <div class="title">
-            <li *ngFor="let item of search_items;let idx=index;" style="border:0px;">
+            <!-- <li *ngFor="let item of search_items;let idx=index;" style="border:0px;"> -->
               <p>{{item.title}}</p>
-            </li>
+            <!-- </li> -->
           </div>
-          <li class="li_content" *ngFor="let item of search_items;let idx=index;" style="border:0px;">
-            <div [ngClass]="item.picture == '' ? 'mid_content' : 'mid_content_pic'">
+          <!-- <li class="li_content" *ngFor="let item of search_items;let idx=index;" style="border:0px;"> -->
+            <div [ngClass]="item.picture == null ? 'mid_content' : 'mid_content_pic'">
               <div class="content">
-                <li>
+                <!-- <li> -->
                   <p>{{item.article}}</p>
-                </li>
+                <!-- </li> -->
               </div>
               <div class="picture">
-                <img src="assets/imgs/北京攻略.jpg" alt="攻略图">
+                <!-- <img src="assets/imgs/北京攻略.jpg" alt="攻略图"> -->
+                <img src="http://192.168.62.144:3000/upload/{{item.picture}}" alt="头像">
               </div>
             </div>
-          </li>
+          <!-- </li> -->
         </div>
       </div>
+    </li>
     </div>
     
 
@@ -90,7 +94,8 @@
           <div class="top">
             <div class="header">
               <li>
-                <img src="assets/imgs/header_1.jpg" alt="头像">
+                <!-- <img src="assets/imgs/header_1.jpg" alt="头像"> -->
+                <img src="http://192.168.62.144:3000/upload/{{item[0].src}}" alt="头像">
               </li>
             </div>
             <div class="username">
@@ -104,14 +109,15 @@
             <div class="title">
               <p>{{item[0].title}}</p>
             </div>
-            <div [ngClass]="item.picture == '' ? 'mid_content' : 'mid_content_pic'">
+            <div [ngClass]="item.picture == null ? 'mid_content' : 'mid_content_pic'">
               <div class="content">
                 <p>
                   {{item[0].article}}
                 </p>
               </div>
               <div class="picture">
-                <img src="assets/imgs/北京攻略.jpg" alt="攻略图">
+                <!-- <img src="assets/imgs/北京攻略.jpg" alt="攻略图"> -->
+                <img src="http://192.168.62.144:3000/upload/{{item[0].picture}}" alt="头像">
               </div>
             </div>
           </div>

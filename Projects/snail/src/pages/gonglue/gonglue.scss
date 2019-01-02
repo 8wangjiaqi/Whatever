@@ -23,10 +23,16 @@ page-gonglue {
         position:absolute;
         margin-top:3%;
     }
-    .articleimg{
-        width: 30%;
-        height: 20%;
-        margin-left: 35%;
+    .pic_none{
+        display: none;
+    }
+    .picture_img{
+        text-align: center;
+        margin-top: 30px;
+        width: 100%;
+        img{
+            // max-width: 80%;
+        }
     }
     .content{
         margin-top:5%;
