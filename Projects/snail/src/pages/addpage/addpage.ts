@@ -19,6 +19,7 @@ export class AddpagePage {
   tit;
   des;
   art;
+  
    logForm() {
     console.log('tel',this.tel);
   this.http.post('/api/artical',{
