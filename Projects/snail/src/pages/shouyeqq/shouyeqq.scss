@@ -3,78 +3,165 @@ page-shouyeqq {
         margin:0px;
         padding:0px;
     }
-    // .toolbar-content-md{
-    //     height: 20%;
-    // }
-    .ion{
-        color: white;
-        float: right;
-        display: block;
-        // margin-top: 10px;
-       font-size:5ex;
-        // background-color: yellow;
-        margin-top: -24%;
-        margin-right: 2%;
-    }
-    .search1{
-        border-radius:20px;
-        width: 73%;
-        height: 1%!important;
-        margin-left: 12%;
-        margin-top: 2%;
-    }
-    .navList{
-        li{
-            width: 30%;
-            margin-left:13%;
-            color: white;
+    ion-header{
+        .search_add{
+            height: 42px;
+            width: 100%;
+            .search{
+                margin-left: 10px;
+                float: left;
+                width: 82%;
+                height: 42px;
+                .searchbar-md .searchbar-search-icon {
+                    top: 10px!important;
+                }
+                .searchbar-md .searchbar-input {
+                    line-height: 30px!important;
+                }
+            }
+            .ion{
+                float: left;
+                width: 14%;
+                height: 42px;
+                font-size: 3ex;
+                color: white;
+                float: right;
+                text-align: center;
+                line-height: 58px;
+            }
+        }
+        .navList{
+            li{
+                line-height: 50px;
+                width: 50%;
+                color: white;
+            }
         }
     }
-   .sli{
-       width:100%;
-       height:10%;
-       .slide-image{
-           width:100%;
-           height:98%;
-       }
-   }
-   .articles{
-       position:relative;
-   }
-   .div1{
-       height: 10%;
-   }
-   .div2{
-        margin-top:30px;
-       height: 150px;
-   }
-   .div3{
-       height: 10%;
-   }
-   .content{
-    overflow: hidden!important;
-    display: -webkit-box;
-    -webkit-box-orient:vertical;
-    -webkit-line-clamp:4!important;
-    //设置文本超过三行时开始隐藏
-   }
-    .touxiang{
-         width: 50px;
-         height: 50px;
-        border-radius: 50%;
-        position:relative;
+
+    ion-content{
+        .article{
+            float: left;
+            padding: 10px 15px 0px 15px;
+            width: 100%;
+            height: 195px;
+            border-bottom: 0.5px solid gainsboro;
+            .top{
+                margin-top: 5px;
+                float: left;
+                height: 40px;
+                width: 100%;
+                .header{
+                    float: left;
+                    width: 40px;
+                    height: 60px;
+                        img{
+                            border-radius: 40px;
+                            width: 40px;
+                            height: 40px;
+                        }
+                }
+                .username{
+                    margin: 0;
+                    padding: 0;
+                    float: left;
+                    width: 30%;
+                    height: 40px;
+                    margin-left: 10px;
+                    line-height: 40px;
+                    font-size: 14px;
+                }
+                .right{
+                    float: right;
+                    .like{
+                        font-size: 30px;
+                        color: rgb(182, 173, 173);
+                    }
+                    .like2{
+                        font-size: 30px;
+                        color: #e4a154;
+                    }
+                }
+
+            }
+            .mid{
+                margin-top: 10px;
+                float: left;
+                width: 100%;
+                height: 25px;
+                .title{
+                    width: 100%;
+                    height: 25px;
+                    line-height: 25px;
+                        p{
+                            font-size: 18px;
+                        }
+                }
+                .mid_content{
+                        float: left;
+                        margin-top: 5px;
+                        width: 100%;
+                        height: 90px;
+                        .content{
+                            float: left;
+                            white-space:initial;
+                            overflow : hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 4;
+                            -webkit-box-orient: vertical;
+                            width: 100%;
+                            height: 72px;
+                                p{
+                                    line-height: 18px;
+                                    letter-spacing: 1px;
+                                    font-size: 14px;
+                                    color: rgb(140, 141, 141);
+                                }
+                          
+                        }
+                        .picture{
+                            display: none;
+                        }
+                    }
+                    .mid_content_pic{
+                        float: left;
+                        margin-top: 5px;
+                        .content{
+                            float: left;
+                            white-space:initial;
+                            overflow : hidden;
+                            text-overflow: ellipsis;
+                            display: -webkit-box;
+                            -webkit-line-clamp: 4;
+                            -webkit-box-orient: vertical;
+                            float: left;
+                            width: 57%;
+                            height: 74px;
+                                p{
+                                    letter-spacing: 1px;
+                                    font-size: 14px;
+                                    color: rgb(140, 141, 141);
+                                }
+                        }
+                        .picture{
+                            margin-left: 5px;
+                            float: left;
+                            width: 41%;
+                            height: 74px;
+                            line-height: 74px;
+                            text-align: center;
+                            img{
+                                max-width: 100%;
+                                max-height: 74px;
+                                line-height: 74px;
+    
+                            }
+                        
+                        }
+                }
+            }
+        }
     }
-    .username{
-        position:absolute;
-        margin-top:3%;
-        font-size: 1.3em;
-    }
-    .guanzhu{
-        position:absolute;
-        margin-right:70%;
-    }
-    .title{
-         font-size: 18px;
-         font-weight: bolder;
-    }
+
 }

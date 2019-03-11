@@ -30,10 +30,6 @@ export class TriplanPage {
    this.navCtrl.push(AddplanPage);
   }
 
-  // gomingxi2(i){
-  //   this.navCtrl.push(ZongjiPage,{index:i,arr:this.arr});
-  //   console.log("chuani",i);
-  // }
   gomingxi2(i){
     this.navCtrl.push(ZongjiPage,{
       days:this.write[i].days,

@@ -22,20 +22,13 @@ export class JizhangbenPage {
   private headers=new HttpHeaders({'Content-Type':'application/json'});
   write;
   tel;
-  // item={
-  //   money:'',
-  //   time:'',
-  //   style:'',
-  //   other:''
-  // };
-  // arr=[];
   constructor(public http:HttpClient,public navCtrl: NavController, public params: NavParams) {
     this.tel=RegisterPage.t;
     this.http.post('/api/zhangben',{'username':this.tel},
       {  headers:this.headers}).subscribe((data)=>{
       this.write=data;
       // console.log('1',this.tel);
-      console.log(data);
+      // console.log('yao',data);
     });
     // this.item=params.data;
     // console.log(this.item);
@@ -44,14 +37,12 @@ export class JizhangbenPage {
     this.navCtrl.push(NullpagePage);
   }
   gomingxipage(i){
-    // console.log(i);
-    // console.log( this.write[i]);
     this.navCtrl.push(MingxiPage,{
       money:this.write[i].money,
-      time:this.write[i].time,
+      shijian:this.write[i].shijian,
       style:this.write[i].style,
-      other:this.write[i].other
-
+      other:this.write[i].other,
+      ID:this.write[i].ID
     });
   }
   ionViewDidLoad() { 

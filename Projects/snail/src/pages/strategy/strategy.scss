@@ -1,4 +1,125 @@
 page-strategy {
+    *{
+        margin:0px;
+        padding:0px;
+    }
+    .article{
+        float: left;
+        padding: 10px 15px 0px 15px;
+        width: 100%;
+        height: 150px;
+        border-bottom: 0.5px solid gainsboro;
+        .mid{
+            margin-top: 10px;
+            float: left;
+            width: 100%;
+            height: 25px;
+            .title{
+                width: 100%;
+                height: 25px;
+                line-height: 25px;
+                    p{
+                        font-size: 18px;
+                    }
+            }
+            .mid_content{
+                    float: left;
+                    margin-top: 10px;
+                    width: 100%;
+                    height: 90px;
+                    .content{
+                        float: left;
+                        white-space:initial;
+                        overflow : hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        width: 100%;
+                        height: 72px;
+                            p{
+                                line-height: 18px;
+                                letter-spacing: 1px;
+                                font-size: 14px;
+                                color: rgb(140, 141, 141);
+                            }
+                      
+                    }
+                    .picture{
+                        display: none;
+                    }
+                }
+                .mid_content_pic{
+                    float: left;
+                    margin-top: 10px;
+                    .content{
+                        float: left;
+                        white-space:initial;
+                        overflow : hidden;
+                        text-overflow: ellipsis;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 4;
+                        -webkit-box-orient: vertical;
+                        float: left;
+                        width: 57%;
+                        height: 74px;
+                            p{
+                                letter-spacing: 1px;
+                                font-size: 14px;
+                                color: rgb(140, 141, 141);
+                            }
+                    }
+                    .picture{
+                        margin-left: 5px;
+                        float: left;
+                        width: 41%;
+                        height: 74px;
+                        line-height: 74px;
+                        text-align: center;
+                        img{
+                            max-width: 100%;
+                            max-height: 74px;
+                            line-height: 74px;
+
+                        }
+                    
+                    }
+            }
+        }
+    }
+   .div2{
+        margin-top:30px;
+       height: 150px;
+   }
+   .div3{
+       height: 10%;
+   }
+   .content{
+    overflow: hidden!important;
+    display: -webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:4!important;
+    //设置文本超过三行时开始隐藏
+   }
+    .touxiang{
+         width: 50px;
+         height: 50px;
+        border-radius: 50%;
+        position:relative;
+    }
+    .username{
+        position:absolute;
+        margin-top:3%;
+        font-size: 1.3em;
+    }
+    .guanzhu{
+        position:absolute;
+        margin-right:70%;
+    }
+    .title{
+         font-size: 18px;
+         font-weight: bolder;
+    }
     ion-header{
         ion-navbar{
             ion-buttons{
@@ -6,72 +127,72 @@ page-strategy {
             }
         }
     }
-    ion-content{
-        .s_content{
-            padding: 0 16px 0 16px!important;
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: auto;
-            .scroll-content{
-                margin-top: 30px!important;
-            }
-            ul{
-                margin: 0;
-                padding: 0;
-                li{
-                    float: left;
-                    margin: 0;
-                    padding: 0;
-                    border-bottom: #e5e5e5 0.5px solid;
-                    .list{
-                        float: left;
-                        width: 100%;
-                        margin-top: 5px;
-                        padding: 0;
-                        .title{
-                            float: left;
-                            width: 100%;
-                            height: 30px;
-                            p{
-                                margin: 0;
-                                font-size: 18px;
-                                font-weight: bold;
-                                line-height: 30px;
-                            }
-                        }
-                        .c_content{
-                            float: left;
-                            width: 55%;
-                            height: 100px;
-                            p{
-                                margin: 5px 0 0 0;
-                                font-size: 15px;
-                                color: #808080;
-                            }
-                        }
-                        .picture{
-                            float: left;
-                            width: 45%;
-                            height: 100px;
-                            img{
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
-                        .bottom{
-                            margin-top: 5px;
-                            width: 100%;
-                            height: 20px;
-                            float: left;
-                            span{
-                                color: #a6a6a6;
-                            }
-                        }
-                    }
-                }
-            }
+    // ion-content{
+    //     .s_content{
+    //         padding: 0 16px 0 16px!important;
+    //         margin: 0;
+    //         padding: 0;
+    //         width: 100%;
+    //         height: auto;
+    //         .scroll-content{
+    //             margin-top: 30px!important;
+    //         }
+    //         ul{
+    //             margin: 0;
+    //             padding: 0;
+    //             li{
+    //                 float: left;
+    //                 margin: 0;
+    //                 padding: 0;
+    //                 border-bottom: #e5e5e5 0.5px solid;
+    //                 .list{
+    //                     float: left;
+    //                     width: 100%;
+    //                     margin-top: 5px;
+    //                     padding: 0;
+    //                     .title{
+    //                         float: left;
+    //                         width: 100%;
+    //                         height: 30px;
+    //                         p{
+    //                             margin: 0;
+    //                             font-size: 18px;
+    //                             font-weight: bold;
+    //                             line-height: 30px;
+    //                         }
+    //                     }
+    //                     .c_content{
+    //                         float: left;
+    //                         width: 55%;
+    //                         height: 100px;
+    //                         p{
+    //                             margin: 5px 0 0 0;
+    //                             font-size: 15px;
+    //                             color: #808080;
+    //                         }
+    //                     }
+    //                     .picture{
+    //                         float: left;
+    //                         width: 45%;
+    //                         height: 100px;
+    //                         img{
+    //                             width: 100%;
+    //                             height: 100%;
+    //                         }
+    //                     }
+    //                     .bottom{
+    //                         margin-top: 5px;
+    //                         width: 100%;
+    //                         height: 20px;
+    //                         float: left;
+    //                         span{
+    //                             color: #a6a6a6;
+    //                         }
+    //                     }
+    //                 }
+    //             }
+    //         }
             
-        }
-    }
+    //     }
+    // }
 }

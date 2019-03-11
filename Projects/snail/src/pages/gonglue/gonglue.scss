@@ -23,10 +23,16 @@ page-gonglue {
         position:absolute;
         margin-top:3%;
     }
-    .articleimg{
-        width: 30%;
-        height: 20%;
-        margin-left: 35%;
+    .pic_none{
+        display: none;
+    }
+    .picture_img{
+        text-align: center;
+        margin-top: 30px;
+        width: 100%;
+        img{
+            // max-width: 80%;
+        }
     }
     .content{
         margin-top:5%;
@@ -59,6 +65,30 @@ page-gonglue {
     //     // z-index:9999;//设置元素的堆叠顺序。拥有更高堆叠顺序的元素总是会处于堆叠顺序较低的元素的前面。
     //     position:fixed; left:0px; bottom:0px; width:100%; height:100px; background-color:red; z-index:9999;
     // }
+    .right{
+        float: right;
+        .only{
+            margin-top: 5px;
+            border-radius: 10px;
+            height: 25px;
+            width: 60px;
+            color: #207b94;
+            background-color: transparent;
+            border: 1px solid #207b94;
+        }
+        .hidden{
+            display: none;
+        }
+        .each{
+            margin-top: 5px;
+            border-radius: 10px;
+            height: 25px;
+            width: 60px;
+            color: #9fa1a1;
+            background-color: transparent;
+            border: 1px solid #9fa1a1;
+        }
+    }
     .divs{
         position: relative;
         margin-left: 60%;

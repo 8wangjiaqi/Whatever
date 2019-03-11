@@ -24,7 +24,7 @@ export class RegisterPage {
   public static t;
 
   constructor(public app:App,public alertCtrl:AlertController,public http:HttpClient,public navCtrl: NavController, public navParams: NavParams){
-  // RegisterPage.t=this.tel;
+  RegisterPage.t=this.tel;
   }
   
   goEnroll(){
@@ -68,6 +68,29 @@ doPost(){
           break;
     }
   });
+  
+//   this.http.post('/api/home',
+//   {  headers:this.headers}).subscribe((data)=>{
+//   // this.id=data[idx].ID;
+//   this.search_items=data;
+//   console.log(data);
+//   for(var i=0;i<this.search_items.length;i++){
+//     this.guanusername=this.search_items[i].username;
+//     this.http.post('/api/guanzhu/c',
+//     {
+//       "username":this.tel,
+//       "guanusername":this.guanusername
+//     },
+
+//     {  headers:this.headers}).subscribe((data)=>{
+//         console.log('zhe');
+//       // this.num=data;
+//       // console.log('num',this.num);
+//   });
+//   }
+  
+// });
+
 }
 
 goHome(){
@@ -93,7 +116,7 @@ presentPrompt(str) {
   });
   alert.present();
 }
-
-
+search_items;
+guanusername;
 
 }

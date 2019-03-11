@@ -55,9 +55,9 @@ export class EnrollPage {
   goTabs(){
     this.navCtrl.push(TabsPage);
   }
-  // goRegister(){
-  //   this.navCtrl.push(RegisterPage);
-  // }
+  goRegister(){
+    this.navCtrl.push(RegisterPage);
+  }
   goHome(){
     //跳转到tabs页并将用户tel传给tabs
     // this.app.getRootNavs()[0].setRoot(TabsPage,{username:this.tel});
